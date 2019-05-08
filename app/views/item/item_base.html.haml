@@ -1,0 +1,26 @@
+.single-container
+  %header.single-header
+        %h1
+            = link to
+              %img{:alt => "mercari", :src => "image/logo.svg"}/
+
+    %main.single-main
+      %section.l-single-container.buy-item-container
+        #sell-container
+
+    %footer.single-footer
+      %nav
+            %ul .clearfix
+                %li
+                    = link to 'プライバシーポリシー', '#'
+                %li
+                    = link to 'メルカリ利用規約', '#'
+                %li
+                    = link to '特定商取引に関する表記', '#'
+
+        = link to .single-footer-logo "https://www.mercari.com/jp/"
+          %img{:alt => "mercari", :height => "65", :src => "image/logo-gray.svg", :width => "80"}/
+        %p
+            %small &copy; 2019 Mercari
+
+

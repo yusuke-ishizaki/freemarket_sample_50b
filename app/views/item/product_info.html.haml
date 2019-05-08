@@ -1,0 +1,175 @@
+.single-container
+  %main.single-main
+    %section.l-single-container
+      #sell-container
+        %div{"data-reactroot" => ""}
+          .sell-container-inner
+            %h2.l-single-head 商品の情報を入力
+            %form.sell-form
+              .sell-upload-box
+                %h3.sell-upload-head
+                  出品画像
+                  %span.form-require 必須
+                %p 最大10枚までアップロードできます
+                .sell-dropbox-container.clearfix
+                  .sell-upload-items-container
+                    .sell-upload-items
+                      %ul
+                  .sell-upload-drop-box
+                    %input.sell-upload-drop-file{:multiple => "multiple", :name => "image1", :style => "display: none;", :type => "file"}/
+                    %pre.visible-pc
+                      ドラッグアンドドロップ
+                      %br>/
+                      またはクリックしてファイルをアップロード
+                    %i.icon-camera
+              .sell-content
+                .form-group
+                  %label
+                    商品名
+                    %span.form-require 必須
+                  %div
+                    %input.input-default{:placeholder => "商品名（必須 40文字まで)", :value => ""}/
+                .form-group
+                  %label
+                    商品の説明
+                    %span.form-require 必須
+                  %textarea.textarea-default{:placeholder => "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", :rows => "5"}
+              .sell-content.clearfix
+                %h3.sell-sub-head 商品の詳細
+                .sell-form-box
+                  .form-group
+                    %label
+                      カテゴリー
+                      %span.form-require 必須
+                    %div
+                      .select-wrap
+                        %select.select-default
+                          %option{:value => ""} ---
+                          %option{:value => "1"} レディース
+                          %option{:value => "2"} メンズ
+                          %option{:value => "3"} ベビー・キッズ
+                          %option{:value => "4"} インテリア・住まい・小物
+                          %option{:value => "5"} 本・音楽・ゲーム
+                          %option{:value => "1328"} おもちゃ・ホビー・グッズ
+                          %option{:value => "6"} コスメ・香水・美容
+                          %option{:value => "7"} 家電・スマホ・カメラ
+                          %option{:value => "8"} スポーツ・レジャー
+                          %option{:value => "9"} ハンドメイド
+                          %option{:value => "1027"} チケット
+                          %option{:value => "1318"} 自動車・オートバイ
+                          %option{:value => "10"} その他
+                        %i.icon-arrow-bottom
+                  .form-group
+                    %label
+                      商品の状態
+                      %span.form-require 必須
+                    .select-wrap
+                      = item.select :condition,[['新品、未使用'],['未使用に近い'],['目立った傷や汚れなし'],['やや傷や汚れあり'],['傷や汚れあり'],['全体的に状態が悪い'] ] , prompt: '--',selected: @item.condition
+            %ul.condition-fail.hide.add-fail
+              %li 選択してください
+
+              .sell-content.clearfix
+                %h3.sell-sub-head 配送について
+                %a.form-question{:href => "", :target => "_blank"} ?
+                .sell-form-box
+                  .form-group
+                    %label
+                      配送料の負担
+                      %span.form-require 必須
+                    .select-wrap
+                      = del.select :postage, [['送料込み（出品者負担）'],['着払い（購入者負担）']], prompt: '--', selected: @item.delivery.postage
+              %ul.postage-fail.hide.add-fail
+                %li 選択してください
+
+                  .form-group
+                    %label
+                      発送元の地域
+                      %span.form-require 必須
+                    .select-wrap
+                      = del.select :region, [['北海道'],['青森県'],['岩手県'],['宮城県'],['秋田県'],['山形県'],['福島県'],['茨城県'],['栃木県'],['群馬県'],['埼玉県'],['千葉県'],['東京都'],['神奈川県'],['新潟県'],['富山県'],['石川県'],['福井県'],['山梨県'],['長野県'],['岐阜県'],['静岡県'],['愛知県'],['三重県'],['滋賀県'],['京都府'],['大阪府'],['兵庫県'],['奈良県'],['和歌山県'],['鳥取県'],['島根県'],['岡山県'],['広島県'],['山口県'],['徳島県'],['香川県'],['愛媛県'],['高知県'],['福岡県'],['佐賀県'],['長崎県'],['熊本県'],['大分県'],['宮崎県'],['鹿児島県'],['沖縄県'],['未定']], prompt: '--', selected: @item.delivery.region
+
+              %ul.region-fail.hide.add-fail
+                %li 選択してください
+
+                  .form-group
+                    %label
+                      発送までの日数
+                      %span.form-require 必須
+                    .select-wrap
+                      = del.select :shipping_date, [['1~2日で発送'],['2~3日で発送'],['4~7日で発送']], prompt: '--', selected: @item.delivery.shipping_date
+
+              %ul.shipping_date-fail.hide.add-fail
+                %li 選択してください
+              .sell-content.clearfix
+                %h3.sell-sub-head 販売価格(300〜9,999,999)
+                %a.form-question{:href => "", :target => "_blank"} ?
+                .sell-form-box
+                  %ul.sell-price
+                    %li.form-group
+                      .clearfix
+                        %label.l-left
+                          価格
+                          %span.form-require 必須
+                        .l-right.sell-price-input
+                          ¥
+                          %div
+                            %input.input-default{:placeholder => "例）300", :value => ""}/
+                    %li.clearfix
+                      .l-left 販売手数料 (10%)
+                      .l-right -
+                    %li.clearfix.bold
+                      .l-left 販売利益
+                      .l-right -
+              .modal{:role => "dialog", :tabindex => "-1"}
+                .modal-inner
+              .sell-content.sell-btn-box
+                %div
+                  %p
+                    %a{:href => "", :target => "_blank"} 禁止されている出品
+                    = succeed "\u{3092}\u{5fc5}\u{305a}\u{3054}\u{78ba}\u{8a8d}\u{304f}\u{3060}\u{3055}\u{3044}\u{3002}" do
+                      %a{:href => "", :target => "_blank"} 行為
+                  %p
+                    またブランド品でシリアルナンバー等がある場合はご記載ください。
+                    %a{:href => "", :target => "_blank"} 偽ブランドの販売
+                    は犯罪であり処罰される可能性があります。
+                  %p
+                    また、出品をもちまして
+                    %a{:href => ""}> 加盟店規約
+                    に同意したことになります。
+                %button.btn-default.btn-red{:type => "submit"} 出品する
+                %a.btn-default.btn-gray もどる
+            .overlay
+
+
+
+
+
+
+
+
+<script>
+    // 手数料の計算
+    $(function () {
+        $('#item_price').keyup(function () {
+            var price = $(this).val();
+
+            if (price >= 300) {
+                var commission = Math.ceil(price * 0.1);
+                var profit = price - commission
+                $('.default-fee').text('¥' + commission);
+                $('.profit_price').text('¥' + profit);
+            } else {
+                $('.default-fee').text('-');
+                $('.profit_price').text('-');
+            }
+        });
+
+        if ($('#item_price').val() < 300 || $('#item_price').val() >= 9999999) {
+            $('.price-fail').removeClass('hide');
+        } else {
+            $('.price-fail').addClass('hide');
+        }
+        $(".sell_item_submit").prop("disabled", false);
+    });
+</script>
+

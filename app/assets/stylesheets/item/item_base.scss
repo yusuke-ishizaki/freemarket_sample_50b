@@ -1,0 +1,116 @@
+body {
+  position: relative;
+  min-height: 100%;
+  background: #f5f5f5;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  display: block;
+}
+
+.single-header {
+  text-align: center;
+}
+
+.single-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  height: 250px;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.single-header {
+  h1 {
+    display: inline-block;
+    margin: 11px 0 12px;
+  }
+  a {
+    display: inline-block;
+    width: 120px;
+    height: 33px;
+    margin: 0 8px 0 0;
+    line-height: 33px;
+  }
+  img {
+    width: 120px;
+    height: 33px;
+  }
+}
+
+.single-footer {
+  ul {
+    font-size: 0;
+  }
+  li {
+    &:first-child {
+      margin: 0;
+    }
+    margin: 16px 0 0;
+    font-size: 12px;
+  }
+  a {
+    display: block;
+    color: #333;
+    display: block;
+    color: #333;
+  }
+}
+
+.single-footer-logo {
+  width: 80px;
+  height: 65px;
+  margin: 40px auto 0;
+}
+
+.single-footer {
+  p {
+    margin: 8px 0 0;
+  }
+  small {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .single-container {
+    padding: 0 0 220px;
+  }
+  .single-header {
+    height: 128px;
+  }
+  .single-footer {
+    width: 456px;
+    height: 220px;
+    margin: 0 auto;
+  }
+  .single-header {
+    h1 {
+      margin: 40px 0 0;
+    }
+    a {
+      width: 185px;
+      height: 49px;
+      line-height: 49px;
+    }
+    img {
+      width: 185px;
+      height: 49px;
+    }
+  }
+  .single-footer li {
+    display: inline-block;
+    margin: 0 0 0 16px;
+  }
+}
