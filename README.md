@@ -2,7 +2,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|text|string|null: false|
+|text|text|null: false|
 |price|integer|null: false|
 |status|integer|null: false|
 ### Association
