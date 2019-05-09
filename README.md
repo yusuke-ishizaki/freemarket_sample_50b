@@ -33,7 +33,7 @@
 |family_name_kana|string|null: false|
 |first_name|string|null: false|
 |first_name_kana|string|null: false|
-|user_id|integer|foreign_key: true|
+|user_id|reference|foreign_key: true|
 ### Association
 - belongs_to :user
 
@@ -60,9 +60,9 @@
 |------|----|-------|
 |price|integer|null: false|
 |region|string|null: false|
-|date|integer|null: false|
+|date|string|null: false|
 |method|string|null: false|
-|product_id|integer|foreign_key: true|
+|product_id|reference|foreign_key: true|
 ### Association
 - belongs_to :product
 
