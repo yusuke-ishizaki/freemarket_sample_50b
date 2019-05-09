@@ -29,10 +29,10 @@
 ## nameテーブル
 |Column|Type|Options|
 |------|----|-------|
-|family-name-kanji|string|null: false|
-|family-name-kana|string|null: false|
-|first-name-kanji|string|null: false|
-|first-name-kana|string|null: false|
+|family_name_kanji|string|null: false|
+|family_name_kana|string|null: false|
+|first_name_kanji|string|null: false|
+|first_name_kana|string|null: false|
 |user_id|integer|
 ### Association
 - belongs_to :user
@@ -47,9 +47,9 @@
 ## categoryテーブル
 |Column|Type|Options|
 |------|----|-------|
-|parent-category|integer|null: false|
-|child-category|integer|null: false|
-|grand-category|integer|null: false|
+|parent|integer|null: false|
+|child|integer|null: false|
+|grand|integer|null: false|
 |size|integer|null: false|
 |product_id|integer|
 ### Association
