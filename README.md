@@ -51,7 +51,7 @@
 |child|integer|null: false|
 |grand|integer|null: false|
 |size|integer|null: false|
-|product_id|integer|null: false|
+|product_id|integer|null: false,foreign_key: true|
 ### Association
 - has_many :products
 
