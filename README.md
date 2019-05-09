@@ -8,7 +8,7 @@
 ### Association
 - belongs_to :user
 - belongs_to :bland
-- belongs_to :delivery, dependent: :destroy
+- has_one :delivery, dependent: :destroy
 - belongs_to :category
 
 ## usersテーブル
@@ -23,8 +23,8 @@
 |birth_day|integer|null: false|
 ### Association
 - has_many :products, dependent: :destroy
-- belongs_to :name, dependent: :destroy
-- belongs_to :adress, dependent: :destroy
+- has_one :name, dependent: :destroy
+- has_one :adress, dependent: :destroy
 
 ## nameテーブル
 |Column|Type|Options|
