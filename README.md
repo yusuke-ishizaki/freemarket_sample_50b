@@ -33,7 +33,7 @@
 |family_name_kana|string|null: false|
 |first_name_kanji|string|null: false|
 |first_name_kana|string|null: false|
-|user_id|integer|
+|user_id|integer|foreign_key: true|
 ### Association
 - belongs_to :user
 
@@ -62,11 +62,11 @@
 |region|string|null: false|
 |date|integer|null: false|
 |method|string|null: false|
-|product_id|integer|
+|product_id|integer|foreign_key: true|
 ### Association
 - belongs_to :product
 
-## adressテーブル
+## addressテーブル
 |Column|Type|Options|
 |------|----|-------|
 |post_code|integer|null: false|
@@ -74,6 +74,6 @@
 |city|string|null: false|
 |block|string|null: false|
 |building|string|
-|user_id|reference|null: false|
+|user_id|reference|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
