@@ -1,0 +1,203 @@
+/* ヘッダー */
+.pc-header {
+  position: relative;
+  z-index: 1001;
+  background: #fff;
+}
+
+.pc-header-inner {
+  width: 700px;
+  margin: 0 auto;
+  padding: 8px 0 0;
+}
+
+.pc-header-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.pc-header h1 a {
+  display: block;
+  color: #333;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* 検索欄 */
+.pc-header-form {
+  position: relative;
+  margin-left: 45px;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  .input-default {
+    background: #f5f5f5;
+    border-radius: 4px;
+    padding: 0 42px 0 10px;
+    width: 100%;
+    height: 40px;
+    /* -webkit-transition: all ease-out .3s; */
+    transition: all ease-out .3s;
+  }
+}
+
+/* input[type='search'] {
+  -webkit-appearance: none;
+  -webkit-appearance: textfield;
+} */
+
+.input-default {
+  /* height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px; */
+  border: 1px solid #ccc;
+  /* background: #fff; */
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.pc-header-form .icon-search {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* display: -webkit-box;
+  display: -ms-flexbox; */
+  display: flex;
+  -webkit-box-align: center;
+  /* -ms-flex-align: center; */
+  align-items: center;
+  -webkit-box-pack: center;
+  /* -ms-flex-pack: center; */
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+i {
+  &[class^='icon-'], &[class*='icon-'] {
+    display: inline-block;
+    font-family: 'icon-font';
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.fa-search::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+.pc-header-nav-box {
+  margin: 8px 0 0;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+  margin: 8px 0 0;
+}
+
+.l-left {
+  float: left;
+}
+
+.pc-header-nav {
+  font-size: 10px;
+  li {
+    float: left;
+  }
+  > li {
+    &:first-child {
+      padding-left: 0;
+    }
+    position: relative;
+    display: inline-block;
+    padding: 0 11px;
+    cursor: pointer;
+  }
+}
+
+.l-right {
+  float: right;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.pc-header-login-nav {
+  > li {
+    &:first-child {
+      margin: 0;
+    }
+    display: inline-block;
+    margin: 0 0 0 8px;
+  }
+  .btn-red {
+    display: block;
+  }
+  .sp-header-btn {
+    margin: 0;
+  }
+}
+
+/* ログインボタン  新規会員登録ボタン */
+.sp-header-btn {
+  &:first-child {
+    margin-right: 3px;
+  }
+  padding: 0 10px;
+  line-height: 30px;
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 26px;
+}
+
+.btn-red {
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+}
+
+.header-sigup {
+  display: block;
+  border: 1px solid #0099e8;
+  background: #fff;
+  color: #0099e8;
+}
+
+a {
+  text-decoration: none;
+}

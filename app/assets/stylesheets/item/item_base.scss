@@ -32,35 +32,35 @@ main {
 }
 
 .single-header {
-  h1 {
+  &h1 {
     display: inline-block;
     margin: 11px 0 12px;
   }
-  a {
+  &a {
     display: inline-block;
     width: 120px;
     height: 33px;
     margin: 0 8px 0 0;
     line-height: 33px;
   }
-  img {
+  &img {
     width: 120px;
     height: 33px;
   }
 }
 
 .single-footer {
-  ul {
+  &ul {
     font-size: 0;
   }
-  li {
+  &li {
     &:first-child {
       margin: 0;
     }
     margin: 16px 0 0;
     font-size: 12px;
   }
-  a {
+  &a {
     display: block;
     color: #333;
     display: block;
@@ -96,15 +96,15 @@ main {
     margin: 0 auto;
   }
   .single-header {
-    h1 {
+    &h1 {
       margin: 40px 0 0;
     }
-    a {
+    &a {
       width: 185px;
       height: 49px;
       line-height: 49px;
     }
-    img {
+    &img {
       width: 185px;
       height: 49px;
     }
