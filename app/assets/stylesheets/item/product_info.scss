@@ -12,7 +12,7 @@ h3 {
 
 /*delete*/
 
-.single-container {
+.single-box {
   background: #5d9dc9;
 }
 
@@ -33,7 +33,7 @@ textarea {
   -webkit-appearance: none;
 }
 
-div.sell-content.sell-btn-box > div > p > a {
+div.sell-cont.sell-btn-box > div > p > a {
   color: #0099e8;
   text-decoration: none;
 }
@@ -49,11 +49,11 @@ div.sell-content.sell-btn-box > div > p > a {
   transform: translate(0, -50%);
 }
 
-.form-group .icon-arrow-bottom {
+.form-box .icon-arrow-bottom {
   position: absolute;
 }
 
-.l-single-container {
+.left-single-box {
   background: #fff;
 }
 
@@ -61,7 +61,7 @@ div.sell-content.sell-btn-box > div > p > a {
   border-top: 1px solid #eee;
 }
 
-.l-single-head {
+.left-single-head {
   padding: 24px 8px;
   font-size: 18px;
   line-height: 1.5;
@@ -80,17 +80,17 @@ div.sell-content.sell-btn-box > div > p > a {
   }
 }
 
-.sell-dropbox-container {
+.sell-drop-cont {
   display: inline;
   margin: 16px auto 0;
 }
 
-.sell-content {
+.sell-cont {
   padding: 40px;
   border-top: 1px solid #eee;
 }
 
-.form-group {
+.form-box {
   &:first-child {
     margin: 0;
   }
@@ -127,7 +127,7 @@ label {
   vertical-align: top;
 }
 
-.form-group .input-default {
+.form-box .input-default {
   width: calc(100% - 32px);
   margin: 8px 0 0;
 }
@@ -142,12 +142,12 @@ label {
   font-size: 0.944rem;
 }
 
-.form-group label + .textarea-default {
+.form-box label + .textarea-default {
   margin: 8px 0 0;
 }
 
-.sell-dropbox-container {
-  &.sell-upload-items-container {
+.sell-drop-cont {
+  &.sell-upitems-cont {
     display: inline;
     &.sell-upload-items {
       display: inline;
@@ -219,7 +219,7 @@ input {
   margin: 40px 0 0;
 }
 
-.form-group .select-wrap {
+.form-box .select-wrap {
   margin: 8px 0 0;
 }
 
@@ -228,7 +228,7 @@ input {
   background: #fff;
 }
 
-.form-group select {
+.form-box select {
   width: 100%;
 }
 
@@ -255,7 +255,7 @@ input {
     border-top: 1px solid #ccc;
     font-size: 0.8rem;
   }
-  &.form-group {
+  &.form-box {
     &.l-left {
       width: 50%;
       line-height: 48px;
@@ -364,12 +364,12 @@ i {
 }
 
 @media screen and (min-width: 768px) {
-  .l-single-container {
+  .left-single-box {
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
   }
-  .l-single-head {
+  .left-single-head {
     padding: 32px 16px;
     font-size: 22px;
   }
@@ -377,7 +377,7 @@ i {
     width: 620px;
     padding: 40px;
   }
-  .sell-dropbox-container {
+  .sell-drop-cont {
     display: block;
     width: 620px;
   }
@@ -385,7 +385,7 @@ i {
     float: left;
     display: block;
   }
-  .sell-dropbox-container .sell-upload-drop-box {
+  .sell-drop-cont .sell-upload-drop-box {
     float: right;
     width: 620px;
   }

@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e5e732-d0cb-4c12-a9d7-2d0e45b4dade" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/common.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/item/item_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/item/item_base.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/item/product_info.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/item/product_info.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/mypage/plofile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/mypage/plofile.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/mypage/regist_personal_info.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/mypage/regist_personal_info.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/item/item_base.html.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/item/item_base.html.haml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/item/product_info.html.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/item/product_info.html.haml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/mypage/plofile.html.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/mypage/plofile.html.haml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/mypage/regist_personal_info.html.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/mypage/regist_personal_info.html.haml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -22,7 +30,7 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.8195164">
       <split-first>
-        <splitter split-orientation="vertical" split-proportion="0.7916137">
+        <splitter split-orientation="vertical" split-proportion="0.25378788">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file pinned="false" current-in-tab="false">
@@ -46,8 +54,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/views/mypage/regist_personal_info.html.haml">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="346">
-                      <caret line="33" column="427" selection-start-line="33" selection-start-column="427" selection-end-line="33" selection-end-column="427" />
+                    <state relative-caret-position="-1467">
+                      <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
                     </state>
                   </provider>
                 </entry>
@@ -64,8 +72,8 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/views/mypage/plofile.html.haml">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="506">
-                      <caret line="18" selection-start-line="18" selection-end-line="18" />
+                    <state relative-caret-position="-52">
+                      <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="26" />
                     </state>
                   </provider>
                 </entry>
@@ -73,7 +81,7 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/common.scss">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="471">
+                    <state relative-caret-position="895">
                       <caret line="98" column="1" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
                     </state>
                   </provider>
@@ -118,7 +126,7 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app/views/layouts/_common_footer.html.haml">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state>
+                    <state relative-caret-position="-2240">
                       <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
                     </state>
                   </provider>
@@ -127,8 +135,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/views/item/product_info.html.haml">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="181">
-                      <caret line="88" column="478" lean-forward="true" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="478" />
+                    <state relative-caret-position="-1116">
+                      <caret line="47" column="44" lean-forward="true" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
                     </state>
                   </provider>
                 </entry>
@@ -144,7 +152,7 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/Gemfile">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="140">
+                    <state relative-caret-position="118">
                       <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
                     </state>
                   </provider>
@@ -157,7 +165,7 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/Gemfile">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="212">
+                    <state relative-caret-position="190">
                       <caret line="39" column="68" selection-start-line="39" selection-start-column="68" selection-end-line="39" selection-end-column="68" />
                     </state>
                   </provider>
@@ -184,10 +192,42 @@
       <find>&lt;/form&gt;</find>
       <find>l-side</find>
       <find>ul</find>
+      <find>l-chapter-container</find>
+      <find>l-chapter-head</find>
+      <find>l-single-inner</find>
+      <find>text-right</find>
+      <find>form-group</find>
+      <find>icon-arrow-</find>
+      <find>setting-profile-icon</find>
+      <find>setting-profile-content</find>
+      <find>single-container</find>
+      <find>l-single-box</find>
+      <find>sell-container-inner</find>
+      <find>l-single-head</find>
+      <find>sell-dropbox-container</find>
+      <find>sell-upload-items-container</find>
+      <find>sell-content</find>
     </findStrings>
     <replaceStrings>
       <replace />
+      <replace>left-container-box</replace>
+      <replace>left-container-header</replace>
+      <replace>left-sing-header</replace>
+      <replace>right-tex</replace>
+      <replace>form-box</replace>
+      <replace>set-prof-icon</replace>
+      <replace>set-prof-cont</replace>
+      <replace>single-box</replace>
+      <replace>left-single-box</replace>
+      <replace>sell-cont-inner</replace>
+      <replace>left-single-head</replace>
+      <replace>sell-drop-cont</replace>
+      <replace>sell-upitems-cont</replace>
+      <replace>sell-cont</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/app</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -201,22 +241,22 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/layouts/common_footer.html.haml" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/common/common_footer.scss" />
-        <option value="$PROJECT_DIR$/app/views/item/product_info.html.haml" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/item/product_info.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/item/item_base.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/common.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/mypage/plofile.scss" />
         <option value="$PROJECT_DIR$/app/views/mypage/plofile.html" />
-        <option value="$PROJECT_DIR$/app/views/mypage/plofile.html.haml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/mypage/regist_personal_info.scss" />
         <option value="$PROJECT_DIR$/app/views/mypage/regist_personal_info.html" />
         <option value="$PROJECT_DIR$/app/views/mypage/regist_personal_info.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/mypage/plofile.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/item/product_info.html.haml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="2" />
     <option name="y" value="23" />
     <option name="width" value="1428" />
@@ -463,22 +503,22 @@
       <workItem from="1557209229174" duration="19000" />
       <workItem from="1557209278850" duration="10000" />
       <workItem from="1557209372048" duration="13636000" />
-      <workItem from="1557303530024" duration="11651000" />
+      <workItem from="1557303530024" duration="14293000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28270000" />
+    <option name="totallyTimeSpent" value="30912000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14806867" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32909784" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32909784" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -535,13 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_common_footer.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/mypage/plofile.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="471">
@@ -563,13 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/mypage/regist_personal_info.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
@@ -584,31 +610,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/common.scss">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="98" column="1" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
+        <state relative-caret-position="118">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/mypage/plofile.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="-52">
+          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/item/product_info.html.haml">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/common.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="88" column="478" lean-forward="true" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="478" />
+        <state relative-caret-position="895">
+          <caret line="98" column="1" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_common_footer.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2240">
+          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/mypage/regist_personal_info.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="33" column="427" selection-start-line="33" selection-start-column="427" selection-end-line="33" selection-end-column="427" />
+        <state relative-caret-position="-1467">
+          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/item/product_info.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1116">
+          <caret line="47" column="44" lean-forward="true" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
         </state>
       </provider>
     </entry>

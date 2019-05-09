@@ -1,17 +1,17 @@
 / right content to plofile
 .l-content
-  %section.l-chapter-container
-    %h2.l-chapter-head プロフィール
+  %section.left-container-box
+    %h2.left-container-header プロフィール
 
       %form{:action => "", :method => "POST"}
         %input{:name => "__csrf_value", :type => "hidden", :value => ""}/
 
-          .setting-profile-icon
+          .set-prof-icon
             %figure
               %img{:height => "60", :src => "//static.mercdn.net/thumb/members/797372017.jpg?1514414793", :width => "60"}/
                 %input.input-default{:name => "nickname", :placeholder => "例)AYA☆セール中", :type => "text", :value => "神戸神戸"}/
 
-            .setting-profile-content
+            .set-prof-cont
               %textarea.textarea-default{:name => "introduction", :placeholder => "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
 
                 %input{:name => "after_save_callback", :type => "hidden", :value => ""}/
