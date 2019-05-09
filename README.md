@@ -33,7 +33,7 @@
 |family_name_kana|string|null: false|
 |first_name|string|null: false|
 |first_name_kana|string|null: false|
-|user_id|integer|foreign_key: true|
+|user_id|references|null: false,foreign_key: true|
 ### Association
 - belongs_to :user
 
@@ -51,7 +51,7 @@
 |child|integer|null: false|
 |grand|integer|null: false|
 |size|integer|null: false|
-|product_id|integer|
+|product_id|integer|null: false|
 ### Association
 - has_many :products
 
@@ -60,9 +60,9 @@
 |------|----|-------|
 |price|integer|null: false|
 |region|string|null: false|
-|date|integer|null: false|
+|date|string|null: false|
 |method|string|null: false|
-|product_id|integer|foreign_key: true|
+|product_id|references|null: false,foreign_key: true|
 ### Association
 - belongs_to :product
 
@@ -74,6 +74,6 @@
 |city|string|null: false|
 |block|string|null: false|
 |building|string|
-|user_id|reference|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
