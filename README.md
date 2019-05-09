@@ -17,7 +17,7 @@
 |nickname|string|null: false|
 |email|string|null: false, unique: true|
 |password|string|null: false|
-|phone|integer|
+|phone_number|integer|
 |birth_year|integer|null: false|
 |birth_month|integer|null: false|
 |birth_day|integer|null: false|
@@ -58,10 +58,10 @@
 ## deliveryテーブル
 |Column|Type|Options|
 |------|----|-------|
-|delivery-price|integer|null: false|
-|delivery-region|string|null: false|
-|delivery-date|integer|null: false|
-|delivery-method|string|null: false|
+|price|integer|null: false|
+|region|string|null: false|
+|date|integer|null: false|
+|method|string|null: false|
 |product_id|integer|
 ### Association
 - belongs_to :product
