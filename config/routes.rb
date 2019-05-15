@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
   # root 'users#index'
-  root 'users#personal_info'
-  get 'product/product_info'
+  root 'product#index'
+  get 'product/index'
   # root 'users#plofile'
   # resources :users, only: [:index, :plofile, :personal_info, :new, :show, :edit]
 
