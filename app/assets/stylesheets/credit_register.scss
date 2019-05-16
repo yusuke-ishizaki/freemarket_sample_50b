@@ -1,0 +1,62 @@
+.l-chapter-conteiner{
+    background: #fff;
+    float: right;
+    width: 700px;
+    display: block;
+}
+.l-chapter-head {
+    font-size: 24px;
+    padding: 8px 24px;
+    text-align: center;
+    line-height: 1.4;
+    width: 700px;
+    font-weight: bold;
+}
+.l-chapter-sub-head{
+    font-size: 16px;
+}
+.l-single-inner{
+    padding: 64px;
+}
+.l-single-content{
+    max-width: 320px;
+    margin: 0 auto;
+}
+.settings-payment-list{
+    list-style: none;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.settings-add-card{
+    padding: 24px 0;
+    border-bottom: 1px solid #eee;
+}
+.settings-add-card a {
+    margin-bottom: 8px !important;
+    touch-action: manipulation;
+}
+.btn-red {
+    background: #ea352d;
+    border: 1px solid #ea352d;
+    color: #fff;
+}
+.btn-default {
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    transition: all ease-out .3s;
+    cursor: pointer;
+    text-align: center;
+}
+.purches{
+    color: #0099e8;
+    text-decoration: none;
+    display: block;
+    margin: 40px 0 0;
+    text-align: right;
+}
