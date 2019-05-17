@@ -9,7 +9,7 @@ body{
         background: #ffffff;
         margin: 40px auto 0;
         padding: 24px 40px 40px;
-        width: calc(700px - 80px);
+        width: 620px;
     }
     &__top-content{
         font-size: 24px;
@@ -21,7 +21,6 @@ body{
         margin: 16px 0 0;
         border-style: solid;
         border-width: 0;
-        font-size: inherit;
         line-height: inherit;
         box-sizing: inherit;
         display: block;
@@ -151,7 +150,7 @@ td{
 .fifth-content{
     margin: 16px 0 0;
     display: block;
-    .fifth-content_right{
+    &_right{
         margin: 8px 0 0;
         float: right;
         color: #0099e8;
@@ -193,7 +192,7 @@ td{
 }
 .six-content{
     margin: 8px auto;
-    width: calc(700px - 4px);
+    width: 696px;
 
     &_message-content{
         padding: 24px;
@@ -208,7 +207,7 @@ td{
 }
 .textarea-default{
     display: block;
-    width: calc(700px - 70px);
+    width: 630px;
     min-height: 104px;
     border: 1px solid #ccc;
     background: #fff;
