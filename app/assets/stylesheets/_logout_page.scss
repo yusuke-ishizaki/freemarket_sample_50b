@@ -1,0 +1,63 @@
+/* sidebarと繋げること
+ログアウト画面*/
+.full_screen_container {
+  background-color: #f5f5f5;
+  width: 100vw;
+  height: 100%;
+  background-size: cover;
+}
+@mixin clearfix {
+  &::after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.main__container {
+  margin: 40px auto 0;
+  width: 1020px;
+  @include clearfix();
+}
+
+.logout__content {
+  float: right;
+  width: 700px;
+}
+
+.chapter__container {
+  &:first-child {
+    margin: 0;
+  }
+  margin: 40px 0 0;
+  background: #fff;
+}
+
+.single-inner {
+  border-top: 1px solid #f5f5f5;
+  padding: 64px;
+}
+
+.single__content {
+  max-width: 320px;
+  margin: 0 auto;
+  height: 50px;
+}
+
+
+/* ログアウトボタン */
+.logout__btn-red {
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+  a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+  }
+}
