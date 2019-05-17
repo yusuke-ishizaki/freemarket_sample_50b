@@ -1,0 +1,22 @@
+/ right content to plofile
+.right-content
+    %section.right-container-box
+        %h2.right-container-header プロフィール
+
+        %form{:action => "", :method => "POST"}
+            %input{:name => "__csrf_value", :type => "hidden", :value => ""}/
+
+            .set-prof-icon
+                %figure
+                    = image_tag("mypage/profile.jpg", size: "60x60", alt: "プロフィール写真")
+
+                %input.input-default{:name => "nickname", :placeholder => "例)AYA☆セール中", :type => "text", :value => "神戸神戸"}/
+
+            .set-prof-cont
+                %textarea.textarea-default{:name => "introduction", :placeholder => "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
+
+                %input{:name => "after_save_callback", :type => "hidden", :value => ""}/
+                %button.btn-default.btn-red{:type => "submit"} 変更する
+
+/ END right content to plofile
+
