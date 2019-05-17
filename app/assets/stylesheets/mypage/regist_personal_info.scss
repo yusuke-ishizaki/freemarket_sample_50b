@@ -66,6 +66,12 @@
       &__prefecture {
         margin: 8px 0 0;
         position: relative;
+        form {
+          select {
+            -moz-appearance: none;
+            -webkit-appearance: none;
+          }
+        }
       }
     }
   }
@@ -113,11 +119,6 @@ p.innertex {
   line-height: 1.5;
   cursor: pointer;
   background: #fff;
-}
-
-select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
 }
 
 i[class^='icon-'], i[class*='icon-'] {
