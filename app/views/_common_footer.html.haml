@@ -1,0 +1,151 @@
+%aside.app-banner
+  .app-banner__box
+    .app-banner__box__inner
+      %h2 スマホでかんたんフリマアプリ
+      %p 今すぐ無料ダウンロード！
+      .app-mel-icon
+        %figure.top-fig
+          =image_tag "mercari_icon.png", width: '68'
+        %ul
+          %li
+            =link_to '#' do
+              =image_tag "app-store.svg", size: '133x40'
+
+          %li
+            =link_to '#' do
+              =image_tag "app-store.svg", size: '133x40'
+
+    %figure
+      =image_tag "download_content_pc.png"
+
+// aside END
+
+%footer.main-footer
+  %nav.main-footer__nav.clearfix
+    .main-footer__nav__about
+      %h2.main-footer__nav__about__head メルカリについて
+      %ul
+        %li
+          =link_to '#' do
+            会社概要（運営会社
+
+        %li
+          =link_to '#' do
+            採用情報
+        %li
+          =link_to '#' do
+            プレスリリース
+        %li
+          =link_to '#' do
+            公式ブログ
+
+        %li
+          =link_to '#' do
+            メルカリロゴ利用ガイドライン
+        %li.footer-sns-link
+          =link_to '#' do
+            =fa_icon 'twitter',class:"fa-twitter"
+        %li.footer-sns-link
+          =link_to '#' do
+            =fa_icon 'facebook',class:"fa-facebook"
+
+    .main-footer__nav__about
+      %h2.main-footer__nav__about__head ヘルプ＆ガイド
+      %ul
+        %li
+          =link_to '#' do
+            メルカリガイド
+        %li
+          =link_to '#' do
+            らくらくメルカリ便
+        %li
+          =link_to '#' do
+            ゆうゆうメルカリ便
+        %li
+          =link_to '#' do
+            大型メルカリ便
+        %li
+          =link_to '#' do
+            車体取引ガイド
+        %li
+          =link_to '#' do
+            メルカリあんしん・あんぜん宣言！
+        %li
+          =link_to '#' do
+            偽ブランド品撲滅への取り組み
+
+        %li
+          =link_to '#' do
+            メルカリボックス
+
+
+    .main-footer__nav__about.full-width
+      %h2.main-footer-cell__ooter-head プライバシーと利用規約
+      .inner-main-footer-cell
+        %ul
+          %li
+            =link_to '#' do
+              プライバシーポリシー
+
+          %li
+            =link_to '#' do
+              メルカリ利用規約
+
+          %li
+            =link_to '#' do
+              あんしんスマホサポート制度に関する利用特約
+
+          %li
+            =link_to '#' do
+              コンプライアンスポリシー
+
+
+      .inner-footer-cell.cel-r-box
+        %ul
+          %li
+            =link_to '#' do
+              個人データの安全管理に係る基本方針
+
+          %li
+            =link_to '#' do
+              特定商取引に関する表記
+
+          %li
+            =link_to '#' do
+              資金決済法に基づく表示
+
+          %li
+            =link_to '#' do
+              法令順守と犯罪抑止のために
+
+          %li
+            =link_to '#' do
+              返品・返金ポリシー
+
+
+    .main-footer__nav__about.footer-word-lang
+      %h2.main-footer-cell__ooter-head 国
+      %ul
+        %li
+          =link_to "#", class: 'active' do
+            日本
+
+        %li
+          =link_to '#' do
+            United States
+
+
+  .footer-bottom
+    =link_to "#", class: 'footer-logo' do
+      =image_tag  "logo-white.svg", alt: "mercari", size: '124x33'
+
+
+      %span.footer-copyright
+        %small © 2019 Mercari
+
+
+=link_to "#", class: "footer-sell-btn" do
+
+  %div 出品
+  =fa_icon 'camera',class:"fa-camera"
+
