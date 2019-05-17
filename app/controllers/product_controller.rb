@@ -6,4 +6,7 @@ class ProductController < ApplicationController
   def product_info
   end
 
+  def show
+  end
+
 end
