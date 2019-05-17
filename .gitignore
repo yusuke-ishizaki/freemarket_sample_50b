@@ -28,9 +28,6 @@
 /public/assets
 .byebug_history
 
-<<<<<<< Updated upstream
-=======
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 config/secrets.yml
->>>>>>> Stashed changes
