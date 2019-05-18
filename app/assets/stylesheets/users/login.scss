@@ -1,12 +1,12 @@
 .login-main{
   display: block;
   &__button{
-  margin: 0 auto;
-  width: 456px;
-  background-color: #fff;
+    margin: 0 auto;
+    width: 456px;
+    background-color: #fff;
     &--new{
-    padding: 40px 64px;
-    text-align: center;
+      padding: 40px 64px;
+      text-align: center;
       p {
         font-size: 14px;
       }
@@ -20,12 +20,12 @@
       }
     }
     &--outside{
-    padding: 32px 64px;
-    border-top: 1px solid #C0C0C0;
+      padding: 32px 64px;
+      border-top: 1px solid #C0C0C0;
     }
     &--form{
-    padding: 32px 64px;
-    text-align: left;
+      padding: 32px 64px;
+      text-align: left;
     }
   }
 }
