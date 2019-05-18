@@ -1,0 +1,145 @@
+.confirm__main{
+    width: 700px;
+    margin: 0 auto;
+    background: #fff;
+}
+.confirm__head-content{
+    text-align: center;
+    border-bottom: 1px solid rgb(245, 245, 245);
+    font-weight: bold;
+    padding: 32px 16px;
+    font-size: 22px;
+}
+.confirm__buy-content{
+    padding: 24px 12.5% 0;
+    border-top: 1px solid #f5f5f5;
+}
+.confirm__body-content{
+    margin: 0 auto;
+    margin-top: 24px;
+    padding: 24px 87.5px 0;
+}
+.confirm__top-content{
+    &-img{
+        text-align: center;
+    }
+    &_title{
+        margin: 8px 0 0;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 600;
+    }
+}
+.confirm-img{
+    width: auto;
+    max-height: 148px;
+}
+.confirm__price{
+    font-size: 28px;
+    margin: 8px 0 0;
+    line-height: 1.5;
+    display: inline-block;
+    font-weight: 600;
+}
+.confirm__komi{
+    margin: 0 0 0 8px;
+    font-size: 14px;
+    font-weight: 400;
+    display: inline-block;
+}
+.confirm__second-content{
+    text-align: center;
+
+    &_point{
+        background: #ccc;
+        margin: 16px auto;
+        padding-inline-start: 40px;
+    }
+        &-li{
+            display: list-item;
+            text-align: -webkit-match-parent;
+        }
+            .confirm__point {
+                border: 1px solid #ccc;
+                padding: 16px;
+            }
+    &_purchese{
+        display: table;
+        border-collapse: collapse;
+        margin: 0 auto;
+    }
+        &-left{
+            font-size: 28px;    
+            display: table-row;
+            font-weight: 600;
+        }
+        .purches-price-title{
+            display: table-cell;
+            padding: 16px 0;
+            text-align: left;
+        }
+        &-right{
+            display: table-cell;
+            padding: 16px 0;
+            text-align: right;
+        }
+        .confirm-price{
+            text-align: right;
+        }
+    &_btn-purches{
+        margin: 16px 0 0;
+        border: 1px solid #888;
+        background: #888;
+        color: #fff;
+        display: block;
+        width: 100%;
+        line-height: 48px;
+        font-size: 14px;
+        text-align: center;
+    }
+}
+.confirm__third-content{
+    margin: 8px;
+    padding: 24px;
+    border-bottom: 1px solid rgb(245, 245, 245);
+    &__adress{
+        max-width: 320px;
+        margin: 0 auto;
+    }
+}
+.adress-head{
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+}
+.adress-detail{
+    text-align: left;
+    font-size: 14px;
+    margin-top: 8px;
+}
+.confirm__bottom-content{
+    margin: 8px;
+    padding: 24px;
+
+    &_purches{
+        max-width: 320px;
+        margin: 0 auto;
+    }
+}
+.purches-method{
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+}
+.purches-detail{
+    text-align: left;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.change{
+    font-size: 14px;
+    display: block;
+    text-align: right;
+    color: #0499e8;
+}
