@@ -1,7 +1,7 @@
 class CreateDeliveries < ActiveRecord::Migration[5.2]
   def change
     create_table :deliveries do |t|
-      t.integer :price
+      t.string :price
       t.string :region
       t.string :date
       t.string :method
