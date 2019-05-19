@@ -39,6 +39,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-rails'
+  gem 'faker'
+  gem 'rspec-rails', '~> 3.5'
   gem 'capistrano'
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
@@ -71,6 +74,8 @@ gem 'erb2haml'
 gem "font-awesome-rails"
 gem 'devise'
 gem 'mini_magick'
+gem 'bxslider-rails'
+gem 'jquery-rails'
 
 group :production do
   gem 'unicorn', '5.4.1'
