@@ -1,0 +1,55 @@
+.login-main{
+  display: block;
+  &__button{
+    margin: 0 auto;
+    width: 456px;
+    background-color: #fff;
+    &--new{
+      padding: 40px 64px;
+      text-align: center;
+      p {
+        font-size: 14px;
+      }
+      a {
+        display: block;
+        background-color: #0099e8;
+        line-height: 40px;
+        color: #fff;
+        margin: 8px 0 0;
+        border: 1px solid #0099e8;
+      }
+    }
+    &--outside{
+      padding: 32px 64px;
+      border-top: 1px solid #C0C0C0;
+    }
+    &--form{
+      padding: 32px 64px;
+      text-align: left;
+    }
+  }
+}
+.password-form{
+  margin: 16px 0 0;
+}
+.forget{
+  margin: 40px 0 0;
+  display: inline-block;
+}
+
+input{
+  width: 320px;
+  height: 50px;
+  margin-bottom: 16px;
+}
+
+.form-btn{
+  width: 324px;
+  height: 54px;
+  background-color: #ea352d;
+  color: #fff;
+}
+
+.form-link--text{
+  margin-top: 40px;
+}
