@@ -1,5 +1,5 @@
 // トップページのスライド部分を動かす記述です。
-$(document).ready(function(){
+$(function(){
   $('.slider').slick({
     infinite: true,
     dots: true,
