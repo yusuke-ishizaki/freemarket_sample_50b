@@ -32,7 +32,7 @@
       .items__content.clearfix
         - @products.each do |product|
           %section.items_box
-            = link_to '' do
+            = link_to product_path(product.id), method: :get do
               %figure.items_box-photo
                 =image_tag "おこ猫.jpg", alt: "商品画像", class: 'img picture'
               .items_box-details
