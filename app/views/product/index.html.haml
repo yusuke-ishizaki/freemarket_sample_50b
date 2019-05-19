@@ -30,19 +30,19 @@
         = link_to '' do
           レディース 新着アイテム
       .items__content.clearfix
-        - @news.each do |new|
+        - @products.each do |product|
           %section.items_box
             = link_to '' do
               %figure.items_box-photo
                 =image_tag "おこ猫.jpg", alt: "商品画像", class: 'img picture'
               .items_box-details
                 %h3.items_box-title.font-2
-                  = new.name
+                  = product.name
                 .items_box-num
                   .items_box-price.font-5
                     ¥
                   .items_box-price.font-5
-                    = new.price
+                    = product.price
                 %p.items_box-tax (税込)
       .view-all-products
         = link_to '' do
@@ -53,19 +53,19 @@
         = link_to '' do
           メンズ 新着アイテム
       .items__content.clearfix
-        - @news.each do |new|
+        - @products.each do |product|
           %section.items_box
             = link_to '' do
               %figure.items_box-photo
-                =image_tag "neko.jpg", alt: "商品画像", class: 'img picture'
+                =image_tag "おこ猫.jpg", alt: "商品画像", class: 'img picture'
               .items_box-details
                 %h3.items_box-title.font-2
-                  = new.name
+                  = product.name
                 .items_box-num
                   .items_box-price.font-5
                     ¥
                   .items_box-price.font-5
-                    = new.price
+                    = product.price
                 %p.items_box-tax (税込)
       .view-all-products
         = link_to '' do
