@@ -12,6 +12,10 @@ class ProductController < ApplicationController
   end
 
   def show
+    @product = Product.find(params[:id])
+    @products = Product.order(created_at: :desc).limit(6)
+    @other_user_products = Product.where(user_id: @product.user_id).order("id DESC").limit(6)
+    @other_bland_products = Product.where(balnd_id: @product.bland_id).order("id DESC").limit(6)
   end
 
   def edit
