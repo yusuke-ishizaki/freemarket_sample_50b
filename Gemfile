@@ -76,6 +76,7 @@ gem 'devise'
 gem 'mini_magick'
 gem 'bxslider-rails'
 gem 'jquery-rails'
+gem 'gretel'
 
 group :production do
   gem 'unicorn', '5.4.1'
