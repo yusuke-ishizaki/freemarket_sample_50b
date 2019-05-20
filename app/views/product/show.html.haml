@@ -1,20 +1,21 @@
 .detail__main-content
   .detail__center-content
     %h1.detail__top-content
-      黒スウェット
+      = @product.name
   
     .detail__second-content
       .detail__second-content_img
-        = image_tag 'neko.jpg',  class: 'detail__img-parent'
-        = image_tag 'neko.jpg',  class: 'detail__img-child'
-        = image_tag 'neko.jpg',  class: 'detail__img-child'
-        = image_tag 'neko.jpg',  class: 'detail__img-child'
+        = image_tag 'おこ猫.jpeg',  class: 'detail__img-parent'
+        = image_tag 'おこ猫.jpeg',  class: 'detail__img-child'
+        = image_tag 'おこ猫.jpeg',  class: 'detail__img-child'
+        = image_tag 'おこ猫.jpeg',  class: 'detail__img-child'
       %table.detail__second-content_detail
         %tbody.detail__second-content_detail-table
           %tr
             %th 出品者
             %td
-              %a.link ひらすけ
+              .link 
+                = link_to @product.user.nickname, ""
               .td__img
                 = image_tag 'スクリーンショット 2019-05-16 21.25.31.png',  class: 'saler-red'
                 = image_tag 'スクリーンショット 2019-05-16 21.25.50.png',  class: 'saler-yellow'
@@ -32,51 +33,43 @@
             %th ブランド
             %td 
               .link
-                %a サタデーズサーフニューヨークシティー
+                = link_to @product.bland.name
           %tr
             %th 商品のサイズ
-            %td M
+            %td 
+              = @product.size
           %tr
             %th 商品の状態
-            %td 目立った傷や汚れなし
+            %td 
+              = @product.status
           %tr
             %th 配送料の負担
-            %td 送料込み(出品者負担)
+            %td 
+              = @product.delivery.price
           %tr
             %th 配送の方法
-            %td らくらくメルカリ便
+            %td 
+              = @product.delivery.method
           %tr
             %th 配送元地域
-            %td 岐阜県
+            %td 
+              = @product.delivery.region
           %tr
             %th 発送日の目安
-            %td 1~2日で発送
+            %td 
+              = @product.delivery.date
     
   
     .third-content
-      %span.third-content_price ￥3,000
+      %span.third-content_price 
+        = @product.price
       %span.third-content_tax (税込)
       %span.third-content_shipping 送料込み
     %a.purches_btn 購入画面に進む
   
     .forth-content
       %p.forth-content_description
-        ご覧頂きありがとうございます。
-        %br
-        プロフィールをお読みの上ご参加ください。
-        %br
-        Saturdays surf nyc スウェット サイズ：M
-        %br
-        ・ZOZOTOWNにて購入
-        %br
-        ・約1シーズン着用→伸び、汚れなどはありません
-        %br
-        ・洗濯後、クローゼットにて保管
-        %br
-        あくまで中古品ですので、神経質な方はご遠慮ください。
-        %br
-        よろしくお願いします。
-  
+        = @product.text
     .fifth-content
       .fifth-content_right 
         %i.fas.fa-lock 
@@ -122,74 +115,44 @@
   .nine-content
     .nine-content_section
       %h.nine-content_section-title
-        ひらすけさんのその他の出品
-      .nine-content_section-box
-        %section.items_box
-          = link_to '' do
-            %figure.items_box-photo
-              =image_tag "neko.jpg", alt: "商品画像", class: 'img picture'
-            .items_box-details
-              %h3.items_box-title.font-2
-                黒スウェット
-              .items_box-num
-                .items_box-price.font-5 ￥3,000
-              %p.items_box-tax (税込)
-        %section.items_box
-          = link_to '' do
-            %figure.items_box-photo
-              =image_tag "neko.jpg", alt: "商品画像", class: 'img picture'
-            .items_box-details
-              %h3.items_box-title.font-2
-                黒スウェット
-              .items_box-num
-                .items_box-price.font-5 ￥3,000
-              %p.items_box-tax (税込)
-        %section.items_box
-          = link_to '' do
-            %figure.items_box-photo
-              =image_tag "neko.jpg", alt: "商品画像", class: 'img picture'
-            .items_box-details
-              %h3.items_box-title.font-2
-                黒スウェット
-              .items_box-num
-                .items_box-price.font-5 ￥3,000
-              %p.items_box-tax (税込)
-        
+      = link_to "" do
+        = "#{@product.user.nickname}さんのその他の商品"
+        .nine-content_section-box
+        - @other_user_products.each do |product|
+          %section.items_box
+            = link_to product_path(product.id), method: :get do
+              %figure.items_box-photo
+                =image_tag "おこ猫.jpg", alt: "商品画像", class: 'img picture'
+              .items_box-details
+                %h3.items_box-title.font-2
+                  = product.name
+                .items_box-num
+                  .items_box-price.font-5
+                    ¥
+                  .items_box-price.font-5
+                    = product.price
+                %p.items_box-tax (税込)
   
   .ten-content
     .ten-content_section
       %h.ten-content_section-title
-        サタデーズサーフニューヨークシティーのスウェット その他の商品
+      = link_to "" do
+        = "#{@product.bland.name}さんのその他の商品"
       .ten-content_section-box
-        %section.items_box
-          = link_to '' do
-            %figure.items_box-photo
-              =image_tag "neko.jpg", alt: "商品画像", class: 'img picture'
-            .items_box-details
-              %h3.items_box-title.font-2
-                黒スウェット
-              .items_box-num
-                .items_box-price.font-5 ￥3,000
-              %p.items_box-tax (税込)
-        %section.items_box
-          = link_to '' do
-            %figure.items_box-photo
-              =image_tag "neko.jpg", alt: "商品画像", class: 'img picture'
-            .items_box-details
-              %h3.items_box-title.font-2
-                黒スウェット
-              .items_box-num
-                .items_box-price.font-5 ￥3,000
-              %p.items_box-tax (税込)
-        %section.items_box
-          = link_to '' do
-            %figure.items_box-photo
-              =image_tag "neko.jpg", alt: "商品画像", class: 'img picture'
-            .items_box-details
-              %h3.items_box-title.font-2
-                黒スウェット
-              .items_box-num
-                .items_box-price.font-5 ￥3,000
-              %p.items_box-tax (税込)
+        - @products.each do |product|
+          %section.items_box
+            = link_to product_path(product.id), method: :get do
+              %figure.items_box-photo
+                =image_tag "おこ猫.jpg", alt: "商品画像", class: 'img picture'
+              .items_box-details
+                %h3.items_box-title.font-2
+                  = product.name
+                .items_box-num
+                  .items_box-price.font-5
+                    ¥
+                  .items_box-price.font-5
+                    = product.price
+                %p.items_box-tax (税込)
+
         
   
