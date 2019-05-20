@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../mel_ara/.idea/freemarket_sample_50b.iml" filepath="$PROJECT_DIR$/../mel_ara/.idea/freemarket_sample_50b.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/freemarket_sample_50b.iml" filepath="$PROJECT_DIR$/.idea/freemarket_sample_50b.iml" />
     </modules>
   </component>
 </project>
