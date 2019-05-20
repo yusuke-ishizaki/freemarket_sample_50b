@@ -1,15 +1,16 @@
-/ top main
--# = render 'top_header'
+-# top main
 %main.white
   %section.top-page-image-carousel.top-carousel.top-page-image-loaded.top-page-image-drag
     .top-page-image-stage-outer
       %ul.top-page-image-stage.slider
         %li.top-page-image-item
           =image_tag "christmas-3025101_1920.jpg", alt: "トップ画像", class: 'img top-page-image-item-img'
-
+        %li.top-page-image-item
           =image_tag "IMG_8652.jpg", alt: "トップ画像", class: 'img top-page-image-item-img'
+        %li.top-page-image-item
+          =image_tag "a.neko.jpg", alt: "トップ画像", class: 'img top-page-image-item-img'
 
-    -# 今は使用しない
+    -# 今は使用しないこと
     -# .top-page-image-nav
     -#   .top-page-image-prev
     -#   .top-page-image-next
@@ -20,6 +21,8 @@
     -#     %span
     -#   .top-page-image-dots.active
     -#     %span
+    -# ここまで
+
   %section.pickup__container
     %h2.pickup-title ピックアップカテゴリー
     %section.items__container.clearfix
@@ -27,97 +30,47 @@
         = link_to '' do
           レディース 新着アイテム
       .items__content.clearfix
-        %section.items_box
-          = link_to '' do
-            %figure.items_box-photo
-              =image_tag "neko.jpg", alt: "商品画像", class: 'img picture'
-            .items_box-details
-              %h3.items_box-title.font-2
-                商品名タイトル
-              .items_box-num
-                .items_box-price.font-5 ¥ 500
-              %p.items_box-tax (税込)
-        %section.items_box
-          = link_to '' do
-            %figure.items_box-photo
-              =image_tag "おこ猫.jpg", alt: "商品画像", class: 'img picture'
-            .items_box-details
-              %h3.items_box-title.font-2
-                商品名タイトル
-              .items_box-num
-                .items_box-price.font-5 ¥ 500
-              %p.items_box-tax (税込)
-        %section.items_box
-          = link_to '' do
-            %figure.items_box-photo
-              =image_tag "a.neko.jpg", alt: "商品画像", class: 'img picture'
-            .items_box-details
-              %h3.items_box-title.font-2
-                商品名タイトル
-              .items_box-num
-                .items_box-price.font-5 ¥ 500
-              %p.items_box-tax (税込)
-        %section.items_box
-          = link_to '' do
-            %figure.items_box-photo
-              =image_tag "a.neko.jpg", alt: "商品画像", class: 'img picture'
-            .items_box-details
-              %h3.items_box-title.font-2
-                商品名タイトル
-              .items_box-num
-                .items_box-price.font-5 ¥ 500
-              %p.items_box-tax (税込)
+        - @products.each do |product|
+          %section.items_box
+            = link_to product_path(product.id), method: :get do
+              %figure.items_box-photo
+                =image_tag "おこ猫.jpg", alt: "商品画像", class: 'img picture'
+              .items_box-details
+                %h3.items_box-title.font-2
+                  = product.name
+                .items_box-num
+                  .items_box-price.font-5
+                    ¥
+                  .items_box-price.font-5
+                    = product.price
+                %p.items_box-tax (税込)
       .view-all-products
         = link_to '' do
           全ての商品を見る
+
     %section.items__container.clearfix
       %h3.text-center
         = link_to '' do
           メンズ 新着アイテム
       .items__content.clearfix
-        %section.items_box
-          = link_to '' do
-            %figure.items_box-photo
-              =image_tag "a.neko.jpg", alt: "商品画像", class: 'img picture'
-            .items_box-details
-              %h3.items_box-title.font-2
-                商品名タイトル
-              .items_box-num
-                .items_box-price.font-5 ¥ 500
-              %p.items_box-tax (税込)
-        %section.items_box
-          = link_to '' do
-            %figure.items_box-photo
-              =image_tag "a.neko.jpg", alt: "商品画像", class: 'img picture'
-            .items_box-details
-              %h3.items_box-title.font-2
-                商品名タイトル
-              .items_box-num
-                .items_box-price.font-5 ¥ 500
-              %p.items_box-tax (税込)
-        %section.items_box
-          = link_to '' do
-            %figure.items_box-photo
-              =image_tag "a.neko.jpg", alt: "商品画像", class: 'img picture'
-            .items_box-details
-              %h3.items_box-title.font-2
-                商品名タイトル
-              .items_box-num
-                .items_box-price.font-5 ¥ 500
-              %p.items_box-tax (税込)
-        %section.items_box
-          = link_to '' do
-            %figure.items_box-photo
-              =image_tag "a.neko.jpg", alt: "商品画像", class: 'img picture'
-            .items_box-details
-              %h3.items_box-title.font-2
-                商品名タイトル
-              .items_box-num
-                .items_box-price.font-5 ¥ 500
-              %p.items_box-tax (税込)
+        - @products.each do |product|
+          %section.items_box
+            = link_to '' do
+              %figure.items_box-photo
+                =image_tag "おこ猫.jpg", alt: "商品画像", class: 'img picture'
+              .items_box-details
+                %h3.items_box-title.font-2
+                  = product.name
+                .items_box-num
+                  .items_box-price.font-5
+                    ¥
+                  .items_box-price.font-5
+                    = product.price
+                %p.items_box-tax (税込)
       .view-all-products
         = link_to '' do
           全ての商品を見る
+
     / 以下省略 今は使用しない
     -# %section.items__container.clearfix
     -# %section.items__container.clearfix

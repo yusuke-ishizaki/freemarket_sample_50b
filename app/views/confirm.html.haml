@@ -1,0 +1,39 @@
+%section.confirm__main
+  %h2.confirm__head-content 購入を確定しますか？
+  %section.confirm__buy-content
+    .confirm__body-content
+      %h3.confirm__top-content-img
+        =image_tag'おこ猫.jpeg', class: 'confirm-img' 
+        %p.confirm__top-content_title おこ猫
+  
+      .confirm__second-content
+        %p.confirm__second-content_price 
+          .confirm__price ¥50000
+          %span.confirm__komi 送料込み
+        %ul.confirm__second-content_point
+          %li.confirm__second-content_point-li
+            .confirm__point ポイントはありません
+        %ul.confirm__second-content_purchese
+          %li.confirm__second-content_purchese-left 
+            .confirm-price-title 支払い金額
+            %span.confirm__second-content_purchese-right
+              .confirm-price ¥50000
+        .confirm__second-content_btn-purches 購入する
+            
+      .confirm__third-content
+        .confirm__third-content__adress
+          %h.adress-head 配送先
+          .adress-detail
+            郵便番号
+            %br>/
+            住所
+            %br>/
+            名前
+          %a.change 変更する>
+          
+      .confirm__bottom-content
+        .confirm__bottom-content_purches
+          %h.purches-method 支払い方法
+          .purches-detail /
+          %a.change 変更する>
+  

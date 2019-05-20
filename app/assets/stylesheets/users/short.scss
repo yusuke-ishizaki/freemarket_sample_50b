@@ -1,0 +1,46 @@
+.short-header {
+  height: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .shortheader_icon {
+    box-sizing: border-box;
+    height: 45px;
+    padding: 0;
+  }
+}
+
+.short-footer {
+  height: calc(100vh - 525px);
+  width: 450px;
+  margin: 0 auto;
+  &-link {
+    width: 400px;
+    padding-top: 40px;
+    margin: 0 auto;
+    &__form {
+      text-decoration: none;
+      &--text {
+        font-size: 11px;
+        margin: 0 8px 0 8px;
+        color: #000;
+      }
+    }
+  }
+  &__logo {
+    width: 80px;
+    padding-top: 25px;
+    margin: 0 auto;
+    &--link {
+      .icon_image {
+        width: 85px;
+        height: 85px;
+      }
+    }
+  }
+  &--text {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 8px;
+  }
+}
