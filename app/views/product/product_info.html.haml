@@ -11,10 +11,10 @@
           %h3.inputs__image__label 出品画像
           .inputs__image__caution 必須
         .upload 最大10枚までアップロードできます
-        .sell-upload-items-container.clearfix
+        .sell-upload-items-container
         .sell-upload-items
           %ul
-        .inner-sell-image.clearfix
+        .inner-sell-image
           = f.file_field :images,multiple: true, id: "image_upload"
           .drag-and-drop
             .drag-and-drop__text
@@ -33,7 +33,7 @@
           = f.text_area :detail, rows: 6, placeholder:'商品の説明（必須1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。', class: 'inputs__text-area'
 
 
-      .inputsell-group.clearfix
+      .inputsell-group
         %h3.inputsell-group__title-head 商品の詳細
         %a.inputsell-group__form-question{href: "", target: "_blank"} ?
         .inputsell-group__form-box
@@ -53,7 +53,7 @@
                 = f.select :condition,[['新品、未使用'],['未使用に近い'],['目立った傷や汚れなし'],['やや傷や汚れあり'],['傷や汚れあり'],['全体的に状態が悪い']] , prompt: '--'
                 =fa_icon 'chevron-down',class:"fa-chevron-down"
 
-      .inputsell-group.clearfix
+      .inputsell-group
         %h3.inputsell-group__title-head 配送について
         =link_to "?","", class: 'inputsell-group__form-question'
         .inputsell-group__form-box
@@ -82,25 +82,25 @@
                 = f.select :shipping_date, [['1~2日で発送'],['2~3日で発送'],['4~7日で発送']], prompt: '--'
                 =fa_icon 'chevron-down',class:"fa-chevron-down"
 
-      .inputsell-group.clearfix
+      .inputsell-group
         %h3.inputsell-group__title-head 販売価格(300〜9,999,999)
         =link_to "?","", class: 'inputsell-group__form-question'
 
         .inputsell-group__form-box
           %ul.inputsell-group__form-box__sell-price
             %li.inputsell-group__form-box__sell-price__form-group
-              .clearfix
+              .inputsell-group__form-box__sell-price__form-group__wrap-box
                 %label.input-left.bold
                   価格
                   %span.form-require 必須
                 .input-right.sell-price-input
                   ¥
                   = f.text_field :price, placeholder:'例）300', class:'inputs-detail-price__form__input',autocomplete: "off", type: 'number',id: "selling-price"
-            %li.clearfix
+            %li
               .input-left
                 販売手数料 (10%)
               .input-right -
-            %li.clearfix.bold.font-sup
+            %li.bold.font-sup
               .input-left 販売利益
               .input-right -
 

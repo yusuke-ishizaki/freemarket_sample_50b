@@ -5,6 +5,16 @@
   font-size: inherit;
   line-height: inherit;
 }
+
+@mixin clear-f {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+    margin: 8px 0 0;
+  }
+}
+
 .bold {
   font-weight: 600;
 }
@@ -49,13 +59,18 @@ select {
   width: 100%;
 }
 
-.sell-price>li {
+.sell-price > li {
   padding: 24px 0;
   border-top: 1px solid #ccc;
 }
 
 .select-wrap {
   position: relative;
+
+  select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
 
   .fa-chevron-down {
     position: absolute;
@@ -113,6 +128,7 @@ section.singlecontainer {
     min-height: 217px;
 
     .inner-sell-image {
+      @include clear-f;
       width: calc(100% - 80px);
       margin-left: 0;
       float: right;
@@ -223,21 +239,28 @@ section.singlecontainer {
 }
 
 .inputsell-group {
+  @include clear-f;
   padding: 40px;
   border-top: 1px solid #eee;
+
   &__title-head {
-      float: left;
-      color: #888;
-      font-size: 14px;
+    float: left;
+    color: #888;
+    font-size: 14px;
   }
+
   &__form-box {
     float: right;
     width: 400px;
     margin: 0;
-    &__form-group, li.clearfix {
+
+    &__form-group, li {
+      @include clear-f;
       margin: 40px 0 0;
+
       label {
         font-weight: 600;
+
         .form-require {
           background: #ea352d;
           margin: 0 0 0 8px;
@@ -249,10 +272,13 @@ section.singlecontainer {
         }
       }
     }
+
     &__form-group:first-child {
       margin: 0;
+
       label {
         font-weight: 600;
+
         .form-require {
           background: #ea352d;
           margin: 0 0 0 8px;
@@ -264,23 +290,29 @@ section.singlecontainer {
         }
       }
     }
+
     &__sell-price:first-child {
       padding: 0 0 24px;
       border: 0;
       margin: 0;
+
       &__form-group {
-        .clearfix {
-          .input-left{
+        .wrap-box {
+          @include clear-f;
+          .input-left {
             width: 50%;
             line-height: 48px;
             float: left;
           }
+
           .input-right {
             width: 50%;
             float: right;
           }
+
           .sell-price-input {
             text-align: right;
+
             div {
               display: inline-block;
               width: 80%;
@@ -289,18 +321,23 @@ section.singlecontainer {
           }
         }
       }
-      li.clearfix {
-        .input-left{
+
+      li {
+        @include clear-f;
+        .input-left {
           width: 50%;
           line-height: 48px;
           float: left;
         }
+
         .input-right {
           width: 50%;
           float: right;
         }
+
         .sell-price-input {
           text-align: right;
+
           div {
             display: inline-block;
             width: 80%;
@@ -309,22 +346,28 @@ section.singlecontainer {
         }
       }
     }
+
     &__sell-price {
       padding: 0 0 24px;
       border: 0;
+
       &__form-group {
-        .clearfix {
-          .input-left{
+        .wrap-box {
+          @include clear-f;
+          .input-left {
             width: 50%;
             line-height: 48px;
             float: left;
           }
+
           .input-right {
             width: 50%;
             float: right;
           }
+
           .sell-price-input {
             text-align: right;
+
             div {
               display: inline-block;
               width: 80%;
@@ -332,17 +375,21 @@ section.singlecontainer {
             }
           }
         }
-        .input-left{
+
+        .input-left {
           width: 50%;
           line-height: 48px;
           float: left;
         }
+
         .input-right {
           width: 50%;
           float: right;
         }
+
         .sell-price-input {
           text-align: right;
+
           div {
             display: inline-block;
             width: 80%;
@@ -358,7 +405,8 @@ form {
   inoutsewll-group {
     &__form-box {
       &__sell-price {
-        li.clearfix{
+        li {
+          @include clear-f;
           padding: 24px 0;
           border-top: 1px solid #ccc;
         }
@@ -366,32 +414,46 @@ form {
     }
   }
 }
-#sell > form > div > div > ul > li:first-child {border: none;padding-top: 0;}
-#sell > form > div > div > ul > li:last-child {padding-bottom: 0;}
-#sell > form > div > div > ul > li {
+
+.inputsell-group__form-box__sell-price li:first-child {
+  border: none;
+  padding-top: 0;
+}
+
+.inputsell-group__form-box__sell-price li:last-child {
+  padding-bottom: 0;
+}
+
+.inputsell-group__form-box__sell-price li {
   padding: 24px 0;
   border-top: 1px solid #ccc;
   margin-top: 0;
+
   .input-right {
     text-align: right;
   }
 }
-#sell > form > div > div > ul > li > div.input-left {
+
+.inputsell-group__form-box__sell-price:first-child li .input-left {
   width: 50%;
   line-height: 1rem;
   float: left;
 }
+
 .font-sup {
   font-size: 1.0rem;
 }
-#sell > form > div.sell-content.sell-btn-box {
+
+div.sell-content.sell-btn-box {
   padding: 40px;
   border-top: 1px solid #eee;
 }
-#sell > form > div.sell-content.sell-btn-box > div > p {
+
+div.sell-content.sell-btn-box div p {
   font-size: 14px;
   line-height: 1.5;
 }
+
 .create-btn {
   margin: 40px 0 0;
   background: #ea352d;
@@ -405,7 +467,12 @@ form {
   cursor: pointer;
   text-align: center;
 }
-#sell > form > div.sell-content.sell-btn-box > div.flex-center > input[type=submit]{
+
+.sell-upload-items-container {
+  @include clear-f;
+}
+
+div.sell-content.sell-btn-box div.flex-center input[type=submit] {
   width: 45%;
   margin: 24px auto 0;
   background: #aaa;
@@ -418,7 +485,6 @@ form {
   cursor: pointer;
   text-align: center;
 }
-
 
 
 .inputs-detail-price__form__input {
@@ -457,3 +523,4 @@ i[class^='icon-'], i[class*='icon-'] {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
