@@ -272,6 +272,12 @@ td{
       margin-right:10px;
       top:29px;
     }
+    .fa-twitter{
+        color:#00aced;
+        font-size: 29px;
+        margin-right:10px;
+        top:29px;
+      }
     .fa-pinterest-square{
       color:#EA352D;
       font-size: 320%;
@@ -280,6 +286,13 @@ td{
     }
   }
 }
+
+.fa-facebook-square, .fa-twitter{
+    &::before {
+        font-size: 28px;
+    }
+}
+
 .nine-content{
     width: 700px;
     margin: 48px auto 0;
