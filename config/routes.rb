@@ -2,8 +2,10 @@ Rails.application.routes.draw do
 
   devise_for :users
   root 'product#index'
-  resources :product, only: [ :index, :show]  
+  get   '/users_product/:id', to: 'product#users_product'
+  resources :product
   resources :card, only: [:index, :new]
+
 
 
 end

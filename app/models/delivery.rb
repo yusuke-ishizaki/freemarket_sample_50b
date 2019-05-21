@@ -1,3 +1,3 @@
 class Delivery < ApplicationRecord
-  belongs_to :product_id
+  belongs_to :product
 end
