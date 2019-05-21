@@ -43,6 +43,7 @@ header {
     width: 100%;
     flex: 1;
     & .fa-search {
+      z-index: 0;
       position: absolute;
       top: 0;
       right: 0;
@@ -86,6 +87,7 @@ header {
         &:hover{
           color: #0099e8;
         }
+      }
     }
     li {
       float: left;
@@ -114,6 +116,7 @@ header {
     }
     a{
       text-decoration: none;
+      color: #333;
     }
     :hover{
       color: #0099e8;
@@ -124,9 +127,9 @@ header {
     position: relative;
     display: block;
     line-height: 32px;
-    color: #333;
   }
 }
+
 
 .search-btn {
   z-index: 100;
