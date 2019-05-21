@@ -1,8 +1,10 @@
+= render "common/sidebar"
+
 .main__card-box
   .l-content
     %section.l-chapter-container
       %h2.l-chapter-head クレジットカード情報入力
-      = form_tag( method: :post, id: 'charge-form',  name: "inputForm", class: "l-single-inner") do      
+      = form_tag( method: :post, id: 'charge-form',  name: "inputForm", class: "l-single-inner") do
         .l-single-content
           .form-group
             %label.payment_card_no カード番号
