@@ -237,10 +237,3 @@ button, [type="button"], [type="date"], [type="datetime"], [type="datetime-local
 }
 
 
-@mixin clearfix {
-    &::after{
-      content: '';
-      display: block;
-      clear: both;
-    }
-  }
