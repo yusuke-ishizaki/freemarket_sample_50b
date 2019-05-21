@@ -1,0 +1,35 @@
+.bread-crumbs{
+    position: relative;
+    border-top: 1px solid #eee;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+    background: #fff;
+    .bread-crumb{
+      overflow: visible;
+      width: 1020px;
+      margin: 0 auto;
+      padding: 17px 0 16px;
+      white-space: normal;
+      &__navs{
+        text-overflow: ellipsis;
+       white-space: nowrap;
+       display: inline-block;
+       font-size: 14px;
+       line-height: 1.2;
+       a{
+        color: #333;
+        text-decoration: none;
+       }
+       span{
+        font-weight: 600;
+       }
+       .fa-angle-right{
+        margin: 0 8px;
+        font-size: 9px;
+        color: #888;
+        font-weight: 400;
+        font-family: FontAwesome;
+        font-style:normal;
+       }
+      }
+    }
+  }
