@@ -1,0 +1,91 @@
+.full_screen_container
+  %main.main__container.clearfix
+    -# ここからマイページ
+    .my__page__content
+      %section.my__page__user-icon
+        = link_to '#' do
+          %figure
+            = image_tag "b.neko.jpg", size: "60x60", alt: "マイページの写真"
+          %h2.bold name
+          .my__page__number
+            %div
+              %span 評価
+              %span.bold 10
+            %div
+              %span 出品数
+              %span.bold 20
+        .my__page__user-icon-rgba
+
+
+      %section.my__page__tab__container__notice-todo
+        %ul.my__page__tab-top
+          %li.active
+            %h3
+              = link_to '#' do
+                お知らせ
+          %li
+            %h3
+              = link_to '#' do
+                やることリスト
+        .my__page__tab-content
+          %ul#my__page__tab-notice.my__page__item__lists.my__page__item__lists__tab
+            %li
+              = link_to '#', class: "my__page__item__links" do
+                %figure
+                  = image_tag "b.neko.jpg", size: "48x48", alt: "gazou"
+                .my__page__item__frame
+                  .my__page__item__message キャンペーン開催中!
+                  %i.far.fa-clock
+                  %span 1日前
+                %i.fas.fa-chevron-right
+            %li.my__page__to-see-list
+              = link_to '#' do
+                一覧を見る
+          %ul#my__page__tab-todo.my__page__item__lists.my__page__item__lists__tab.active
+            %li.my__page__item__not-find.bold 現在、やることリストはありません
+
+
+      %aside.modal__window{"data-close": "modal", "data-modal": "banner"}
+        .modal__window__inner.modal__window__banner
+          .modal__window__banner-image
+            = image_tag "b.neko.jpg", size: "48x48", alt: "広告画像"
+            = image_tag "b.neko.jpg", size: "48x48", alt: "広告画像"
+          .modal__window__banner-body
+            %h2 今すぐ無料ダウンロード！
+            %p.bold 全ての機能を使えるスマホアプリはこちら
+            .modal__window__banner-app.clearfix
+            .modal__window__banner-app-open{href: ""}
+              = link_to '#' do
+                アプリで開く
+          %i.icon-close{"data-close": "modal"}
+
+
+      %section.my__page__tab__container
+        %h2.my__page__tab-buy-top 購入した商品
+        %ul.my__page__tab-top
+          %li.active
+            %h3
+              = link_to '#' do
+                取引中
+          %li
+            %h3
+              = link_to '#' do
+                過去の取引
+        .my__page__tab-content
+          %ul#my__page__tab-processing-now.my__page__item__lists.my__page__item__lists__tab.active
+            %li.my__page__item__not-find.bold 取引中の商品がありません
+          %ul#my__page__tab-processing-old.my__page__item__lists.my__page__item__lists__tab
+            %li
+              = link_to '#', class: "my__page__item__links" do
+                %figure
+                  = image_tag "b.neko.jpg", size: "48x48", alt: "過去の取引画像"
+                .my__page__item__frame
+                  .my__page__item__message
+                    「あああ」を購入しました。
+                    %span 取引が完了しました。
+                  .my__page__item__state.bold.done 取引完了
+                %i.fas.fa-chevron-right
+            %li.my__page__to-see-list
+              = link_to '#' do
+                一覧を見る
+
