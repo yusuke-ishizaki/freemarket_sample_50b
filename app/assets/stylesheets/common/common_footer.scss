@@ -97,7 +97,7 @@
       display: block;
       float: left;
       margin-top: 18px;
-      vertical-align: top;
+      // vertical-align: top;
 
       &__head {
         color: #fff;
@@ -105,7 +105,7 @@
         font-weight: 100;
         text-align: left;
 
-        ui {
+        ul {
           li {
             margin: 16px 0 0;
 
@@ -187,6 +187,7 @@ footer > nav > div > ul > li:first-child {
   float: left;
   width: 47px;
   height: 43px;
+  margin-top: 30px;
   a {
     .fa {
       color: #ffffff;
