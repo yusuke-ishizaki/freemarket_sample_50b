@@ -24,6 +24,9 @@ body{
     line-height: inherit;
     box-sizing: inherit;
     display: block;
+    @include clearfix;
+    background-color: white;
+    padding: 24px 40px 40px;
 
     &_img{
         float: left;
