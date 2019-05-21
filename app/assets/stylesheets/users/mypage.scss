@@ -4,13 +4,7 @@
   height: 100%;
   background-size: cover;
 }
-@mixin clearfix {
-  &::after{
-    content: '';
-    display: block;
-    clear: both;
-  }
-}
+
 .main__container {
   margin: 40px auto 0;
   width: 1020px;
