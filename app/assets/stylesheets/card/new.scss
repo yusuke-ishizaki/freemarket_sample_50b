@@ -4,11 +4,11 @@
     height: 100%;
 }
 .l-content{
-    float: right;
     width: 700px;
     height: 666px;
     display: block;
     background: #fff;
+    margin: 0 auto;
 }
 .l-chapter-container{
     margin-bottom: 64px;
@@ -16,9 +16,9 @@
 .l-chapter-head{
     display: block;
     font-size: 24px;
-    padding: 8px 24px;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
+    padding: 8px 0;
+    // margin-block-start: 0.83em;
+    // margin-block-end: 0.83em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
