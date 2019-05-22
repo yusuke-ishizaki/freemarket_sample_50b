@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 = render "common/sidebar"
 
 = form_tag(pay_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
+=======
+.full_screen_container
+  = render "users/short_header"
+>>>>>>> master
   .main__card-box
     .l-content
       %section.l-chapter-container
@@ -71,4 +76,9 @@
                 .signup-seqcode-text カード裏面の番号とは？
             #card_token
             = submit_tag "追加する", id: "token_submit"
+<<<<<<< HEAD
   
+=======
+
+  = render "users/short_footer"
+>>>>>>> master

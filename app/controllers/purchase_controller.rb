@@ -22,7 +22,6 @@ class PurchaseController < ApplicationController
     :customer => card.customer_id, 
     :currency => 'jpy', 
   )
-  redirect_to root_path
   end
 
   def confirm

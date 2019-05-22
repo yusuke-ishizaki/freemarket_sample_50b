@@ -1,5 +1,7 @@
 .full_screen_container
+  = render "common/top_header"
   %main.main__container.clearfix
+    = render "common/sidebar"
     -# ここからマイページ
     .my__page__content
       %section.my__page__user-icon
@@ -88,4 +90,6 @@
             %li.my__page__to-see-list
               = link_to '#' do
                 一覧を見る
+
+  = render "common/common_footer"
 
