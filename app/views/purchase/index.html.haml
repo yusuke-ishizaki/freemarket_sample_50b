@@ -22,8 +22,8 @@
               .confirm-price 
                 = @product.price
         .confirm__second-content_btn-purches 
-          = form_tag(action: :pay, method: :post) do
-            %button 購入する
+          = form_tag pay_purchase_index_path(@product) do
+            = submit_tag("購入する",class: "pay",id: "pay")
 
       .confirm__third-content
         .confirm__third-content__adress

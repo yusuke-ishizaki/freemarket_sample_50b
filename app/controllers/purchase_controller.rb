@@ -1,8 +1,10 @@
 class PurchaseController < ApplicationController
 
   require 'payjp'
+  before_action :set_product, only: [:index, :pay]
 
   def index
+    @user = @product.user
     card = Card.where(user_id: current_user.id).first
     if card.blank?
       redirect_to controller: "card", action: "new"
@@ -14,7 +16,7 @@ class PurchaseController < ApplicationController
   end
 
   def pay
-    @product = Product.find(params[:id])
+    @product = Product.find(params[:format])
     card = Card.where(user_id: current_user.id).first
     Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
     Payjp::Charge.create(
@@ -22,10 +24,16 @@ class PurchaseController < ApplicationController
     :customer => card.customer_id, 
     :currency => 'jpy', 
   )
+  redirect_to root_path
   end
 
   def confirm
     @product = Product.find(params[:id])
   end
   
+  private
+
+  def set_product
+    @product = Product.find(params[:format])
+  end
 end

@@ -68,12 +68,8 @@
         = @product.price
       %span.third-content_tax (税込)
       %span.third-content_shipping 送料込み  
-    - if @default_card_information.blank?
-      = link_to "/purchase/confirm/#{@product.id}" , class: "purches_btn" do
-        購入画面に進む
-    - else
-      = link_to purchase_index_path, class: "purches_btn" do
-        購入画面に進む
+      = link_to "購入画面に進む", purchase_index_path(@product), class: "purches_btn" 
+        
   
     .forth-content
       %p.forth-content_description
