@@ -3,6 +3,9 @@ class UsersController < ApplicationController
   def index
   end
 
+  def show
+  end
+
   def personal_info
   end
 
@@ -12,10 +15,12 @@ class UsersController < ApplicationController
   def new
   end
 
-  def show
+  def login
   end
 
   def edit
   end
 
+  def update
+  end
 end

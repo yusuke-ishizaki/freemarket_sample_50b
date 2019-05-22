@@ -1,11 +1,12 @@
-= render 'users/short_header'
+= render 'common/short_header'
 
 .login-main
   .login-main__button
     .login-main__button--new
       %p
         アカウントをお持ちでない方はこちら
-        =link_to "新規登録会員", class: "btn-default btn-sns"
+        =link_to "/users/new", class: "btn-default btn-sns" do
+          新規登録会員
     .login-main__button--outside
       = link_to "Facebookでログイン", class: "btn-default btn-sns btn-sns-facebook" do
         Facebookでログイン
@@ -25,4 +26,4 @@
           %P.form-link--text
             パスワードをお忘れの方
 
-= render 'users/short_footer'
+= render 'common/short_footer'
