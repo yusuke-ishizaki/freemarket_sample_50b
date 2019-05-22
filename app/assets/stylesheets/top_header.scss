@@ -43,6 +43,7 @@ header {
     width: 100%;
     flex: 1;
     & .fa-search {
+      z-index: 0;
       position: absolute;
       top: 0;
       right: 0;
@@ -82,6 +83,11 @@ header {
       text-decoration: none;
       font-size: 15px;
       color: #333;
+      span{
+        &:hover{
+          color: #0099e8;
+        }
+      }
     }
     li {
       float: left;
@@ -110,6 +116,10 @@ header {
     }
     a{
       text-decoration: none;
+      color: #333;
+    }
+    :hover{
+      color: #0099e8;
     }
   }
   /* ログインした時のヘッダー お知らせ やることリスト マイページ ボタン*/
@@ -117,8 +127,20 @@ header {
     position: relative;
     display: block;
     line-height: 32px;
-    color: #333;
   }
+}
+
+
+.search-btn {
+  z-index: 100;
+  position: absolute;
+  right: 2px;
+  top: 1px;
+  height: 38px;
+  width: 40px;
+  border: none;
+  background-color: unset;
+  cursor: pointer;
 }
 
 // カテゴリー,ブランド のfontawesome

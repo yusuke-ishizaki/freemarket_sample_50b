@@ -9,7 +9,8 @@
         .top__header_form
           = form_with do |f|
             = f.text_field :text, name: "keyword", placeholder: "何かお探しですか？", type: "search", class: 'input__box'
-          %i.fas.fa-search
+            = f.submit "data-disable-with": "", name: "commit", type: "submit", value: "", class: "search-btn"
+            %i.fas.fa-search
       .top__header_nav__box.clearfix
         %nav.top__header__left__box
           %ul.top__header_nav
@@ -19,6 +20,7 @@
                 = link_to "#" do
                   %i.fas.fa-list-ul
                   %span カテゴリーから探す
+
               / リストは現在使用しない
               -# %ul.top__header_nav-parent-wrap{"data-mega" => "1", :style => "width: auto;"}
               -#   %li.top__header_nav-parent
@@ -314,12 +316,14 @@
               -#             %a{:href => ""} その他
               -#   %li.top__header_nav-child
               -#   %li.top__header_nav-child
+
             %li
               %h2
                 .top__header_nav-root.list__parent
                 = link_to "#" do
                   %i.fas.fa-tag
                   %span ブランドから探す
+
                 / 検索リストは現在使用しない
                 -# %ul.top__header_nav-parent-wrap
                 -#   %li.top__header_nav-parent
@@ -341,10 +345,33 @@
                 -#     %h3
                 -#       %a{:href => ""} ブランド一覧
                 / ここまで使用しない
+
+
         .top__header__right__box
+          -# ここに if文 を記述する もしユーザーがサインインした場合
           %ul.top__header_login_nav
             %li
-            = link_to "#" do
+              .top__header_menu
+              = link_to "#" do
+                %i.far.fa-bell
+                %span お知らせ
+                .top__header_nav_count
+              %ul.top__header_user_box.top__header_notice_box.mypage__box_list
+            %li
+              .top__header_menu
+              = link_to "#" do
+                %i.fas.fa-check
+                %span やることリスト
+            %li
+              .top__header_user-icon.top__header_menu
+              = link_to "#" do
+                %i.fas.fa-user-circle
+                %span マイページ
+
+          -# ここに if文 を記述する ユーザーがログアウトした場合
+          %ul.top__header_login_nav
+            %li
+            = link_to "/users/sign_in" do
               .header-btn.header-btn-red ログイン
             %li
             = link_to "#" do
