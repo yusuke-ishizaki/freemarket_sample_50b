@@ -7,7 +7,7 @@
         .single-inner
           .single__content
             %button.btn.logout__btn-red
-              =link_to "#" do
+              =link_to "ログアウト", destroy_user_session_path do
                 ログアウト
 
   = render "common/common_footer"
