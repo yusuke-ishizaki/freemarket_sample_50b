@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   resources :product
   resources :card, only: [:index, :new]
 
-  resources :users
 
 
 end
