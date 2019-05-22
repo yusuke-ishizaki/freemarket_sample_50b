@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'purchase/done'
   devise_for :users
   root 'product#index'
+  resources :users
   get   '/users_product/:id', to: 'product#users_product'
   resources :product
 

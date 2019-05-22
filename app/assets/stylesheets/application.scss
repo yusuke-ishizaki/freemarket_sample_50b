@@ -10,9 +10,11 @@
 @import "product/show";
 @import "product/users_product";
 @import "top_header";
-@import "users/short";
-@import "users/new";
-@import "users/login";
+@import "common/short";
+@import "devise/new";
+@import "devise/login";
 @import "users/mypage";
+@import "users/plofile";
+@import "users/regist_personal_info";
 @import "confirm";
-
+@import "devise/registration";
