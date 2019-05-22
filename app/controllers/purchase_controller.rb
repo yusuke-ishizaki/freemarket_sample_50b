@@ -23,8 +23,8 @@ class PurchaseController < ApplicationController
     :amount => @product.price,
     :customer => card.customer_id, 
     :currency => 'jpy', 
-  )
-  redirect_to root_path
+    )
+    redirect_to root_path
   end
 
   def confirm

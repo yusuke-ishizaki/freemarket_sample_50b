@@ -15,13 +15,13 @@ Rails.application.routes.draw do
     end
   end
   get '/purchase/confirm/:id', to: 'purchase#confirm'
-  get '/purchase/index/:id', to: 'purchase#index'
 
   resources :purchase, only: [:index] do
     collection do
     get 'index', to: 'purchase#index'
     post 'pay', to: 'purchase#pay'
     get 'done', to: 'purchase#done'
+    get 'confrm', to: 'purchase#confirm'
     end
   end
 

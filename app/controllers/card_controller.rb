@@ -6,8 +6,7 @@ class CardController < ApplicationController
     end
 
     def new
-        card = Card.where(user_id: current_user.id)
-        redirect_to action: "show" if card.exists?
+        card = Card.where(user_id: current_user.id).first
     end
 
     def pay 
@@ -32,7 +31,7 @@ class CardController < ApplicationController
 
     def delete
         card = Card.where(user_id: current_user.id).first
-        if card.blank?
+        if card.present?
         else
           Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
           customer = Payjp::Customer.retrieve(card.customer_id)
