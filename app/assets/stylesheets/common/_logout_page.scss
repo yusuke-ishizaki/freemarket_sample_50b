@@ -17,6 +17,7 @@
 .main__container {
   margin: 40px auto 0;
   width: 1020px;
+  padding: 0 0 40px;
   @include clearfix();
 }
 

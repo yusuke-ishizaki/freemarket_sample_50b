@@ -1,11 +1,12 @@
 .full_screen_container
+  = render "common/top_header"
   %main.main__container.clearfix
     = render "common/sidebar"
-    -# sidebarと繋げること ログアウトページ
     .logout__content
       .chapter__container
         .single-inner
           .single__content
             %button.btn.logout__btn-red
-              = link_to "#" do
-                ログアウト
+              =link_to "ログアウト", destroy_user_session_path(current_user), method: :delete
+
+  = render "common/common_footer"

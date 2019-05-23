@@ -1,14 +1,18 @@
-= render "common/sidebar"
-%section.l-chapter-conteiner
-  %h2.l-chapter-head 支払い方法
-  .l-single-inner
-    %section
-      .l-single-content
-        %h2.l-chapter-sub-head クレジットカード一覧
-      %ul.settings-payment-list
-    %section.settings-add-card
-      .l-single-content
-        %a{class:"btn-default btn-red submit_button"} クレジットカードを追加する
-    .settings-not-regist
-      %a.purches
-        %span 支払い方法について＞
+.full_screen_container
+  %main.main__container.clearfix
+    = render "common/short_header"
+    %section.l-chapter-conteiner
+      %h2.l-chapter-head 支払い方法
+      .l-single-inner
+        %section
+          .l-single-content
+            %h2.l-chapter-sub-head クレジットカード一覧
+          %ul.settings-payment-list
+        %section.settings-add-card
+          .l-single-content
+            = link_to new_card_path, class:"btn-default btn-red submit_button" do
+              クレジットカードを追加する
+        .settings-not-regist
+          %a.purches
+            %span 支払い方法について＞
+  = render "common/short_footer"

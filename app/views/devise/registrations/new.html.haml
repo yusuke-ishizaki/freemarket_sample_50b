@@ -1,0 +1,89 @@
+= render 'common/short_header'
+
+.single-container
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = devise_error_messages!
+    .single-main-container
+      %h2.single-main-container__head__main.hidden.active 会員情報入力
+      = f.fields_for :user_profile do |p|
+        .right-continer__inner__main.hidden.active
+          .new__devise__form-groups
+            - if flash[:notice]
+              .email-conflict
+                = flash[:notice]
+            .new__devise__form-group__first.new__devise__form-group
+              %label{for: "nickname"} ニックネーム
+              %span 必須
+              = f.text_field :nickname, class: "input-default", placeholder: "例) メルカリ太郎"
+              .self-form__nickname__nil.error.hidden ニックネームを入力してください
+            .new__devise__form-group
+              %label{for: "email"} メールアドレス
+              %span 必須
+              = f.email_field :email, class: "input-default", placeholder: "例) PC・携帯どちらでも可"
+              .self-form__email__nil.error.hidden メールアドレスを入力してください
+              .self-form__email__format.error.hidden フォーマットが不適切です
+            .new__devise__form-group
+              %label{for: "password"} パスワード
+              %span 必須
+              = f.password_field :password, class: "input-default", placeholder: "例) 6文字以上"
+              .self-form__password__nil.error.hidden パスワードを入力してください
+              .self-form__password__format.error.hidden パスワードは6文字以上の英数字で入力してください
+            .new__devise__form-group
+              %label{for: "password_confirmation"} パスワード(確認)
+              %span 必須
+              = f.password_field :password_confirmation, class: "input-default", placeholder: "例) 6文字以上"
+              .self-form__confilmation-password__nil.error.hidden パスワード(確認)を入力してください
+              .self-form__confilmation-password__match.error.hidden パスワードとパスワード (確認) が一致しません
+            .new__devise__form-group
+              %label{for: "identification"} 本人確認
+              %p.font-size-small
+                安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+            -# .new__devise__form-group
+            -#   %label{for: "last_name"} 姓 (全角)
+            -#   %span 必須
+            -#   = p.text_field :last_name, class: "input-default", placeholder: "例) 山田"
+            -#   .self-form__last-name__nil.error.hidden 姓を入力してください
+            -# .new__devise__form-group
+            -#   %label{for: "first_name"} 名 (全角)
+            -#   %span 必須
+            -#   = p.text_field :first_name, class: "input-default", placeholder: "例) 彩"
+            -#   .self-form__first-name__nil.error.hidden 名を入力してください
+            -# .new__devise__form-group
+            -#   %label{for: "last_name_kana"} 姓カナ (全角)
+            -#   %span 必須
+            -#   = p.text_field :last_name_kana, class: "input-default", placeholder: "例) ヤマダ"
+            -#   .self-form__last-name-kana__nil.error.hidden 姓(カナ)を入力してください
+            -#   .self-form__last-name-kana__kana.error.hidden 姓(カナ)はカナ文字を入力してください
+            -# .new__devise__form-group
+            -#   %label{for: "first_name_kana"} 名カナ (全角)
+            -#   %span 必須
+            -#   = p.text_field :first_name_kana, class: "input-default", placeholder: "例) アヤ"
+            -#   .self-form__first-name-kana__nil.error.hidden 名(カナ)を入力してください
+            -#   .self-form__first-name-kana__kana.error.hidden 名(カナ)はカナ文字を入力してください
+            -# .new__devise__form-group-year
+            -#   %label{for: "birthday"} 生年月日
+            -#   %span 必須
+            -#   .select-wrap-birthday.select-wrap
+            -#     = p.select :birth_y, User.years.keys, prompt: "--"
+            -#     %i.fas.fa-angle-down.font-color-gray#birthday
+            -#     %p.birthday.font-size-small 年
+            -#   .select-wrap-birthday.select-wrap
+            -#     = p.select :birth_m, User.months.keys, prompt: "--"
+            -#     %i.fas.fa-angle-down.font-color-gray#birthday
+            -#     %p.birthday.font-size-small 月
+            -#   .select-wrap-birthday.select-wrap
+            -#     = p.select :birth_d, Brand.days.keys, prompt: "--"
+            -#     %i.fas.fa-angle-down.font-color-gray#birthday
+            -#     %p.birthday.font-size-small 日
+            -#   .self-form__birthday__nil.error.hidden 生年月日を入力してください
+            %p.font-color-gray.font-size-small
+              ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+            .new__devise__form-group
+              %p.font-size-small
+                「次へ進む」のボタンを押すことにより、
+                = link_to "利用規約", "/", id: "font-color-blue"
+                に同意したものとみなします
+              %button{type: "submit", class: "next__btn-red"}
+                次へ進む
+
+= render 'common/short_footer'

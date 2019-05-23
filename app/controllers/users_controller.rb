@@ -3,6 +3,12 @@ class UsersController < ApplicationController
   def index
   end
 
+  def show
+    @user = User.find(current_user.id)
+    @product = Product.all
+    @product_count = Product.where(user_id: current_user.id).count
+  end
+
   def personal_info
   end
 
@@ -12,10 +18,16 @@ class UsersController < ApplicationController
   def new
   end
 
-  def show
+  def login
   end
 
   def edit
+  end
+
+  def update
+  end
+
+  def destroy
   end
 
 end

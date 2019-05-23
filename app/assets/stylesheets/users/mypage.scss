@@ -8,6 +8,7 @@
 .main__container {
   margin: 40px auto 0;
   width: 1020px;
+  padding: 0 0 40px;
   // 以下の記述でclearfixを呼び出しています。
   @include clearfix();
 }

@@ -1,4 +1,4 @@
-= render 'users/short_header'
+= render 'common/short_header'
 
 .signup-main
   .signup-main-top
@@ -6,14 +6,13 @@
       新規会員登録
   .signup-main-center
     .signup-main-center__form
-      = link_to "/users/plofile" ,class: 'btn-default btn-mail' do
+      = link_to "/users/sign_up" ,class: 'new_devise_btn-default btn-mail' do
         メールアドレスで登録
     .signup-main-center__fb
-      = link_to "Facebookで登録", class: "btn-default btn-sns btn-sns-facebook" do
+      = link_to "Facebookで登録", class: "new_devise_btn-default btn-sns btn-sns-facebook" do
         Facebookで登録
     .signup-main-center__gg
-      = link_to "Googleで登録", class: "btn-default btn-sns btn-sns-google" do
+      = link_to "Googleで登録", class: "new_devise_btn-default btn-sns btn-sns-google" do
         Googleで登録
 
-= render 'users/short_footer'
-
+= render 'common/short_footer'

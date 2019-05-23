@@ -48,13 +48,14 @@
     }
   }
 }
-.btn-default{
+.new_devise_btn-default{
   display: block;
   width: 100%;
   line-height:  48px;
   font-size: 14px;
   border: 1px solid transparent;
   cursor: pointer;
+  text-align: center;
 }
 
 .login-submit {
@@ -66,8 +67,11 @@
   width: 320px;
   margin: 0 auto;
   position: relative;
+  color: black;
   &:before {
-    font-family: 'Font Awesome 5 Regular';
+    // font-family: 'Font Awesome 5 Regular';
+    // font-family: 'Font Awesome 5 Brands';
+    font-family: "Font Awesome 5 Free";
     content: '\f0e0';
     font-weight: 400;
     font-size: 26px;
@@ -75,7 +79,7 @@
     top: 50%;
     left: 16px;
     transform: translate(0, -50%);
-    color: white;
+    color: gray;
   }
 }
 .btn-sns-facebook {
@@ -117,3 +121,4 @@
     transform: translate(0, -50%);
   }
 }
+
