@@ -1,6 +1,8 @@
+= render "common/short_header"
 .background
-  -#= render './shared/products-new-header'
 %section.singlecontainer
+  -# = render "common/short_header"
+
   #sell
     =form_with model: @product,multipart: true do |f|
       .inputs
@@ -125,4 +127,4 @@
         .flex-center
           =button_to "もどる" "#", class: 'agreement-back-btn'
 
-      -#= render './shared/products-new-footer'
+= render "common/short_footer"
