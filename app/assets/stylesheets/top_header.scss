@@ -23,6 +23,7 @@ header {
   z-index: 1001;
   background-color: white;
   margin-top: 5px;
+  height: 100px;
   &_inner {
     width: 1020px;
     margin: 0 auto;
@@ -164,10 +165,18 @@ header {
     background: #ea352d;
     border: 1px solid #ea352d;
     color: #fff;
+    &:hover{
+      background: #ea4841;
+      color: #fff;
+    }
   }
   &-sigup {
     border: 1px solid #0099e8;
     background: #fff;
     color: #0099e8;
+    &:hover{
+      background:#0099e8;
+      color: #fff;
+    }
   }
 }
