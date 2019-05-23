@@ -289,7 +289,7 @@ td{
 
 .fa-facebook-square, .fa-twitter{
     &::before {
-        font-size: 28px;
+        // font-size: 28px;
     }
 }
 
@@ -308,7 +308,7 @@ td{
 .ten-content{
     width: 700px;
     margin: 48px auto 0;
-    display: block;
+    display: -ms-flexbox;
 
     &_section-title{
         margin: 24px 0 8px;
@@ -384,10 +384,7 @@ td{
   }
 }
 .items_box {
-    margin: 0 0 0 20px;
+    margin: 0 0 20px 20px;
     width: 213px;
     float: left;
   }
-  
-  
-  

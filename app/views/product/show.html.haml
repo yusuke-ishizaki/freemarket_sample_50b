@@ -6,7 +6,7 @@
   .detail__center-content
     %h1.detail__top-content
       = @product.name
-  
+
     .detail__second-content
       .detail__second-content_img
         = image_tag 'おこ猫.jpeg',  class: 'detail__img-parent'
@@ -18,7 +18,7 @@
           %tr
             %th 出品者
             %td
-              .link 
+              .link
                 = link_to @product.user.nickname, ""
               .td__img
                 = image_tag 'スクリーンショット 2019-05-16 21.25.31.png',  class: 'saler-red'
@@ -28,59 +28,57 @@
             %th カテゴリー
             %td
               .link
-                %a メンズ  
+                %a メンズ
                 %br
                 %a >トップス
                 %br
                 %a >スウェット
           %tr
             %th ブランド
-            %td 
+            %td
               .link
                 = link_to @product.bland.name
           %tr
             %th 商品のサイズ
-            %td 
+            %td
               = @product.size
           %tr
             %th 商品の状態
-            %td 
+            %td
               = @product.status
           %tr
             %th 配送料の負担
-            %td 
+            %td
               = @product.delivery.price
           %tr
             %th 配送の方法
-            %td 
+            %td
               = @product.delivery.method
           %tr
             %th 配送元地域
-            %td 
+            %td
               = @product.delivery.region
           %tr
             %th 発送日の目安
-            %td 
+            %td
               = @product.delivery.date
-    
-  
+
     .third-content
-      %span.third-content_price 
+      %span.third-content_price
         = @product.price
       %span.third-content_tax (税込)
-      %span.third-content_shipping 送料込み  
+      %span.third-content_shipping 送料込み
       -if user_signed_in?
-        = link_to "購入画面に進む", purchase_index_path(@product), class: "purches_btn" 
+        = link_to "購入画面に進む", purchase_index_path(@product), class: "purches_btn"
       -else
-        = link_to "購入画面に進む", new_user_path, class: "purches_btn" 
-        
-  
+        = link_to "購入画面に進む", new_user_path, class: "purches_btn"
+
     .forth-content
       %p.forth-content_description
         = @product.text
     .fifth-content
-      .fifth-content_right 
-        %i.fas.fa-lock 
+      .fifth-content_right
+        %i.fas.fa-lock
         .fifth-content_right-text あんしん・あんぜんへの取り組み
       .fifth-content_left
         .fifth-content_left-like
@@ -89,8 +87,7 @@
         .fifth-content_left-report
           %i.fas.fa-flag
           %a.btn-flag 不適切な商品の報告
-      
-  
+
   .six-content
     .six-content_message
       .six-content_message-content
@@ -99,7 +96,7 @@
           %textarea.textarea-default
           %button.message-submit
             %span コメントする
-  
+
   %ul.seven-content.clearfix
     %li.seven-content_left
       %a.seven-content_prev
@@ -107,7 +104,7 @@
     %li.seven-content_right
       %a.seven-content_next
         黒板フラワーリース>
-  
+
   .eight-content
     %ul.item__social__media--box--content
       %li
@@ -119,7 +116,7 @@
       %li
         = link_to "", class: "pinterest__icon" do
           %i.fab.fa-pinterest-square
-  
+
   .nine-content
     .nine-content_section
       %h.nine-content_section-title
@@ -140,13 +137,13 @@
                   .items_box-price.font-5
                     = product.price
                 %p.items_box-tax (税込)
-  
+
   .ten-content
     .ten-content_section
       %h.ten-content_section-title
       = link_to "" do
         = "#{@product.bland.name}さんのその他の商品"
-      .ten-content_section-box
+        .ten-content_section-box
         - @products.each do |product|
           %section.items_box
             = link_to product_path(product.id), method: :get do
@@ -161,6 +158,5 @@
                   .items_box-price.font-5
                     = product.price
                 %p.items_box-tax (税込)
-  = render "common/common_footer"
-  
-  
+
+-# = render "common/common_footer"
