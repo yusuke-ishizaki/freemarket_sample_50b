@@ -1,3 +1,4 @@
+= render "common/top_header"
 -breadcrumb:product,@product
 = render partial:'breadcrumb'
 
@@ -67,8 +68,12 @@
       %span.third-content_price 
         = @product.price
       %span.third-content_tax (税込)
-      %span.third-content_shipping 送料込み
-    %a.purches_btn 購入画面に進む
+      %span.third-content_shipping 送料込み  
+      -if user_signed_in?
+        = link_to "購入画面に進む", purchase_index_path(@product), class: "purches_btn" 
+      -else
+        = link_to "購入画面に進む", new_user_path, class: "purches_btn" 
+        
   
     .forth-content
       %p.forth-content_description
@@ -156,6 +161,6 @@
                   .items_box-price.font-5
                     = product.price
                 %p.items_box-tax (税込)
-
-        
+  = render "common/common_footer"
+  
   

@@ -7,5 +7,5 @@ class User < ApplicationRecord
   has_many :products, dependent: :destroy
   has_one :name, dependent: :destroy
   has_one :adress, dependent: :destroy
-         
+  has_one :card, dependent: :destroy
 end
