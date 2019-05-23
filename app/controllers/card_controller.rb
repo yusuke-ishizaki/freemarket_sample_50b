@@ -6,7 +6,11 @@ class CardController < ApplicationController
     end
 
     def new
-        card = Card.where(user_id: current_user.id).first
+      @card = Card.new
+      card = Card.where(@card.user_id == current_user.id)
+      redirect_to action: "show" if card.exists?
+      # @card = Card.new
+      # redirect_to action: "show" if @card.user_id ==  current_user.id
     end
 
     def pay 
@@ -30,9 +34,9 @@ class CardController < ApplicationController
     end
 
     def delete
-        card = Card.where(user_id: current_user.id).first
+        @card = Card.new
+        card = Card.where(@card.user_id == current_user.id).first
         if card.present?
-        else
           Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
           customer = Payjp::Customer.retrieve(card.customer_id)
           customer.delete
@@ -42,7 +46,9 @@ class CardController < ApplicationController
     end
     
     def show 
-        card = Card.where(user_id: current_user.id).first
+        # @card = Card.find(params[:id])
+        @card = Card.new
+        card = Card.where(@card.user_id == current_user.id).first
         if card.blank?
           redirect_to action: "new" 
         else

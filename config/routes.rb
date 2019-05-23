@@ -14,7 +14,6 @@ Rails.application.routes.draw do
       post 'delete', to: 'card#delete'
     end
   end
-  get '/purchase/confirm/:id', to: 'purchase#confirm'
 
   resources :purchase, only: [:index] do
     collection do

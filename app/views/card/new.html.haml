@@ -1,7 +1,7 @@
 .full_screen_container
   = render "common/short_header"
   .main__card-box
-    .l-content
+    .card_l-content
       %section.l-chapter-container
         %h2.l-chapter-head クレジットカード情報入力
         = form_tag(pay_card_index_path, method: :post, id: 'charge-form',  name: "inputForm", class: "l-single-inner") do
