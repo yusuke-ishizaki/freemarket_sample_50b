@@ -1,3 +1,4 @@
+= render "common/top_header"
 -breadcrumb:product,@product
 = render partial:'breadcrumb'
 
@@ -157,6 +158,6 @@
                   .items_box-price.font-5
                     = product.price
                 %p.items_box-tax (税込)
-
-        
+  = render "common/common_footer"
+  
   
