@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'product#index'
   resources :users
   get   '/users_product/:id', to: 'product#users_product'
+<<<<<<< HEAD
   resources :product 
  
 
@@ -23,5 +24,10 @@ Rails.application.routes.draw do
     get 'confrm', to: 'purchase#confirm'
     end
   end
+=======
+  resources :product
+  resources :card, only: [:index, :new]
+  get '/logout' => 'users#logout'
+>>>>>>> master
 
 end

@@ -8,7 +8,7 @@
           .l-single-content
             .form-group
               %label.payment_card_no カード番号
-              %span.form-require 必須
+              %span.card__form-require 必須
               = text_field_tag "number", "", class: "input-default", placeholder: "半角数字のみ" ,maxlength: "16", type: "text", id: "card_number"
               %ul.signup-card-list
                 %li.signup-card-list-inner
@@ -29,7 +29,7 @@
             .form-group.signup-form-expire
               %h3.limit-title
                 %label 有効期限
-                %span.form-require 必須
+                %span.card__form-require 必須
               .select-main
                 .select-wrap
                   %select#exp_month{name: "exp_month", type: "text", class: "select-default"}
@@ -63,7 +63,7 @@
                 %br
             .form-group
               %label セキュリティコード
-              %span.form-require 必須
+              %span.card__form-require 必須
               = text_field_tag "cvc", "", class: "input-default", placeholder: "カード背面3~4桁の番号", maxlength: "4", id: "cvc"
               .signup-seqcode
                 #span.form-question ？

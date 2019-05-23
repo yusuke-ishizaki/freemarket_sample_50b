@@ -1,12 +1,7 @@
-= render "common/sidebar"
-.wrapper
-  -#= render 'shared/header'
-  -#= render 'shared/register-breadcrumbs'
-
-  .container.clearfix
-
-    -#= render 'leftbar-register'
-
+.full_screen_container
+  -# = render "common/top_header"
+  %main.main__container.clearfix
+    = render "common/sidebar"
     .main
       .content
         .head-profile
@@ -87,5 +82,4 @@
               %span 本人情報の登録について
               =fa_icon 'chevron-right',class:"fa-chevron-right"
 
-  -#= render 'shared/sell-btn'
-  -#= render "shared/app-banner"
+  = render "common/common_footer"
