@@ -4,6 +4,9 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
+    @product = Product.all
+    @product_count = Product.where(user_id: current_user.id).count
   end
 
   def personal_info

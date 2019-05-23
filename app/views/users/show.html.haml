@@ -8,14 +8,16 @@
         = link_to '#' do
           %figure
             = image_tag "b.neko.jpg", size: "60x60", alt: "マイページの写真"
-          %h2.bold name
+          %h2.bold 
+            = @user.nickname
           .my__page__number
             %div
               %span 評価
               %span.bold 10
             %div
               %span 出品数
-              %span.bold 20
+              %span.bold 
+                = @product_count
         .my__page__user-icon-rgba
 
 
