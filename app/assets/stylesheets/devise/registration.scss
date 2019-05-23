@@ -27,7 +27,7 @@
   width: 44%;
 }
 
-.form-group-year {
+.new__devise__form-group-year {
   margin: 40px 0 0;
 }
 
@@ -58,7 +58,7 @@
 
 
 
-.form-group{
+.new__devise__form-group{
   margin: 40px 0 0;
 }
 
@@ -109,18 +109,18 @@ text-align: right;
   font-weight: 10px;
 }
 
-.form-group__first-font label {
+.new__devise__form-group__first-font label {
   font-weight: 600;
   font-size: 15px;
 }
 
 
-.form-group-font label {
+.new__devise__form-group-font label {
   font-weight: 600;
   font-size: 15px;
 }
 
-.form-group-font {
+.new__devise__form-group-font {
   margin: 40px 0 0;
 }
 
@@ -175,9 +175,33 @@ text-align: right;
 }
 
 
+.new__devise__form-group{
+  font-weight: 600;
+  margin: 40px 0 0;
+  width: 320px;
+  text-align: -webkit-auto;
+  span {
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: top;
+    background: #ea352d;
+  }
+}
 
-
-
+.next__btn-red {
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+  margin: 40px 0 0;
+}
 
 
 
@@ -218,6 +242,7 @@ text-align: right;
   background-color: #FFFFFF;
   border-top: 1px solid #f5f5f5;
   padding: 32px 16px;
+  text-align: -webkit-center;
 }
 
 .right-continer__inner__phone {
