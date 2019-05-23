@@ -5,19 +5,19 @@
     .login-main__button--new
       %p
         アカウントをお持ちでない方はこちら
-        =link_to "/users/new", class: "btn-default btn-sns" do
+        =link_to "/users/new", class: "new_devise_btn-default btn-sns" do
           新規登録会員
     .login-main__button--outside
-      = link_to "Facebookでログイン", class: "btn-default btn-sns btn-sns-facebook" do
+      = link_to "Facebookでログイン", class: "new_devise_btn-default btn-sns btn-sns-facebook" do
         Facebookでログイン
-      = link_to "Googleでログイン", class: "btn-default btn-sns btn-sns-google" do
+      = link_to "Googleでログイン", class: "new_devise_btn-default btn-sns btn-sns-google" do
         Googleでログイン
     .login-main__button--form
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         = f.email_field :email, class: 'form-box--input', placeholder: 'メールアドレス'
         = f.password_field :password, autocomplete: "off", class: 'form-box--input', placeholder: 'パスワード'
         -# = recaptcha_tags
-        = f.submit "ログイン", class: "login-submit btn-default btn-red"
+        = f.submit "ログイン", class: "login-submit new_devise_btn-default btn-red"
         = link_to 'パスワードをお忘れの方', "", class: "forget"
 
 = render 'common/short_footer'
