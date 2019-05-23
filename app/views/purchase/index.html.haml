@@ -26,8 +26,11 @@
           -if @user == current_user
             =link_to "購入できません", "", class: "pay", id: "pay" 
           -else
-            = form_tag pay_purchase_index_path(@product) do
-              = submit_tag("購入する",class: "pay",id: "pay")
+            - if @default_card_information.blank?
+              =link_to "購入する", new_card_path, class: "pay", id: "pay" 
+            -else
+              = form_tag pay_purchase_index_path(@product) do
+                = submit_tag("購入する",class: "pay",id: "pay")
           
 
       .confirm__third-content
@@ -45,5 +48,5 @@
         .confirm__bottom-content_purches
           %h.purches-method 支払い方法
           .purches-detail /
-          %a.change 変更する>
+          = link_to "変更する>", new_card_path, class: "change"
 = render "common/short_footer"

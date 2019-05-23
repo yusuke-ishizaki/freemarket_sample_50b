@@ -69,7 +69,10 @@
         = @product.price
       %span.third-content_tax (税込)
       %span.third-content_shipping 送料込み  
-      = link_to "購入画面に進む", purchase_index_path(@product), class: "purches_btn" 
+      -if user_signed_in?
+        = link_to "購入画面に進む", purchase_index_path(@product), class: "purches_btn" 
+      -else
+        = link_to "購入画面に進む", new_user_path, class: "purches_btn" 
         
   
     .forth-content
