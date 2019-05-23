@@ -4,11 +4,13 @@
     .confirm__body-content
       %h3.confirm__top-content-img
         =image_tag'おこ猫.jpeg', class: 'confirm-img' 
-        %p.confirm__top-content_title おこ猫
+        %p.confirm__top-content_title 
+          = @product.name
   
       .confirm__second-content
         %p.confirm__second-content_price 
-          .confirm__price ¥50000
+          .confirm__price 
+            = @product.price
           %span.confirm__komi 送料込み
         %ul.confirm__second-content_point
           %li.confirm__second-content_point-li
@@ -17,9 +19,12 @@
           %li.confirm__second-content_purchese-left 
             .confirm-price-title 支払い金額
             %span.confirm__second-content_purchese-right
-              .confirm-price ¥50000
-        .confirm__second-content_btn-purches 購入する
-            
+              .confirm-price 
+                = @product.price
+        .confirm__second-content_btn-purches 
+          = form_tag pay_purchase_index_path(@product) do
+            = submit_tag("購入する",class: "pay",id: "pay")
+
       .confirm__third-content
         .confirm__third-content__adress
           %h.adress-head 配送先

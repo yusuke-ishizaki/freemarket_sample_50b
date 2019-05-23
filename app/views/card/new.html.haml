@@ -4,7 +4,7 @@
     .card_l-content
       %section.l-chapter-container
         %h2.l-chapter-head クレジットカード情報入力
-        = form_tag( method: :post, id: 'charge-form',  name: "inputForm", class: "l-single-inner") do
+        = form_tag(pay_card_index_path, method: :post, id: 'charge-form',  name: "inputForm", class: "l-single-inner") do
           .l-single-content
             .form-group
               %label.payment_card_no カード番号
@@ -70,5 +70,5 @@
                 .signup-seqcode-text カード裏面の番号とは？
             #card_token
             = submit_tag "追加する", id: "token_submit"
-
   = render "common/short_footer"
+
