@@ -9,8 +9,6 @@ class CardController < ApplicationController
       @card = Card.new
       card = Card.where(@card.user_id == current_user.id)
       redirect_to action: "show" if card.exists?
-      # @card = Card.new
-      # redirect_to action: "show" if @card.user_id ==  current_user.id
     end
 
     def pay 
@@ -46,7 +44,6 @@ class CardController < ApplicationController
     end
     
     def show 
-        # @card = Card.find(params[:id])
         @card = Card.new
         card = Card.where(@card.user_id == current_user.id).first
         if card.blank?
