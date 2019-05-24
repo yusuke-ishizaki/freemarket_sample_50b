@@ -1,0 +1,33 @@
+= render 'common/top_header'
+= render 'common/sidebar'
+
+.stutas__main-content
+  %section.mypage-tab-container
+    %h2.mypage-tab-head 出品した商品
+    %ul.listing-tabs
+      %li.active
+        %h3.status 出品中
+      %li.active
+        %h3.status 取引中
+      %li.active
+        %h3.status 売却済み
+    .tab-content
+      %ul#mypage-tab-transaction-old.mypage-item-list.tab-pane.active
+        %li.mypage-item-list 
+          = link_to  do
+            %figure
+              -# = image_tag 'src', alt: '', height: '', width: '', class: ''
+            .mypage-item-body.show-stock-item
+              .mypage-item-text  
+                aaa
+              %div
+                %i.icon-like-border
+                %i.icon-message
+            
+
+  %ul.mypage-history.pager
+    %li.pager-prev.pager-cell
+      %i.icon-arrow-right
+    %li.pager-next.pager-cell     
+      %i.icon-arrow-left               
+          

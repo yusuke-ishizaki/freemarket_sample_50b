@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'product#index'
   resources :users
   get   '/users_product/:id', to: 'product#users_product'
+  get   '/product_status/:id', to: 'product#product_status'
   resources :product
   get '/logout' => 'users#logout'
 
