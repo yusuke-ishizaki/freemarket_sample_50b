@@ -65,7 +65,7 @@
 
     .third-content
       %span.third-content_price
-        = @product.price
+        = "¥ #{@product.price}"
       %span.third-content_tax (税込)
       %span.third-content_shipping 送料込み
       -if user_signed_in?
@@ -108,7 +108,7 @@
   .eight-content
     %ul.item__social__media--box--content
       %li
-        = link_to "", class: "facebook__icon" do
+        = link_to "", class: "facebook__icon", id: "facebook" do
           %i.fab.fa-facebook-square
       %li
         = link_to "", class: "twitter__icon" do
@@ -160,5 +160,4 @@
                 %p.items_box-tax (税込)
 
   = render "common/common_footer"
-  
-  
+

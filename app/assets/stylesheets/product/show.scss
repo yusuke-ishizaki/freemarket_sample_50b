@@ -26,7 +26,7 @@ body{
     display: block;
     @include clearfix;
     background-color: white;
-    padding: 24px 40px 40px;
+    // padding: 24px 40px 40px;
 
     &_img{
         float: left;
@@ -262,7 +262,8 @@ td{
     justify-content:center;
     .facebook__icon{
       color:#305097;
-      font-size: 320%;
+    //   font-size: 320%;
+      font-size: 29px;
       margin-right:10px;
       top:16px;
     }
@@ -292,6 +293,14 @@ td{
 //         font-size: 28px;
 //     }
 // }
+
+#facebook .fa-facebook-square{
+    color: #385185;
+    font-size: 50px;
+    // margin-right:10px;
+    margin-left: 20px;
+    top:16px;
+  }
 
 .nine-content{
     width: 700px;
