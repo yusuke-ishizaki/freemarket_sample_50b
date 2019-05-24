@@ -33,5 +33,7 @@ class ProductController < ApplicationController
     @product = Product.find(params[:id])
   end
 
+  def product_status
+  end
 
 end
