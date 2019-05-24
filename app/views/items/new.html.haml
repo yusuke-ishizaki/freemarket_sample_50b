@@ -20,12 +20,11 @@
           %ul
 
         .inner-sell-image.sell-upload-items-container__guide
-          .image-input-box
-            = f.label :images, class:"drag-and-drop" do
-              = f.file_field :images,multiple: true, id: "image_upload"
-              .drag-and-drop__text
-                ドラッグ&ドロップ
-                またはクリックしてファイルをアップロード
+          = f.file_field :images,multiple: true, id: "image_upload"
+          .drag-and-drop.have__image--0
+            .drag-and-drop__text
+              ドラッグ&ドロップ
+              またはクリックしてファイルをアップロード
 
 
       .inputs
