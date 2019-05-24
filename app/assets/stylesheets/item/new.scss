@@ -24,7 +24,7 @@ h2 {
   text-align: center;
 }
 
-.inputs__image__caution, .inputs-detail__caution, form-require {
+.inputs__image__caution, .inputs-detail__caution, .form-require {
   margin: 0 0 0 8px;
   padding: 2px 4px;
   border-radius: 2px;
@@ -66,6 +66,7 @@ select {
 
 .select-wrap {
   position: relative;
+  width: 100%;
 
   select {
     -moz-appearance: none;
@@ -486,6 +487,9 @@ div.sell-content.sell-btn-box div.flex-center input[type=submit] {
   text-align: center;
 }
 
+.profit {
+  font-size: 20px;
+}
 
 .inputs-detail-price__form__input {
   width: 87%;

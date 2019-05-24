@@ -1,10 +1,10 @@
 = render "common/short_header"
-.background
-%section.singlecontainer
-  -# = render "common/short_header"
 
+.background
+  -#= render './shared/products-new-header'
+%section.singlecontainer
   #sell
-    =form_with model: @product,multipart: true do |f|
+    =form_with model: @item, multiple: true, html: {id:'new_item'}, local: true  do |f|
       .inputs
         %h2.inputs__header 商品の情報を入力
       .inputs-uploadbox
@@ -12,16 +12,20 @@
         .inputs__image
           %h3.inputs__image__label 出品画像
           .inputs__image__caution 必須
+        %div#itemimage_uproad_over{style: "display:none"}  アップロードできる画像は10枚までです。
+        %div#itemimage_uproad_none{style: "display:none"}  画像がありません
         .upload 最大10枚までアップロードできます
         .sell-upload-items-container
-        .sell-upload-items
+        .sell-upload-items.sell-upload-items-container__preview
           %ul
-        .inner-sell-image
+
+        .inner-sell-image.sell-upload-items-container__guide
           = f.file_field :images,multiple: true, id: "image_upload"
-          .drag-and-drop
+          .drag-and-drop.have__image--0
             .drag-and-drop__text
-              ドラッグアンドドロップ
-              またはクリックしてファイルをダウンロード
+              ドラッグ&ドロップ
+              またはクリックしてファイルをアップロード
+
 
       .inputs
         .inputs__product
@@ -32,7 +36,7 @@
           .inputs__product
             %h3.inputs__product__label 商品の説明
             .inputs__product__caution 必須
-          = f.text_area :detail, rows: 6, placeholder:'商品の説明（必須1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。', class: 'inputs__text-area'
+          = f.text_area :content, rows: 6, placeholder:'商品の説明（必須1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。', class: 'inputs__text-area'
 
 
       .inputsell-group
@@ -45,6 +49,9 @@
               %span.form-require 必須
               .select-wrap
                 = f.select :category, [['レディース'],['レディース'],['インテリア・住まい・小物'],['本・音楽・ゲーム'],['おもちゃ・ホビー・グッズ'],['コスメ・香水・美容'],['家電・スマホ・カメラ'],['スポーツ・レジャー'],['ハンドメイド'],['チケット'],['自動車・オートバイ'],['その他']], prompt: '--'
+                -#= f.select :category_id,Category.all.where(ancestry: nil).map{|c| [c.name, c.id]},{include_blank: "---"},{class:'select-default', id:'selectitembox'}
+                -#= f.select :category_id,{},{include_blank: "---"},{class: "select-default", id:'selectitembox1',style: 'display:none' }
+                -#= f.select :category_id,{},{include_blank: "---"},{class: "select-default",id:"selectitembox2" ,style: "display:none"}
                 =fa_icon 'chevron-down',class:"fa-chevron-down"
 
           .inputsell-group__form-box__form-group
@@ -101,10 +108,12 @@
             %li
               .input-left
                 販売手数料 (10%)
-              .input-right -
+              .input-right
+                %p.tax -
             %li.bold.font-sup
               .input-left 販売利益
-              .input-right -
+              .input-right
+                %p.profit -
 
 
       .sell-content.sell-btn-box
@@ -123,8 +132,9 @@
             =link_to "加盟店規約","", class: 'agreement'
             に同意したことになります。
 
-        =f.submit '出品する',class:'create-btn'
-        .flex-center
-          =button_to "もどる" "#", class: 'agreement-back-btn'
+        .sell__form__sellcontent__submit__done
+          =f.submit '出品する',class:'create-btn btn-default item__done'
+          .flex-center
+            =button_to "もどる" "#", class: 'agreement-back-btn'
 
 = render "common/short_footer"
