@@ -24,7 +24,7 @@ h2 {
   text-align: center;
 }
 
-.inputs__image__caution, .inputs-detail__caution, .form-require {
+.inputs__image__caution, .inputs-detail__caution {
   margin: 0 0 0 8px;
   padding: 2px 4px;
   border-radius: 2px;
@@ -528,3 +528,13 @@ i[class^='icon-'], i[class*='icon-'] {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.item__new-form-requir {
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+    vertical-align: top;
+  background: #ea352d;
+}

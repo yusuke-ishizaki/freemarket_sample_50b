@@ -60,9 +60,9 @@
               = p.text_field :first_name_kana, class: "input-default", placeholder: "例) アヤ"
               .self-form__first-name-kana__nil.error.hidden 名(カナ)を入力してください
               .self-form__first-name-kana__kana.error.hidden 名(カナ)はカナ文字を入力してください
-            .new__devise__form-group-year
-              %label{for: "birthday"} 生年月日
-              %span 必須
+            -# .new__devise__form-group-year
+            -#   %label{for: "birthday"} 生年月日
+            -#   %span 必須
               -# .select-wrap-birthday.select-wrap
               -#   = p.select :birth_y, User.years.keys, prompt: "--"
               -#   %i.fas.fa-angle-down.font-color-gray#birthday

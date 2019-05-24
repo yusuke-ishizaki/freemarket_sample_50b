@@ -28,6 +28,8 @@ Rails.application.routes.draw do
 
   get '/profile' => 'users#personal_info'
 
-# get "/product/product_info"
+  get "/product/product_info"
+  get "/items/new"
+
 
 end
