@@ -5,10 +5,11 @@
 }
 .card_l-content{
     width: 700px;
-    height: 666px;
+    // height: 666px;
     display: block;
     background: #fff;
-    margin: 0 auto;
+    // margin: 0 auto;
+    float: right;
 }
 .l-chapter-container{
     margin-bottom: 64px;
@@ -37,9 +38,9 @@
     line-height: 1.5;
     font-size: 16px;
 }
-.l-single-inner{
-    padding: 64px;
-}
+// .l-single-inner{
+//     padding: 64px;
+// }
 .l-single-content{
     max-width: 320px;
     margin: 0 auto;
