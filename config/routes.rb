@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     end
   end
 
+  get '/profile' => 'users#personal_info'
 
 # get "/product/product_info"
 
