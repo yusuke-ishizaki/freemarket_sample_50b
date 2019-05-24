@@ -83,7 +83,8 @@
                 「次へ進む」のボタンを押すことにより、
                 = link_to "利用規約", "/", id: "font-color-blue"
                 に同意したものとみなします
-              %button{type: "submit", class: "next__btn-red"}
-                登録完了
+              = link_to root_path do
+                %button{type: "submit", class: "next__btn-red"}
+                  登録完了
 
 = render 'common/short_footer'
