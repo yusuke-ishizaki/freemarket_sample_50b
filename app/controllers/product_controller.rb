@@ -25,12 +25,13 @@ class ProductController < ApplicationController
   end
 
   def destroy
-    product = Product.find(params[:id])
+    product = Product.where(user_id: current_user.id).first
     product.destroy
+    redirect_to root_path
   end
 
   def users_product
-    @product = Product.find(params[:id])
+    @product = Product.where(user_id: current_user.id).first
   end
 
   def product_status

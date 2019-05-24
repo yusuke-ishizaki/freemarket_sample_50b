@@ -1,4 +1,5 @@
 = render 'common/top_header'
+= render 'common/sidebar'
 
 .stutas__main-content
   %section.mypage-tab-container
@@ -12,9 +13,21 @@
         %h3.status 売却済み
     .tab-content
       %ul#mypage-tab-transaction-old.mypage-item-list.tab-pane.active
-        %li.mypage-item-not-found 取引中の商品がありません
-        = image_tag 'スクリーンショット 2019-05-24 12.46.26.png', alt: 'stutas-logo', height: '50px', width: '50px', class: 'status-logo'
-%ul.mypage-history.pager
-  %li.pager-prev.pager-cell
-  %li.pager-next.pager-cell                    
-        
+        %li.mypage-item-list 
+          = link_to  do
+            %figure
+              -# = image_tag 'src', alt: '', height: '', width: '', class: ''
+            .mypage-item-body.show-stock-item
+              .mypage-item-text  
+                aaa
+              %div
+                %i.icon-like-border
+                %i.icon-message
+            
+
+  %ul.mypage-history.pager
+    %li.pager-prev.pager-cell
+      %i.icon-arrow-right
+    %li.pager-next.pager-cell     
+      %i.icon-arrow-left               
+          
