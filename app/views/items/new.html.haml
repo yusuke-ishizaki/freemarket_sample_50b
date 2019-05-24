@@ -12,17 +12,20 @@
         .inputs__image
           %h3.inputs__image__label 出品画像
           .inputs__image__caution 必須
+        %div#itemimage_uproad_over{style: "display:none"}  アップロードできる画像は10枚までです。
+        %div#itemimage_uproad_none{style: "display:none"}  画像がありません
         .upload 最大10枚までアップロードできます
         .sell-upload-items-container
         .sell-upload-items.sell-upload-items-container__preview
           %ul
 
         .inner-sell-image.sell-upload-items-container__guide
-          = f.file_field :images,multiple: true, id: "image_upload"
-          .drag-and-drop.have__image--0
-            .drag-and-drop__text
-              ドラッグ&ドロップ
-              またはクリックしてファイルをダウンロード
+          .image-input-box
+            = f.label :images, class:"drag-and-drop" do
+              = f.file_field :images,multiple: true, id: "image_upload"
+              .drag-and-drop__text
+                ドラッグ&ドロップ
+                またはクリックしてファイルをアップロード
 
 
       .inputs

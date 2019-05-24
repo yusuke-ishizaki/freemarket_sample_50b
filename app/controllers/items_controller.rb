@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :set_item,only: [:show, :edit, :update, :destroy]
 
   def index
   end
@@ -17,11 +18,11 @@ class ItemsController < ApplicationController
   end
 
   def show
-    set_item
+    @item
   end
 
   def edit
-    set_item
+    @item
   end
 
   def update
@@ -31,7 +32,7 @@ class ItemsController < ApplicationController
       redirect_to item_confirmation_items_path(@item)
     else
       flash[:notice] = "権限がありません"
-      redirect_to  edit_item_path
+      redirect_to edit_item_path
     end
   end
 
