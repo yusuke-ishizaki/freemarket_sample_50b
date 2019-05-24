@@ -1,5 +1,8 @@
 .full_screen_container
   = render "common/top_header"
+  - breadcrumb :mypage
+  = render "common/breadcrumb"
+
   %main.main__container.clearfix
     = render "common/sidebar"
     -# ここからマイページ
@@ -8,7 +11,7 @@
         = link_to '#' do
           %figure
             = image_tag "b.neko.jpg", size: "60x60", alt: "マイページの写真"
-          %h2.bold 
+          %h2.bold
             = @user.nickname
           .my__page__number
             %div
@@ -16,7 +19,7 @@
               %span.bold 10
             %div
               %span 出品数
-              %span.bold 
+              %span.bold
                 = @product_count
         .my__page__user-icon-rgba
 
