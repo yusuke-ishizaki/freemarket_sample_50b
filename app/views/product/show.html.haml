@@ -1,6 +1,6 @@
 = render "common/top_header"
 -breadcrumb:product,@product
-= render partial:'breadcrumb'
+= render "common/breadcrumb"
 
 .detail__main-content
   .detail__center-content
@@ -118,46 +118,46 @@
           %i.fab.fa-pinterest-square
 
   .nine-content
-    .nine-content_section
-      %h.nine-content_section-title
-      = link_to "" do
-        = "#{@product.user.nickname}さんのその他の商品"
-        .nine-content_section-box
-        - @other_user_products.each do |product|
-          %section.items_box
-            = link_to product_path(product.id), method: :get do
-              %figure.items_box-photo
-                =image_tag "おこ猫.jpg", alt: "商品画像", class: 'img picture'
-              .items_box-details
-                %h3.items_box-title.font-2
-                  = product.name
-                .items_box-num
-                  .items_box-price.font-5
-                    ¥
-                  .items_box-price.font-5
-                    = product.price
-                %p.items_box-tax (税込)
+    .ten-content
+      %h4.nine-content_section-title
+        = link_to "" do
+          = "#{@product.user.nickname}さんのその他の商品"
+          .nine-content_section-box
+          - @other_user_products.each do |product|
+            %section.items_box
+              = link_to product_path(product.id), method: :get do
+                %figure.items_box-photo
+                  =image_tag "おこ猫.jpg", alt: "商品画像", class: 'img picture'
+                .items_box-details
+                  %h3.items_box-title.font-2
+                    = product.name
+                  .items_box-num
+                    .items_box-price.font-5
+                      ¥
+                    .items_box-price.font-5
+                      = product.price
+                  %p.items_box-tax (税込)
 
-  .ten-content
-    .ten-content_section
-      %h.ten-content_section-title
-      = link_to "" do
-        = "#{@product.bland.name}さんのその他の商品"
-        .ten-content_section-box
-        - @products.each do |product|
-          %section.items_box
-            = link_to product_path(product.id), method: :get do
-              %figure.items_box-photo
-                =image_tag "おこ猫.jpg", alt: "商品画像", class: 'img picture'
-              .items_box-details
-                %h3.items_box-title.font-2
-                  = product.name
-                .items_box-num
-                  .items_box-price.font-5
-                    ¥
-                  .items_box-price.font-5
-                    = product.price
-                %p.items_box-tax (税込)
+    .ten-content
+      .ten-content_section
+        %h4.ten-content_section-title
+          = link_to "" do
+            = "#{@product.bland.name}さんのその他の商品"
+            .ten-content_section-box
+            - @products.each do |product|
+              %section.items_box
+                = link_to product_path(product.id), method: :get do
+                  %figure.items_box-photo
+                    =image_tag "おこ猫.jpg", alt: "商品画像", class: 'img picture'
+                  .items_box-details
+                    %h3.items_box-title.font-2
+                      = product.name
+                    .items_box-num
+                      .items_box-price.font-5
+                        ¥
+                      .items_box-price.font-5
+                        = product.price
+                    %p.items_box-tax (税込)
 
   = render "common/common_footer"
 
