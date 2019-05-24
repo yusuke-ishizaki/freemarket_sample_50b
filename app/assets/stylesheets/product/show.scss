@@ -306,6 +306,7 @@ td{
     width: 700px;
     margin: 48px auto 0;
     display: block;
+    display: flex;
 
     &_section-title{
         margin: 24px 0 8px;
@@ -315,9 +316,10 @@ td{
     }
 }
 .ten-content{
-    width: 700px;
-    margin: 48px auto 0;
+    // width: 700px;
+    // margin: 48px auto 0;
     display: -ms-flexbox;
+    @include clearfix;
 
     &_section-title{
         margin: 24px 0 8px;
