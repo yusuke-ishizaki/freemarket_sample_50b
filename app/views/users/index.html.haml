@@ -1,4 +1,6 @@
 = render "common/top_header"
+- breadcrumb :show_user
+= render "common/breadcrumb"
 %main.main__container.clearfix
     = render "common/sidebar"
     .right-content
@@ -20,4 +22,5 @@
                     %input{name: "after_save_callback", type: "hidden"}/
                     %button.btn-default.btn-red{type: "submit"} 変更する
 
+= render "common/common_footer"
 

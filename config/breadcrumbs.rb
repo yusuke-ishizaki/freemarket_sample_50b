@@ -2,9 +2,28 @@ crumb :root do
   link 'メルカリ', root_path
 end
 
-crumb :product do
-  link 'マイページ', user_path
+    #users/show
+crumb :mypage do |user|
+  link 'マイページ', user
   parent :root
+end
+
+    #users/index
+crumb :show_user do |user|
+  link "プロフィール", user
+  parent :mypage
+end
+
+    #users/logout
+crumb :logout_user do |user|
+  link "ログアウト", user
+  parent :mypage
+end
+
+    #users/personal_info
+crumb :edit_user do |user|
+  link "本人情報の登録", user
+  parent :mypage
 end
 
 crumb :product do |product|
@@ -12,9 +31,16 @@ crumb :product do |product|
   parent :root
 end
 
-crumb :card do
-  link '支払方法', user_cards_path
-  parent :users
+    #card/index
+crumb :card do |user|
+  link '支払い方法', user
+  parent :mypage
+end
+
+    #card/new
+crumb :card_new do |user|
+  link 'クレジットカード情報入力', user
+  parent :card
 end
 
 crumb :category do

@@ -56,15 +56,15 @@
           %th 発送日の目安
           %td 
             = @product.delivery.date
-              
-  .listing-item-change-box
-    = link_to edit_product_path(@product),class: "item__change__box__edit" do
-      %a.btn-product.btn-red  商品の編集
-    %p.user-product__text-center or
-    = link_to root_path, class: "item__change__box__pend" do
-      %button.btn-product.btn-red 出品を停止する
-    = link_to product_path(@product),method: :delete, class: "item__change__box__delete" do
-      %button.btn-product.btn-gray  この商品を削除する
+  - if @product.user == current_user            
+    .listing-item-change-box
+      = link_to edit_product_path(@product),class: "item__change__box__edit" do
+        %a.btn-product.btn-red  商品の編集
+      %p.user-product__text-center or
+      = link_to root_path, class: "item__change__box__pend" do
+        %button.btn-product.btn-red 出品を停止する
+      = link_to product_path(@product),method: :delete, class: "item__change__box__delete" do
+        %button.btn-product.btn-gray  この商品を削除する
   
   .six-content
     .six-content_message
