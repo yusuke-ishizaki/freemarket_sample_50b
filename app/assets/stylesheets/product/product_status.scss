@@ -1,72 +1,215 @@
-.stutas__main-content{
-    float: right;    
-    width: 700px;
-    display: block;
+.stutas__main-content {
+  float: right;
+  width: 700px;
+  display: block;
 }
-.mypage-tab-container{
-    background: #fff;
+
+.mypage-tab-container {
+  margin: 0;
+  background: #fff;
 }
-.mypage-tab-head{
-    padding: 0 16px;
-    background: #fafafa;
-    font-size: 16px;
-    line-height: 72px;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-}
-.listing-tabs{
-    border: 0;
-    background: #eee;
-    font-size: 0;
-}
-.active{
+
+ul.listing-tabs {
+  border: 0;
+  background: #eee;
+  font-size: 0;
+
+  li {
+    width: 33.3%;
     display: inline-block;
     text-align: center;
     vertical-align: top;
+    padding: 3% 0;
+    border: 0;
+
+    h3 {
+      font-size: 22px;
+
+    }
+  }
+
+  li.active {
+    background: #fff;
+    border-top: 2px solid #ea352d;
+  }
 }
-.status {
-    font-size: 22px;
+
+.mypage-tab-head {
+  padding: 0 16px;
+  background: #fafafa;
+  font-size: 16px;
+  line-height: 72px;
 }
-.mypage-item-list {
+
+
+.tab-content {
+  .tab-pane.active {
+    display: block;
+  }
+
+  ul.mypage-item-list {
+    border: 0;
+
+    li {
+      position: relative;
+
+      :last-child {
+        border: 0;
+      }
+    }
+  }
+
+  .mypage-item-not-found {
     padding: 160px 0 60px;
+    background-repeat: no-repeat;
     background-position: center 40px;
     background-size: 78px 85px;
     text-align: center;
     font-size: 16px;
     color: #ccc;
-    font-weight: bold;
+  }
 }
-.status-logo{
-    margin: 0 auto;
+
+
+.mypage-item-list {
+  display: block;
+  min-height: 55px;
+  padding: 16px;
+  color: #333;
 }
-.mypage-history{
-    height: 44px;
+.mypage-item-list img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
 }
-.pager{
-    position: relative;
-    font-size: 0;
-    text-align: center;
+  .mypage-item-body {
+    margin: 0 40px 0 68px;
+  }
+
+.mypage-item-body.show-stock-item {
+  margin-right: 100px;
 }
-.pager-prev{
-    left: 0;
-    position: absolute;
-    top: 0;
+
+.mypage-item-body {
+  margin: 0 40px 0 68px;
 }
-.pager-next{
-    right: 0;
-    position: absolute;
-    top: 0;
+
+.tab-content .tab-pane.active {
+  display: block;
 }
-.pager-cell{
-    display: inline-block;
-    width: 44px;
-    height: 44px;
-    border-radius: 4px;
-    background: #fff;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    line-height: 42px;
+
+.mypage-item-list li:first-child {
+  border-bottom: 1px solid #eee;
+}
+
+.mypage-item-list li:last-child {
+  border: 0;
+}
+.mypage-item-list li {
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+
+.mypage-item-link {
+  display: block;
+  min-height: 80px;
+  padding: 16px;
+  color: #333;
+}
+.mypage-item-link figure {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  width: 48px;
+  height: 48px;
+}
+
+.mypage-item-text {
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  max-height: 4.4em;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+}
+
+.listing-item-count {
+  vertical-align: 2px;
+  margin: 0 6px 0 0;
+}
+
+.mypage-item-status.awaiting {
+  background: #0099e8;
+}
+
+.mypage-item-status {
+  display: inline-block;
+  margin: 8px 0 0 0;
+  padding: 5px 6px;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.listing-item-count i {
+  vertical-align: middle;
+  color: #ccc;
+}
+
+.listing-item-count span {
+  vertical-align: middle;
+  margin: 0 0 0 2px;
+  font-size: 16px;
+  color: #888;
+}
+
+.mypage-item-link .icon-arrow-right {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.mypage-item-status.awaiting {
+  background: #0099e8;
+}
+
+.mypage-item-status {
+  display: inline-block;
+  margin: 8px 0 0 0;
+  padding: 5px 6px;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #fff;
+}
+.mypage-tabs a, .listing-tabs a, .review-history-tabs a {
+  position: relative;
+  display: block;
+  color: #333;
+  font-size: 16px;
+  line-height: 72px;
+}
+
+.icon-like-border:before {
+  content: '\e017';
+}
+
+i[class^='icon-'], i[class*='icon-'] {
+  display: inline-block;
+  font-family: 'icon-font';
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
