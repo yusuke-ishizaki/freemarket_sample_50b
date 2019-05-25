@@ -1,5 +1,7 @@
 .full_screen_container
   = render "common/top_header"
+  - breadcrumb :card_new
+  = render "common/breadcrumb"
   %main.main__container.clearfix
     = render "common/sidebar"
     .main__card-box
@@ -26,7 +28,7 @@
                   %li.signup-card-list-inner
                     = image_tag 'https://www-mercari-jp.akamaized.net/assets/img/card/dinersclub.svg?3982094107', class: 'img'
                   %li.signup-card-list-inner
-                    = image_tag 'https://www-mercari-jp.akamaized.net/assets/img/card/discover.svg?3982094107', class: 'img'    
+                    = image_tag 'https://www-mercari-jp.akamaized.net/assets/img/card/discover.svg?3982094107', class: 'img'
                 %br
               .form-group.signup-form-expire
                 %h3.limit-title

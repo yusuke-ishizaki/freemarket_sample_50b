@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :items
   devise_for :users
   root 'product#index'
   resources :users
   get   '/users_product/:id', to: 'product#users_product'
+  get   '/product_status/:id', to: 'product#product_status'
   resources :product
   get '/logout' => 'users#logout'
 
@@ -26,6 +28,8 @@ Rails.application.routes.draw do
 
   get '/profile' => 'users#personal_info'
 
-# get "/product/product_info"
+  get "/product/product_info"
+  get "/items/new"
+
 
 end

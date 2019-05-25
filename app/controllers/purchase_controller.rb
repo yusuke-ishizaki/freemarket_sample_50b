@@ -20,16 +20,16 @@ class PurchaseController < ApplicationController
     Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
     Payjp::Charge.create(
     :amount => @product.price,
-    :customer => card.customer_id, 
-    :currency => 'jpy', 
+    :customer => card.customer_id,
+    :currency => 'jpy',
     )
     redirect_to root_path
   end
 
-  def confirm
-    @product = Product.find(params[:id])
-  end
-  
+  # def confirm
+  #   @product = Product.find(params[:id])
+  # end
+
   private
 
   def set_product
