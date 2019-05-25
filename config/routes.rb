@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :items
+
   devise_for :users
   root 'product#index'
   resources :users
   get   '/users_product/:id', to: 'product#users_product'
   get   '/product_status/:id', to: 'product#product_status'
-  resources :product
   get '/logout' => 'users#logout'
 
   resources :card, only: [:new, :show, :index] do
@@ -16,13 +15,16 @@ Rails.application.routes.draw do
       post 'delete', to: 'card#delete'
     end
   end
+  
 
-  resources :purchase, only: [:index] do
-    collection do
-    get 'index', to: 'purchase#index'
-    post 'pay', to: 'purchase#pay'
-    get 'done', to: 'purchase#done'
-    get 'confrm', to: 'purchase#confirm'
+  resources :product do
+    resources :purchase, only: [:index] do
+      collection do
+      get 'index', to: 'purchase#index'
+      post 'pay', to: 'purchase#pay'
+      get 'done', to: 'purchase#done'
+      get 'confrm', to: 'purchase#confirm'
+      end
     end
   end
 
