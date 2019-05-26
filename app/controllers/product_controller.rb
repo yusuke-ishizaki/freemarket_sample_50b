@@ -6,9 +6,18 @@ class ProductController < ApplicationController
   end
 
   def new
+    @product = Product.new
+    @product.build_delivery
+    # @delivery = Derivery.new
   end
 
   def create
+    @product = Product.create!(create_params)# POINT
+    if @product.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def show
@@ -22,6 +31,15 @@ class ProductController < ApplicationController
   end
 
   def update
+    if @product.user_id == current_user.id
+      @product.update(item_params)
+      flash[:notice] = "商品情報を編集しました"
+      redirect_to item_confirmation_items_path(@item)
+    else
+      flash[:notice] = "権限がありません"
+      redirect_to edit_item_path
+    end
+
   end
 
   def destroy
@@ -37,4 +55,23 @@ class ProductController < ApplicationController
   def product_status
   end
 
+
+  private
+
+  def set_item
+    @product = Product.find(params[:id])
+  end
+
+  def create_params
+    # images以外の値についてのストロングパラメータの設定
+    params.require(:product).permit(:name,:text,:status,:price,:bland_id,delivery_attributes:[:id,:price,:region,:date,:product_id],category_attributes:[:id, :parent]).merge(user_id: current_user.id)
+    # return product_params
+  end
+  def delivery_params
+    params.require(:delivery).permit(:price,:region,:date)
+  end
+  def image_params
+    #imageのストロングパラメータの設定.js側でimagesをrequireすれば画像のみを引き出せるように設定する。
+    params.require(:product).permit( {:user_ids => []})
+  end
 end
