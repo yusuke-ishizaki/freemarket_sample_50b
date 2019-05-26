@@ -1,16 +1,11 @@
 Rails.application.routes.draw do
 
-<<<<<<< HEAD
   resources :items
   devise_for :users, controllers: {
       sessions: 'users/sessions' ,
       registrations: 'users/registrations' ,
       omniauth_callbacks: 'users/omniauth_callbacks'
   }
-=======
-
-  devise_for :users
->>>>>>> master
   root 'product#index'
   resources :users
   get   '/users_product/:id', to: 'product#users_product'
