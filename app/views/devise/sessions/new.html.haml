@@ -8,9 +8,9 @@
         =link_to "/users/new", class: "new_devise_btn-default btn-sns" do
           新規登録会員
     .login-main__button--outside
-      = link_to "Facebookでログイン", class: "new_devise_btn-default btn-sns btn-sns-facebook" do
+      = link_to user_facebook_omniauth_authorize_path, class: "new_devise_btn-default btn-sns btn-sns-facebook" do
         Facebookでログイン
-      = link_to "Googleでログイン", class: "new_devise_btn-default btn-sns btn-sns-google" do
+      = link_to user_google_oauth2_omniauth_authorize_path, class: "new_devise_btn-default btn-sns btn-sns-google" do
         Googleでログイン
     .login-main__button--form
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
