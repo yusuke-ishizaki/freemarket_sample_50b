@@ -27,10 +27,6 @@ class PurchaseController < ApplicationController
     redirect_to root_path
   end
 
-  # def confirm
-  #   @product = Product.find(params[:id])
-  # end
-
   private
 
   def set_product
