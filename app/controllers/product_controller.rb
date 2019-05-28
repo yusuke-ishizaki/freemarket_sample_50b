@@ -35,10 +35,10 @@ class ProductController < ApplicationController
     if @product.user_id == current_user.id
       @product.update(create_params)
       flash[:notice] = "商品情報を編集しました"
-      redirect_to item_confirmation_items_path(@item)
+      redirect_to root_path
     else
       flash[:notice] = "権限がありません"
-      redirect_to edit_item_path
+      redirect_to product_status_path
     end
 
   end
