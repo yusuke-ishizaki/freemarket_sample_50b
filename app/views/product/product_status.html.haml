@@ -3,7 +3,7 @@
   - breadcrumb :puroduct_status
   = render "common/breadcrumb"
   %main.main__container.clearfix
-    = render "common/sidebar"
+    -# = render "common/sidebar"
 
     .stutas__main-content
       %section.mypage-tab-container
@@ -11,21 +11,24 @@
         %ul.listing-tabs
           %li.active
             %h3.status
-              %a{"data-toggle" => "tab", :href => "#mypage-tab-transaction-now"}
-              出品中
+              = link_to product_product_status_list_path(current_user.id), class: 'active' do
+                出品中
           %li
             %h3.status 取引中
           %li
             %h3.status 売却済み
         .tab-content
-          %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane.active
+          - @product.each do |item|
+            %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane.active
+            
             %li
-              = link_to class: "mypage-item-link" do
+              = link_to product_path(product.id), method: :get, class: "mypage-item-link" do
                 %figure
-                  -# = image_tag 'src', alt: '', height: '', width: '', class: 'lazyloaded'
+
+                  =image_tag product.images[0].product_image.url, class: 'lazyloaded'
                 .mypage-item-body.show-stock-item
                 .mypage-item-text
-                  広辞苑
+                  = product.name
                 %div
                   %span.listing-item-count
                     %i.fa-heart

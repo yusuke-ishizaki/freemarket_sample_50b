@@ -54,6 +54,8 @@ class ProductController < ApplicationController
   end
 
   def product_status
+    # @items = current_user.items.order("created_at DESC")
+    @product = Product.find(params[:id])
   end
 
 
