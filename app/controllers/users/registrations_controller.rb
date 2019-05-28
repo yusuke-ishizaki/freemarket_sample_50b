@@ -15,31 +15,16 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def create
-    @user = User.new(sign_up_params)
-    if @user.save
-
+    if @user = User.new(sign_up_params)
+      @user.save
+      redirect_to root_path
     else
-      flash[:notice] = "メールアドレスに誤りがあります。ご確認いただき、正しく変更してください。"
-      render :sns
+      super
+      @user.uid = session[:uid]
+      @user.provider = session[:provider]
+      @user.save
     end
   end
-
-  def sns
-    @user = User.new(
-      nickname: session[:nickname],
-      email: session[:email],
-      password: session[:password],
-      password_confirmation: session[:password],
-    )
-  end
-
-  def create
-    super
-    @user.uid = session[:uid]
-    @user.provider = session[:provider]
-    @user.save
-  end
-
 
   # GET /resource/sign_up
   # def new

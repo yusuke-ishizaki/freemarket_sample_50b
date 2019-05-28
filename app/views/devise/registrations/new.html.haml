@@ -34,10 +34,10 @@
               = f.password_field :password_confirmation, class: "input-default", placeholder: "例) 6文字以上"
               .self-form__confilmation-password__nil.error.hidden パスワード(確認)を入力してください
               .self-form__confilmation-password__match.error.hidden パスワードとパスワード (確認) が一致しません
-            .new__devise__form-group
-              %label{for: "identification"} 本人確認
-              %p.font-size-small
-                安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+            -# .new__devise__form-group
+            -#   %label{for: "identification"} 本人確認
+            -#   %p.font-size-small
+            -#     安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
             -# .new__devise__form-group
             -#   %label{for: "last_name"} 姓 (全角)
             -#   %span 必須
@@ -76,11 +76,11 @@
               -#   %i.fas.fa-angle-down.font-color-gray#birthday
               -#   %p.birthday.font-size-small 日
               -# .self-form__birthday__nil.error.hidden 生年月日を入力してください
-            %p.font-color-gray.font-size-small
-              ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+            -# %p.font-color-gray.font-size-small
+            -#   ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
             .new__devise__form-group
               %p.font-size-small
-                「次へ進む」のボタンを押すことにより、
+                「登録完了」のボタンを押すことにより、
                 = link_to "利用規約", "/", id: "font-color-blue"
                 に同意したものとみなします
                 %button{type: "submit", class: "next__btn-red"}
