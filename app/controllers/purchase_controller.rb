@@ -15,24 +15,25 @@ class PurchaseController < ApplicationController
   end
 
   def pay
-    @product = Product.find(params[:format])
+    @product = Product.find(params[:product_id])
     card = Card.where(user_id: current_user.id).first
     Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
     Payjp::Charge.create(
     :amount => @product.price,
-    :customer => card.customer_id, 
-    :currency => 'jpy', 
+    :customer => card.customer_id,
+    :currency => 'jpy',
     )
+    @product.update( user_id: current_user.id, sale: "sold_out")
     redirect_to root_path
   end
 
-  def confirm
-    @product = Product.find(params[:id])
-  end
-  
+  # def confirm
+  #   @product = Product.find(params[:id])
+  # end
+
   private
 
   def set_product
-    @product = Product.find(params[:format])
+    @product = Product.find(params[:product_id])
   end
 end

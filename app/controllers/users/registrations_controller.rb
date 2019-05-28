@@ -14,15 +14,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
     )
   end
 
-  def create
-    @user = User.new(sign_up_params)
-    if @user.save
-
-    else
-      flash[:notice] = "メールアドレスに誤りがあります。ご確認いただき、正しく変更してください。"
-      render :sns
-    end
-  end
+  # def create
+  # end
 
   # GET /resource/sign_up
   # def new

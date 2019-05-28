@@ -26,7 +26,7 @@ body{
     display: block;
     @include clearfix;
     background-color: white;
-    padding: 24px 40px 40px;
+    // padding: 24px 40px 40px;
 
     &_img{
         float: left;
@@ -185,9 +185,11 @@ td{
 }
 .fa-heart{
     color: #cccccc;
+    font-family: "Font Awesome 5 Free";
 }
 .fa-flag{
     color: #a0a0a0;
+    font-family: "Font Awesome 5 Free";
 }
 .six-content{
     margin: 8px auto;
@@ -262,7 +264,8 @@ td{
     justify-content:center;
     .facebook__icon{
       color:#305097;
-      font-size: 320%;
+    //   font-size: 320%;
+      font-size: 29px;
       margin-right:10px;
       top:16px;
     }
@@ -287,16 +290,25 @@ td{
   }
 }
 
-.fa-facebook-square, .fa-twitter{
-    &::before {
-        font-size: 28px;
-    }
-}
+// .fa-facebook-square, .fa-twitter{
+//     &::before {
+//         font-size: 28px;
+//     }
+// }
+
+#facebook .fa-facebook-square{
+    color: #385185;
+    font-size: 50px;
+    // margin-right:10px;
+    margin-left: 20px;
+    top:16px;
+  }
 
 .nine-content{
     width: 700px;
     margin: 48px auto 0;
     display: block;
+    display: flex;
 
     &_section-title{
         margin: 24px 0 8px;
@@ -306,9 +318,10 @@ td{
     }
 }
 .ten-content{
-    width: 700px;
-    margin: 48px auto 0;
-    display: block;
+    // width: 700px;
+    // margin: 48px auto 0;
+    display: -ms-flexbox;
+    @include clearfix;
 
     &_section-title{
         margin: 24px 0 8px;
@@ -384,10 +397,7 @@ td{
   }
 }
 .items_box {
-    margin: 0 0 0 20px;
+    margin: 0 0 20px 20px;
     width: 213px;
     float: left;
   }
-  
-  
-  

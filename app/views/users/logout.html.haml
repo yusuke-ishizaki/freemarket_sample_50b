@@ -1,12 +1,14 @@
 .full_screen_container
   = render "common/top_header"
+  - breadcrumb :logout_user
+  = render "common/breadcrumb"
   %main.main__container.clearfix
     = render "common/sidebar"
     .logout__content
       .chapter__container
         .single-inner
           .single__content
-            %button.btn.logout__btn-red
+            .btn.logout__btn-red
               =link_to "ログアウト", destroy_user_session_path(current_user), method: :delete
 
   = render "common/common_footer"

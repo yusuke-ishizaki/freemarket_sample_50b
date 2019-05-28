@@ -53,6 +53,9 @@ header {
       width: 40px;
       height: 40px;
       cursor: pointer;
+      background-color: gray;
+      color: white;
+      border-radius: 4px;
     }
     .input__box {
       background: #f5f5f5;
@@ -137,7 +140,7 @@ header {
   right: 2px;
   top: 1px;
   height: 38px;
-  width: 40px;
+  width: 37px;
   border: none;
   background-color: unset;
   cursor: pointer;

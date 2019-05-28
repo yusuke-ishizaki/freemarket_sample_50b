@@ -1,0 +1,42 @@
+.full_screen_container
+  = render "common/top_header"
+  - breadcrumb :puroduct_status
+  = render "common/breadcrumb"
+  %main.main__container.clearfix
+    = render "common/sidebar"
+
+    .stutas__main-content
+      %section.mypage-tab-container
+        %h2.mypage-tab-head 出品した商品
+        %ul.listing-tabs
+          %li.active
+            %h3.status
+              %a{"data-toggle" => "tab", :href => "#mypage-tab-transaction-now"}
+              出品中
+          %li
+            %h3.status 取引中
+          %li
+            %h3.status 売却済み
+        .tab-content
+          %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane.active
+            %li
+              = link_to class: "mypage-item-link" do
+                %figure
+                  -# = image_tag 'src', alt: '', height: '', width: '', class: 'lazyloaded'
+                .mypage-item-body.show-stock-item
+                .mypage-item-text
+                  広辞苑
+                %div
+                  %span.listing-item-count
+                    %i.fa-heart
+                    %span 0
+                  %span.listing-item-count
+                    %i.icon-message
+                    %span 0
+                  .mypage-item-status.bold.awaiting
+                    出品中
+                    %i.icon-arrow-right
+
+
+  = render 'common/common_footer'
+
