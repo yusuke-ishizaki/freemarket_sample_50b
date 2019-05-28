@@ -5,4 +5,6 @@ class Product < ActiveRecord::Base
     accepts_nested_attributes_for :delivery
     # belongs_to :category
     has_many_attached :images
+    extend ActiveHash::Associations::ActiveRecordExtensions
+    belongs_to_active_hash :prefecture  
 end

@@ -32,13 +32,13 @@ class ProductController < ApplicationController
   end
 
   def update
-    if @product.user_id == current_user.id
-      @product.update(create_params)
+    @product = Product.find(params[:id])
+    if @product.update(create_params)
       flash[:notice] = "商品情報を編集しました"
       redirect_to root_path
     else
-      flash[:notice] = "権限がありません"
-      redirect_to product_status_path
+      flash[:notice] = "編集できませんでした"
+      render :edit
     end
 
   end
@@ -69,7 +69,6 @@ class ProductController < ApplicationController
   def create_params
     # images以外の値についてのストロングパラメータの設定
     params.require(:product).permit(:name,:text,:status,:price,:bland_id,delivery_attributes:[:id,:price,:region,:date,:product_id],category_attributes:[:id, :parent]).merge(user_id: current_user.id)
-    # return product_params
   end
   def image_params
     #imageのストロングパラメータの設定.js側でimagesをrequireすれば画像のみを引き出せるように設定する。

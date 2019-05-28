@@ -12,8 +12,6 @@ Rails.application.routes.draw do
   get   '/listings', to: 'product#product_status'
   get  '/logout' => 'users#logout'
   get  '/users/show/123' => 'users#show'
-  get  '/product_status', to: 'product#product_status'
-
 
   resources :card, only: [:new, :show, :index] do
     collection do

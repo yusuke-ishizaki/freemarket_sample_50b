@@ -1,0 +1,13 @@
+%section.items_box
+  = link_to product_path(product.id), method: :get do
+    %figure.items_box-photo
+      = product.images
+    .items_box-details
+      %h3.items_box-title.font-2
+        = product.name
+      .items_box-num
+        .items_box-price.font-5
+          ¥
+        .items_box-price.font-5
+          = product.price
+      %p.items_box-tax (税込)    

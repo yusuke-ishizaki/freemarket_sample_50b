@@ -82,7 +82,7 @@ gem 'dotenv-rails'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
-
+gem 'active_hash'
 gem 'ancestry'
 
 group :production do
