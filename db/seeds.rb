@@ -25,3 +25,10 @@ CSV.foreach('db/category.csv', headers: true) do |row|
     parent_id: row['parent_id'],
   )
 end
+
+CSV.foreach('db/brand.csv', headers: true) do |row|
+  Bland.find_or_create_by(
+    id: row['id'],
+    name: row['name'],
+  )
+end
