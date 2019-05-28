@@ -1,5 +1,4 @@
-class ProductController < ApplicationController
-
+class ProductsController < ApplicationController
   def index
     # サーバー 一覧表示, DBより最新の4件をトップページに表示
     @products = Product.order(created_at: :desc).limit(4)
@@ -73,4 +72,3 @@ class ProductController < ApplicationController
     params.require(:images).permit( {:images => []})
   end
 end
-

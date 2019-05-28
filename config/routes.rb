@@ -6,13 +6,13 @@ Rails.application.routes.draw do
       registrations: 'users/registrations' ,
       omniauth_callbacks: 'users/omniauth_callbacks'
   }
-  root 'product#index'
+  root 'products#index'
   resources :users
-  get   '/users_product/:id', to: 'product#users_product'
-  get   '/product_status/:id', to: 'product#product_status'
+  get   '/users_product/:id', to: 'products#users_product'
+  get   '/product_status/:id', to: 'products#product_status'
   get  '/logout' => 'users#logout'
   get  '/users/show/123' => 'users#show'
-  get  '/product_status', to: 'product#product_status'
+  get  '/product_status', to: 'products#product_status'
 
 
   resources :card, only: [:new, :show, :index] do
@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   end
 
 
-  resources :product do
+  resources :products do
     resources :purchase, only: [:index] do
       collection do
       get 'index', to: 'purchase#index'

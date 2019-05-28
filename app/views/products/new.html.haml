@@ -4,7 +4,7 @@
   -#= render './shared/products-new-header'
 %section.singlecontainer
   #sell
-    =form_with model: @product, url: '/product', method: :post, multiple: true, html: {id:'new_item'}, local: true  do |f|
+    =form_with model: @product, url: '/products', method: :post, multiple: true, html: {id:'new_item'}, local: true  do |f|
       .inputs
         %h2.inputs__header 商品の情報を入力
       .inputs-uploadbox
