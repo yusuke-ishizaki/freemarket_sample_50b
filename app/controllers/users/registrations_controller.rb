@@ -14,17 +14,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
     )
   end
 
-  def create
-    if @user = User.new(sign_up_params)
-      @user.save
-      redirect_to root_path
-    else
-      super
-      @user.uid = session[:uid]
-      @user.provider = session[:provider]
-      @user.save
-    end
-  end
+  # def create
+  # end
 
   # GET /resource/sign_up
   # def new
