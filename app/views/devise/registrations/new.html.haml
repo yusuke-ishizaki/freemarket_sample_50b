@@ -38,28 +38,28 @@
               %label{for: "identification"} 本人確認
               %p.font-size-small
                 安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
-            .new__devise__form-group
-              %label{for: "last_name"} 姓 (全角)
-              %span 必須
-              = p.text_field :last_name, class: "input-default", placeholder: "例) 山田"
-              .self-form__last-name__nil.error.hidden 姓を入力してください
-            .new__devise__form-group
-              %label{for: "first_name"} 名 (全角)
-              %span 必須
-              = p.text_field :first_name, class: "input-default", placeholder: "例) 彩"
-              .self-form__first-name__nil.error.hidden 名を入力してください
-            .new__devise__form-group
-              %label{for: "last_name_kana"} 姓カナ (全角)
-              %span 必須
-              = p.text_field :last_name_kana, class: "input-default", placeholder: "例) ヤマダ"
-              .self-form__last-name-kana__nil.error.hidden 姓(カナ)を入力してください
-              .self-form__last-name-kana__kana.error.hidden 姓(カナ)はカナ文字を入力してください
-            .new__devise__form-group
-              %label{for: "first_name_kana"} 名カナ (全角)
-              %span 必須
-              = p.text_field :first_name_kana, class: "input-default", placeholder: "例) アヤ"
-              .self-form__first-name-kana__nil.error.hidden 名(カナ)を入力してください
-              .self-form__first-name-kana__kana.error.hidden 名(カナ)はカナ文字を入力してください
+            -# .new__devise__form-group
+            -#   %label{for: "last_name"} 姓 (全角)
+            -#   %span 必須
+            -#   = p.text_field :last_name, class: "input-default", placeholder: "例) 山田"
+            -#   .self-form__last-name__nil.error.hidden 姓を入力してください
+            -# .new__devise__form-group
+            -#   %label{for: "first_name"} 名 (全角)
+            -#   %span 必須
+            -#   = p.text_field :first_name, class: "input-default", placeholder: "例) 彩"
+            -#   .self-form__first-name__nil.error.hidden 名を入力してください
+            -# .new__devise__form-group
+            -#   %label{for: "last_name_kana"} 姓カナ (全角)
+            -#   %span 必須
+            -#   = p.text_field :last_name_kana, class: "input-default", placeholder: "例) ヤマダ"
+            -#   .self-form__last-name-kana__nil.error.hidden 姓(カナ)を入力してください
+            -#   .self-form__last-name-kana__kana.error.hidden 姓(カナ)はカナ文字を入力してください
+            -# .new__devise__form-group
+            -#   %label{for: "first_name_kana"} 名カナ (全角)
+            -#   %span 必須
+            -#   = p.text_field :first_name_kana, class: "input-default", placeholder: "例) アヤ"
+            -#   .self-form__first-name-kana__nil.error.hidden 名(カナ)を入力してください
+            -#   .self-form__first-name-kana__kana.error.hidden 名(カナ)はカナ文字を入力してください
             -# .new__devise__form-group-year
             -#   %label{for: "birthday"} 生年月日
             -#   %span 必須
@@ -83,7 +83,6 @@
                 「次へ進む」のボタンを押すことにより、
                 = link_to "利用規約", "/", id: "font-color-blue"
                 に同意したものとみなします
-              = link_to root_path do
                 %button{type: "submit", class: "next__btn-red"}
                   登録完了
 
