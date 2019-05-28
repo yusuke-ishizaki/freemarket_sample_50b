@@ -26,6 +26,12 @@ crumb :edit_user do |user|
   parent :mypage
 end
 
+    #product/product_status
+    crumb :puroduct_status do |product|
+      link "出品した商品 - 出品中", product_status_path
+      parent :mypage
+    end
+
 crumb :product do |product|
   link product.name, product_path(product)
   parent :root
