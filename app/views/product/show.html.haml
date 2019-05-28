@@ -2,6 +2,9 @@
 -breadcrumb:product,@product
 = render "common/breadcrumb"
 
+-if @product.sale == 'sold_out'
+  = @product.name
+
 .detail__main-content
   .detail__center-content
     %h1.detail__top-content

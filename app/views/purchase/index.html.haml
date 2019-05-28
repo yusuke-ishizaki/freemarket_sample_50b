@@ -4,13 +4,9 @@
   %section.confirm__buy-content
     .confirm__body-content
       %h3.confirm__top-content-img
-        -if @product.sale == 'sold_out'
-          =image_tag'sale-slim-gothic-red-soldout.png', class: 'confirm-img' 
-        -else
-          =image_tag'おこ猫.jpeg', class: 'confirm-img' 
+        =image_tag'おこ猫.jpeg', class: 'confirm-img' 
         %p.confirm__top-content_title 
           = @product.name
-          = @product.sale
   
       .confirm__second-content
         %p.confirm__second-content_price 
@@ -27,14 +23,11 @@
               .confirm-price 
                 = @product.price
         .confirm__second-content_btn-purches 
-          -if @user == current_user
+          -if @user == current_user || @product.sale == 'sold_out'
             =link_to "購入できません", "", class: "pay", id: "pay" 
           -else
-            -if @default_card_information.blank?
-              = link_to "購入する", new_card_path, class: "purches_btn"
-            -else
-              = form_tag pay_product_purchase_index_path(@product) do
-                = submit_tag("購入する",class: "pay",id: "pay")
+            = form_tag pay_product_purchase_index_path(@product) do
+              = submit_tag("購入する",class: "pay",id: "pay")
 
           
 
