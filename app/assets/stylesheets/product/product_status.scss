@@ -19,7 +19,7 @@ ul.listing-tabs {
     display: inline-block;
     text-align: center;
     vertical-align: top;
-    padding: 3% 0;
+    //padding: 3% 0;
     border: 0;
 
     h3 {
@@ -49,6 +49,7 @@ ul.listing-tabs {
 
   ul.mypage-item-list {
     border: 0;
+    padding: 0;
 
     li {
       position: relative;
@@ -85,6 +86,8 @@ ul.listing-tabs {
   left: 0;
   z-index: 1;
   width: 100%;
+  object-fit: cover;
+  height: 48px;
 }
   .mypage-item-body {
     margin: 0 40px 0 68px;
@@ -116,7 +119,7 @@ ul.listing-tabs {
 
 .mypage-item-link {
   display: block;
-  min-height: 80px;
+  min-height: 55px;
   padding: 16px;
   color: #333;
 }

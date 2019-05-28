@@ -54,6 +54,9 @@ class ProductController < ApplicationController
   end
 
   def product_status
+    # @items = current_user.items.order("created_at DESC")
+    @products = current_user.products
+    # @product.images.attach(params[:product][:images])
   end
 
 

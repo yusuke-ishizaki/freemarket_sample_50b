@@ -11,31 +11,37 @@
         %ul.listing-tabs
           %li.active
             %h3.status
-              %a{"data-toggle" => "tab", :href => "#mypage-tab-transaction-now"}
-              出品中
+              = link_to product_path(current_user.id), class: 'active' do
+                出品中
           %li
-            %h3.status 取引中
+            %h3.status
+              = link_to "#" do
+                取引中
           %li
-            %h3.status 売却済み
+            %h3.status
+              = link_to "#" do
+                売却済み
         .tab-content
-          %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane.active
-            %li
-              = link_to class: "mypage-item-link" do
-                %figure
-                  -# = image_tag 'src', alt: '', height: '', width: '', class: 'lazyloaded'
-                .mypage-item-body.show-stock-item
-                .mypage-item-text
-                  広辞苑
-                %div
-                  %span.listing-item-count
-                    %i.fa-heart
-                    %span 0
-                  %span.listing-item-count
-                    %i.icon-message
-                    %span 0
-                  .mypage-item-status.bold.awaiting
-                    出品中
-                    %i.icon-arrow-right
+          - @products.each do |product|
+            %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane.active
+
+              %li
+                = link_to "/users_product/:id", method: :get, class: "mypage-item-link" do
+                  %figure
+                    =image_tag product.images[0]
+                  .mypage-item-body.show-stock-item
+                    .mypage-item-text
+                      = product.name
+                    %div
+                      %span.listing-item-count
+                        %i.fa-heart
+                        %span 0
+                      %span.listing-item-count
+                        %i.icon-message
+                        %span 0
+                      .mypage-item-status.bold.awaiting
+                        出品中
+                        %i.icon-arrow-right
 
 
   = render 'common/common_footer'
