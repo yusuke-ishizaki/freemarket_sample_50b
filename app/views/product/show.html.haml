@@ -69,7 +69,7 @@
       %span.third-content_tax (税込)
       %span.third-content_shipping 送料込み
       -if user_signed_in?
-        = link_to "購入画面に進む", purchase_index_path(@product), class: "purches_btn"
+        = link_to "購入画面に進む", product_purchase_index_path(@product), class: "purches_btn"
       -else
         = link_to "購入画面に進む", new_user_path, class: "purches_btn"
 
@@ -142,9 +142,9 @@
       .ten-content_section
         %h4.ten-content_section-title
           = link_to "" do
-            = "#{@product.bland.name}さんのその他の商品"
+            = "#{@product.bland.name}のその他の商品"
             .ten-content_section-box
-            - @products.each do |product|
+            - @other_bland_products.each do |product|
               %section.items_box
                 = link_to product_path(product.id), method: :get do
                   %figure.items_box-photo

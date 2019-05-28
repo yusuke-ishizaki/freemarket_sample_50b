@@ -1,6 +1,5 @@
 class CardController < ApplicationController
 
-  require 'payjp'
   
     def index
     end
