@@ -19,7 +19,7 @@
 require 'csv'
 
 CSV.foreach('db/category.csv', headers: true) do |row|
-  Content.create!(
+  Category.find_or_create_by(
     id: row['id'],
     name: row['name'],
     parent_id: row['parent_id'],
