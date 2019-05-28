@@ -16,17 +16,16 @@
         %div#itemimage_uproad_none{style: "display:none"}  画像がありません
         .upload 最大10枚までアップロードできます
         .sell-upload-items-container
-        .sell-upload-items.sell-upload-items-container__preview
-          %ul
+        .sell-upload-items-container__flex
+          .sell-upload-items.sell-upload-items-container__preview
+            %ul.sell-upload-items.sell-upload-items-container__preview-ul
 
-        .inner-sell-image.sell-upload-items-container__guide
-          = f.file_field :images,multiple: true, id: "image_upload"
-          .drag-and-drop.have__image--0
-            .drag-and-drop__text
-              ドラッグ&ドロップ
-              またはクリックしてファイルをアップロード
-
-
+          .inner-sell-image.sell-upload-items-container__guide
+            = f.file_field :images,multiple: true, id: "image_upload"
+            .drag-and-drop.have__image--0
+              .drag-and-drop__text
+                ドラッグ&ドロップ
+                またはクリックしてファイルをアップロード
       .inputs
         .inputs__product
           %h3.inputs__product__label 商品名
