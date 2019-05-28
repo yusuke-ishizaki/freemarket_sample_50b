@@ -23,7 +23,7 @@
               .confirm-price 
                 = @product.price
         .confirm__second-content_btn-purches 
-          -if @user == current_user
+          -if @user == current_user || @product.sale == 'sold_out'
             =link_to "購入できません", "", class: "pay", id: "pay" 
           -else
             = form_tag pay_product_purchase_index_path(@product) do

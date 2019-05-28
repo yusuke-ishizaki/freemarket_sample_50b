@@ -10,8 +10,10 @@ Rails.application.routes.draw do
   resources :users
   get   '/users_product/:id', to: 'product#users_product'
   get   '/product_status/:id', to: 'product#product_status'
-  get '/logout' => 'users#logout'
-  get '/users/show/123' => 'users#show'
+  get  '/logout' => 'users#logout'
+  get  '/users/show/123' => 'users#show'
+  get  '/product_status', to: 'product#product_status'
+
 
   resources :card, only: [:new, :show, :index] do
     collection do
@@ -26,10 +28,7 @@ Rails.application.routes.draw do
   resources :product do
     resources :purchase, only: [:index] do
       collection do
-      get 'index', to: 'purchase#index'
-      post 'pay', to: 'purchase#pay'
-      get 'done', to: 'purchase#done'
-      get 'confrm', to: 'purchase#confirm'
+        post 'pay', to: 'purchase#pay'
       end
     end
   end
