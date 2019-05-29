@@ -7,7 +7,6 @@ class CardController < ApplicationController
     def new
       @card = Card.new
       card = Card.where(@card.user_id == current_user.id)
-      redirect_to action: "show" if card.exists?
     end
 
     def pay
