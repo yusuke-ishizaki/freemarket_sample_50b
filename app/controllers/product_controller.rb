@@ -1,4 +1,5 @@
 class ProductController < ApplicationController
+  before_action :set_item, only: [:show, :edit, :update, :users_product]
 
   def index
     # サーバー 一覧表示, DBより最新の4件をトップページに表示
@@ -21,18 +22,18 @@ class ProductController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
+    @product
     @products = Product.order(created_at: :desc).limit(6)
     @other_user_products = Product.where(user_id: @product.user_id).order("id DESC").limit(6)
     @other_bland_products = Product.where(bland_id: @product.bland_id).order("id DESC").limit(6)
   end
 
   def edit
-    @product = Product.find(params[:id])
+    @product
   end
 
   def update
-    @product = Product.find(params[:id])
+    @product
     if @product.update(create_params)
       flash[:notice] = "商品情報を編集しました"
       redirect_to root_path
@@ -44,19 +45,20 @@ class ProductController < ApplicationController
   end
 
   def destroy
-    product = Product.where(user_id: current_user.id).first
-    product.destroy
-    redirect_to root_path
+    product = Product.find(params[:id])
+    if product.user_id == current_user.id
+      product.destroy
+      redirect_to ‘/listings’
+    end
   end
 
   def users_product
-    @product = Product.where(user_id: current_user.id).first
+    @product
   end
 
   def product_status
     # @items = current_user.items.order("created_at DESC")
     @products = current_user.products
-    # @product.images.attach(params[:product][:images])
   end
 
 
