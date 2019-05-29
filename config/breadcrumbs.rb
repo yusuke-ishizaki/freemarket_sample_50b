@@ -27,10 +27,10 @@ crumb :edit_user do |user|
 end
 
     #product/product_status
-    crumb :puroduct_status do |product|
-      link "出品した商品 - 出品中", product_status_path
-      parent :mypage
-    end
+crumb :puroduct_status do |product|
+  link "出品した商品 - 出品中", product_status_path
+  parent :mypage
+end
 
 crumb :product do |product|
   link product.name, product_path(product)
@@ -49,7 +49,8 @@ crumb :card_new do |user|
   parent :card
 end
 
-crumb :category do
+    #categories/index
+crumb :category do |category|
   link 'カテゴリー一覧'
   parent :root
 end

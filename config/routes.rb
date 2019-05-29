@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'categories/index'
   resources :items
   devise_for :users, controllers: {
       sessions: 'users/sessions' ,
@@ -12,6 +13,9 @@ Rails.application.routes.draw do
   get   '/listings', to: 'product#product_status'
   get  '/logout' => 'users#logout'
   get  '/users/show/123' => 'users#show'
+  get  '/product_status', to: 'product#product_status'
+
+  resources :categories
 
   resources :card, only: [:new, :show, :index] do
     collection do
