@@ -4,7 +4,7 @@
   %section.confirm__buy-content
     .confirm__body-content
       %h3.confirm__top-content-img
-        =image_tag'おこ猫.jpeg', class: 'confirm-img' 
+        = image_tag @product.images[0], class: 'confirm-img' 
         %p.confirm__top-content_title 
           = @product.name
   

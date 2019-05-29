@@ -1,4 +1,24 @@
-.item-sold-out-badge {
-    border-width: 65px 65px 0 0;
+.item-sold-out-badge{
+    border-width: 100px 100px 0 0;
     border-color: #ea352d transparent transparent transparent;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    color: white;
+}
+.sold_text{
+    position: absolute;
+    left: 2px;
+    z-index: 2;
+    color: #fff;
+    transform: rotate(-45deg);
+    letter-spacing: 2px;
+    font-weight: 600;
+    top: -77px;
+    font-size: 21px;
 }

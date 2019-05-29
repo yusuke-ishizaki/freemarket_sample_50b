@@ -26,7 +26,7 @@
             %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane.active
 
               %li
-                = link_to "/users_product/:id", method: :get, class: "mypage-item-link" do
+                = link_to "/users_product/#{product.id}", method: :get, class: "mypage-item-link" do
                   %figure
                     =image_tag product.images[0]
                   .mypage-item-body.show-stock-item

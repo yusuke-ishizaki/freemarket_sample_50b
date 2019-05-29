@@ -26,7 +26,7 @@ class PurchaseController < ApplicationController
     :customer => card.customer_id,
     :currency => 'jpy',
     )
-    @product.update( user_id: current_user.id, sale: "sold_out")
+    @product.update( sale: "sold_out")
     redirect_to root_path
   end
 
