@@ -68,10 +68,13 @@
         = "¥ #{@product.price}"
       %span.third-content_tax (税込)
       %span.third-content_shipping 送料込み
-      -if user_signed_in?
-        = link_to "購入画面に進む", product_purchase_index_path(@product), class: "purches_btn"
+      -if @product.sale == 'sold_out'
+        = link_to "売り切れました", "", class: "purches_btn-sold"
       -else
-        = link_to "購入画面に進む", new_user_path, class: "purches_btn"
+        -if user_signed_in?
+          = link_to "購入画面に進む", product_purchase_index_path(@product), class: "purches_btn"
+        -else
+          = link_to "購入画面に進む", new_user_path, class: "purches_btn"
 
     .forth-content
       %p.forth-content_description
@@ -127,7 +130,11 @@
             %section.items_box
               = link_to product_path(product.id), method: :get do
                 %figure.items_box-photo
-                  =image_tag @product.images[0], alt: "商品画像", class: 'img picture'
+                  = image_tag product.images.first
+                  -if product.sale == 'sold_out'
+                    %figcaption
+                      .item-sold-out-badge
+                        .sold_text SOLD 
                 .items_box-details
                   %h3.items_box-title.font-2
                     = product.name
@@ -137,8 +144,7 @@
                     .items_box-price.font-5
                       = product.price
                   %p.items_box-tax (税込)
-
-    .ten-content
+      .ten-content
       .ten-content_section
         %h4.ten-content_section-title
           = link_to "" do
@@ -148,7 +154,11 @@
               %section.items_box
                 = link_to product_path(product.id), method: :get do
                   %figure.items_box-photo
-                    =image_tag @product.images[0], alt: "商品画像", class: 'img picture'
+                    -# = image_tag product.images.first
+                    -if product.sale == 'sold_out'
+                      %figcaption
+                        .item-sold-out-badge
+                          .sold_text SOLD 
                   .items_box-details
                     %h3.items_box-title.font-2
                       = product.name
@@ -158,6 +168,6 @@
                       .items_box-price.font-5
                         = product.price
                     %p.items_box-tax (税込)
-
+    
   = render "common/common_footer"
 

@@ -1,78 +1,80 @@
-.users-product__main-content  
-  .detail__second-content
-    %h1.users-product__top-content
-      = @product.name  
-    .detail__second-content_img
-      = image_tag 'おこ猫.jpeg',  class: 'detail__img-parent'
-      = image_tag 'おこ猫.jpeg',  class: 'detail__img-child'
-      = image_tag 'おこ猫.jpeg',  class: 'detail__img-child'
-      = image_tag 'おこ猫.jpeg',  class: 'detail__img-child'
-    %table.detail__second-content_detail
-      %tbody.detail__second-content_detail-table
-        %tr
-          %th 出品者
-          %td
-            .link 
-              = link_to @product.user.nickname, ""
-            .td__img
-              = image_tag 'スクリーンショット 2019-05-16 21.25.31.png',  class: 'saler-red'
-              = image_tag 'スクリーンショット 2019-05-16 21.25.50.png',  class: 'saler-yellow'
-              = image_tag 'スクリーンショット 2019-05-16 21.26.03.png',  class: 'saler-bulue'
-        %tr
-          %th カテゴリー
-          %td
-            .link
-              %a メンズ  
-              %br
-              %a >トップス
-              %br
-              %a >スウェット
-        %tr
-          %th ブランド
-          %td 
-            .link
-              = link_to @product.bland.name
-        %tr
-          %th 商品のサイズ
-          %td 
-            = @product.size
-        %tr
-          %th 商品の状態
-          %td 
-            = @product.status
-        %tr
-          %th 配送料の負担
-          %td 
-            = @product.delivery.price
-        %tr
-          %th 配送の方法
-          %td 
-            = @product.delivery.method
-        %tr
-          %th 配送元地域
-          %td 
-            = @product.delivery.region
-        %tr
-          %th 発送日の目安
-          %td 
-            = @product.delivery.date
-  - if @product.user == current_user            
-    .listing-item-change-box
-      = link_to edit_product_path(@product),class: "item__change__box__edit" do
-        %a.btn-product.btn-red  商品の編集
-      %p.user-product__text-center or
-      = link_to root_path, class: "item__change__box__pend" do
-        %button.btn-product.btn-red 出品を停止する
-      = link_to product_path(@product),method: :delete, class: "item__change__box__delete" do
-        %button.btn-product.btn-gray  この商品を削除する
+= render 'common/top_header'
+%main.main__users_product
+  .users-product__main-content  
+    .detail__second-content
+      %h1.users-product__top-content
+        = @product.name  
+      .detail__second-content_img
+        = image_tag @product.images[0],  class: 'detail__img-parent'
+        = image_tag @product.images[0],  class: 'detail__img-child'
+        = image_tag @product.images[0],  class: 'detail__img-child'
+        = image_tag @product.images[0],  class: 'detail__img-child'
+      %table.detail__second-content_detail
+        %tbody.detail__second-content_detail-table
+          %tr
+            %th 出品者
+            %td
+              .link 
+                = link_to @product.user.nickname, ""
+              .td__img
+                = image_tag 'スクリーンショット 2019-05-16 21.25.31.png',  class: 'saler-red'
+                = image_tag 'スクリーンショット 2019-05-16 21.25.50.png',  class: 'saler-yellow'
+                = image_tag 'スクリーンショット 2019-05-16 21.26.03.png',  class: 'saler-bulue'
+          %tr
+            %th カテゴリー
+            %td
+              .link
+                %a メンズ  
+                %br
+                %a >トップス
+                %br
+                %a >スウェット
+          %tr
+            %th ブランド
+            %td 
+              .link
+                = link_to @product.bland.name
+          %tr
+            %th 商品のサイズ
+            %td 
+              = @product.size
+          %tr
+            %th 商品の状態
+            %td 
+              = @product.status
+          %tr
+            %th 配送料の負担
+            %td 
+              = @product.delivery.price
+          %tr
+            %th 配送の方法
+            %td 
+              = @product.delivery.method
+          %tr
+            %th 配送元地域
+            %td 
+              = @product.delivery.region
+          %tr
+            %th 発送日の目安
+            %td 
+              = @product.delivery.date
+    - if @product.user == current_user            
+      .listing-item-change-box
+        = link_to edit_product_path(@product),class: "item__change__box__edit" do
+          %a.btn-product.btn-red  商品の編集
+        %p.user-product__text-center or
+        = link_to root_path, class: "item__change__box__pend" do
+          %button.btn-product.btn-red 出品を停止する
+        = link_to product_path(@product),method: :delete, class: "item__change__box__delete" do
+          %button.btn-product.btn-gray  この商品を削除する
+    
+    .six-content
+      .six-content_message
+        .six-content_message-content
+          %form.six-content_message-form
+            %p.comment-worning 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+            %textarea.textarea-default
+            %button.message-submit
+              %span コメントする
   
-  .six-content
-    .six-content_message
-      .six-content_message-content
-        %form.six-content_message-form
-          %p.comment-worning 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
-          %textarea.textarea-default
-          %button.message-submit
-            %span コメントする
-  
-            
+= render 'common/common_footer'         

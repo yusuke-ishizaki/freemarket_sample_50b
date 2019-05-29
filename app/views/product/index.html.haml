@@ -82,5 +82,13 @@
     / ここまで使用しない
   -# %section.pickup__container
   / これも今は使用しない
-
+  -if user_signed_in?
+    =link_to new_product_path, class: "footer-sell-btn" do
+      %div 出品
+      =fa_icon 'camera',class:"fa-camera"  
+  - else
+    =link_to new_user_path, class: "footer-sell-btn" do
+      %div 出品
+      =fa_icon 'camera',class:"fa-camera"
+  
   = render "common/common_footer"
