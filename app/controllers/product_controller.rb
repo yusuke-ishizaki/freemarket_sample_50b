@@ -48,7 +48,7 @@ class ProductController < ApplicationController
     product = Product.find(params[:id])
     if product.user_id == current_user.id
       product.destroy
-      redirect_to ‘/listings’
+      redirect_to '/listings'
     end
   end
 
