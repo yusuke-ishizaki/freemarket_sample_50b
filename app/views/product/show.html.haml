@@ -2,9 +2,6 @@
 -breadcrumb:product,@product
 = render "common/breadcrumb"
 
--if @product.sale == 'sold_out'
-  = @product.name
-
 .detail__main-content
   .detail__center-content
     %h1.detail__top-content
@@ -12,10 +9,10 @@
 
     .detail__second-content
       .detail__second-content_img
-        = image_tag 'おこ猫.jpeg',  class: 'detail__img-parent'
-        = image_tag 'おこ猫.jpeg',  class: 'detail__img-child'
-        = image_tag 'おこ猫.jpeg',  class: 'detail__img-child'
-        = image_tag 'おこ猫.jpeg',  class: 'detail__img-child'
+        = image_tag @product.images[0],  class: 'detail__img-parent'
+        = image_tag @product.images[0],  class: 'detail__img-child'
+        = image_tag @product.images[0],  class: 'detail__img-child'
+        = image_tag @product.images[0],  class: 'detail__img-child'
       %table.detail__second-content_detail
         %tbody.detail__second-content_detail-table
           %tr
@@ -130,7 +127,7 @@
             %section.items_box
               = link_to product_path(product.id), method: :get do
                 %figure.items_box-photo
-                  =image_tag "おこ猫.jpg", alt: "商品画像", class: 'img picture'
+                  =image_tag @product.images[0], alt: "商品画像", class: 'img picture'
                 .items_box-details
                   %h3.items_box-title.font-2
                     = product.name
@@ -151,7 +148,7 @@
               %section.items_box
                 = link_to product_path(product.id), method: :get do
                   %figure.items_box-photo
-                    =image_tag "おこ猫.jpg", alt: "商品画像", class: 'img picture'
+                    =image_tag @product.images[0], alt: "商品画像", class: 'img picture'
                   .items_box-details
                     %h3.items_box-title.font-2
                       = product.name
