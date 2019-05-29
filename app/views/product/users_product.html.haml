@@ -6,9 +6,12 @@
         = @product.name  
       .detail__second-content_img
         = image_tag @product.images[0],  class: 'detail__img-parent'
-        = image_tag @product.images[0],  class: 'detail__img-child'
-        = image_tag @product.images[0],  class: 'detail__img-child'
-        = image_tag @product.images[0],  class: 'detail__img-child'
+        %ul.show__image-ul
+          -if @product.images[1].blank?
+          -else
+            - @product.images.each do |image|
+              %li.show__image-li
+                = image_tag image,  class: 'detail__img-child'
       %table.detail__second-content_detail
         %tbody.detail__second-content_detail-table
           %tr
@@ -60,8 +63,8 @@
               = @product.delivery.date
     - if @product.user == current_user            
       .listing-item-change-box
-        = link_to edit_product_path(@product),class: "item__change__box__edit" do
-          %a.btn-product.btn-red  商品の編集
+        = link_to edit_product_path(@product.id),class: "item__change__box__edit" do
+          %button.btn-product.btn-red  商品の編集
         %p.user-product__text-center or
         = link_to root_path, class: "item__change__box__pend" do
           %button.btn-product.btn-red 出品を停止する
