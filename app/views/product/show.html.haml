@@ -133,7 +133,7 @@
             %section.items_box
               = link_to product_path(product.id), method: :get do
                 %figure.items_box-photo
-                  -# = image_tag product.images[0]
+                  = image_tag product.images[0]
                   -if product.sale == 'sold_out'
                     %figcaption
                       .item-sold-out-badge
@@ -157,7 +157,7 @@
               %section.items_box
                 = link_to product_path(product.id), method: :get do
                   %figure.items_box-photo
-                    -# = image_tag product.images[0]
+                    = image_tag product.images[0]
                     -if product.sale == 'sold_out'
                       %figcaption
                         .item-sold-out-badge
