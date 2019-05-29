@@ -4,25 +4,31 @@ end
 
     #users/show
 crumb :mypage do |user|
-  link 'マイページ', user
+  link 'マイページ', users_show_123_path
   parent :root
 end
 
     #users/index
 crumb :show_user do |user|
-  link "プロフィール", user
+  link "プロフィール", users_path
   parent :mypage
 end
 
     #users/logout
 crumb :logout_user do |user|
-  link "ログアウト", user
+  link "ログアウト", logout_path
   parent :mypage
 end
 
     #users/personal_info
 crumb :edit_user do |user|
   link "本人情報の登録", user
+  parent :mypage
+end
+
+    #product/product_status
+crumb :puroduct_status do |product|
+  link "出品した商品 - 出品中", product_status_path
   parent :mypage
 end
 
@@ -33,7 +39,7 @@ end
 
     #card/index
 crumb :card do |user|
-  link '支払い方法', user
+  link '支払い方法', cards_card_index_path
   parent :mypage
 end
 
@@ -43,7 +49,8 @@ crumb :card_new do |user|
   parent :card
 end
 
-crumb :category do
+    #categories/index
+crumb :category do |category|
   link 'カテゴリー一覧'
   parent :root
 end

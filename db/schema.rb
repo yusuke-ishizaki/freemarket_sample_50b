@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_24_025600) do
+ActiveRecord::Schema.define(version: 2019_05_28_124138) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -59,6 +59,13 @@ ActiveRecord::Schema.define(version: 2019_05_24_025600) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.integer "parent_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "deliveries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "price"
     t.string "region"
@@ -67,6 +74,7 @@ ActiveRecord::Schema.define(version: 2019_05_24_025600) do
     t.bigint "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "prefecture_id"
     t.index ["product_id"], name: "index_deliveries_on_product_id"
   end
 
@@ -84,9 +92,18 @@ ActiveRecord::Schema.define(version: 2019_05_24_025600) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "size"
-    t.integer "bland"
     t.integer "user_id"
     t.integer "bland_id"
+    t.string "sale"
+  end
+
+  create_table "sns_credentials", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "provider", null: false
+    t.string "uid", null: false
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_sns_credentials_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -106,4 +123,5 @@ ActiveRecord::Schema.define(version: 2019_05_24_025600) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "addresses", "users"
   add_foreign_key "deliveries", "products"
+  add_foreign_key "sns_credentials", "users"
 end

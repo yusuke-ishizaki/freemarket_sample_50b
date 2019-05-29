@@ -59,6 +59,11 @@
   a {
     text-decoration: none;
     color: #fff;
-    display: block;
+    // display: block;
+    height: 100%;
+    // text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

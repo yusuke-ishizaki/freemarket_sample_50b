@@ -1,5 +1,6 @@
 class CardController < ApplicationController
 
+  
     def index
     end
 
@@ -9,7 +10,11 @@ class CardController < ApplicationController
       redirect_to action: "show" if card.exists?
     end
 
-    def pay 
+    def pay
+      if current_user.card.present?
+        redirect_to '/card'
+        return
+      end
         Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
         if params['payjp-token'].blank?
           redirect_to action: "new"
@@ -22,7 +27,7 @@ class CardController < ApplicationController
           ) 
           @card = Card.new(user_id: current_user.id, customer_id: customer.id, card_id: customer.default_card)
           if @card.save
-            redirect_to action: "show"
+            redirect_to action: '/card'
           else
             redirect_to action: "pay"
           end

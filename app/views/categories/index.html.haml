@@ -1,0 +1,25 @@
+-# ここはカテゴリー一覧のページです
+.full_screen_container
+  = render "common/top_header"
+  - breadcrumb :category
+  = render "common/breadcrumb"
+  .category__main__container.clearfix
+    .category__container
+      %div.category-title
+        %h2 カテゴリー一覧
+      %div.category-lists
+        %ul.category__parent
+          - @parents.each do |parent|
+            %li.category__parent-list
+              =link_to '' do
+                = parent.name
+              %ul.category__child
+                - parent.children.each do |child|
+                  %li.category__child-list
+                    = child.name
+                  -# %ul.category__grand-child
+                    - child.children.each do |grand|
+                      %li.category__grand-child-list
+                        = grand.name
+
+      -# %div.category-lists-box
