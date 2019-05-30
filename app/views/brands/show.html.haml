@@ -1,0 +1,27 @@
+-# ここはカテゴリー一覧の詳細ページです
+.full_screen_container
+  = render "common/top_header"
+  -# - breadcrumb :categories
+  -# = render "common/breadcrumb"
+  %main.main__container.clearfix
+  
+    .categories__child__links
+      %h3.text-center
+      %section.items__container.clearfix
+        %h2.categories-title
+          = "#{@brand.name}の商品一覧"
+        .items__content.clearfix
+          - @products.each do |product|
+            %section.items_box
+              = link_to product_path(product.id), method: :get do
+                %figure.items_box-photo
+                  = image_tag product.images[0], class: 'img picture'
+                .items_box-details
+                  %h3.items_box-title.font-2
+                    = product.name
+                  .items_box-num
+                    .items_box-price.font-5
+                      ¥
+                    .items_box-price.font-5
+                      = product.price
+                  %p.items_box-tax (税込)

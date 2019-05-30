@@ -1,0 +1,26 @@
+-# ここはカテゴリー一覧のページです
+.full_screen_container
+  = render "common/top_header"
+  .category__main__container.clearfix
+    .category__container
+      %div.category-title
+        %h2 ブランド一覧
+      %div.category-lists
+        %ul.category__parent
+          - @brand.each do |parent|
+            %li.category__parent-list
+              =link_to brand_path(parent.id), method: :get do
+                = parent.name
+            -#   %ul.category__child
+            -#     - parent.children.each do |child|
+            -#       %li.category__child-list
+            -#         =link_to category_path(child.id), method: :get do
+            -#           = child.name
+            -#         %ul.category__grand-child
+            -#           - child.children.each do |grand|
+            -#             %li.category__grand-child-list
+            -#               =link_to category_path(grand.id), method: :get do
+            -#                 = grand.name
+  
+  = render "common/common_footer"
+    
