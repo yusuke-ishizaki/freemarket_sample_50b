@@ -28,6 +28,9 @@ Rails.application.routes.draw do
 
 
   resources :product do
+    collection do
+      get 'search'
+    end
     resources :purchase, only: [:index] do
       collection do
         post 'pay', to: 'purchase#pay'

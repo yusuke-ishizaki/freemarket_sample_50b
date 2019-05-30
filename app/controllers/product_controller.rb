@@ -61,6 +61,9 @@ class ProductController < ApplicationController
     @products = current_user.products
   end
 
+  def search
+    @products_search = Product.where('name LIKE(?)', "%#{params[:keyword]}%").page(params[:page]).per(10)
+  end
 
   private
 

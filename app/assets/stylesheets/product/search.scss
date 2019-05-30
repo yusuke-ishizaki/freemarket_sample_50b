@@ -1,0 +1,183 @@
+.search__container__left {
+    margin-left: 13em;
+    margin-right: 3em;
+    margin-bottom: 3em;
+    &__form{
+      &__upside{
+        background-color: white;
+        margin-bottom: 3em;
+        border: solid 1px gray;
+        height: 48px;
+        width: 280px;
+        border-radius: 7px;
+        &__wrap{
+          &__select{
+          }
+          .fa-arrow-down{
+            position: relative;
+            left: 85%;
+            top: 10px;
+            font-size: 20px;
+            color: #333333;
+          }
+        }
+      }
+      &__downside{
+        background-color:white;
+        width: 280px;
+        padding: 13px;
+        &__detailsearch{
+          font-weight: bolder;
+          margin-left: 1em;
+          margin-bottom: 1em;
+        }
+        &__keyword{
+          margin-bottom: 1em;
+          &__label{
+            &__span{
+              font-weight: bolder;
+            }
+            &__input{
+              height: 48px;
+              width: 248px;
+              border-radius: 7px;
+              border: solid 1px gray;
+              padding-left: 5px;
+            }
+          }
+        }
+        &__category{
+          position:relative;
+          right: 6%;
+          font-weight: bolder;
+          margin-left: 1em;
+          margin-bottom: 1em;
+          &__all{
+            &__select{
+              height: 48px;
+              width: 248px;
+              border-radius: 7px;
+              border: solid 1px gray;
+            }
+            .fa-arrow-down{
+              position:relative;
+              left: 90%;
+              bottom: 30px;
+            }
+          }
+        }
+        &__bland{
+          margin-bottom: 1em;
+          &__label{
+            &__span{
+              font-weight: bolder;
+            }
+            &__input{
+              height: 48px;
+              width: 248px;
+              border-radius: 7px;
+              border: solid 1px gray;
+              padding-left: 5px;
+            }
+          }
+        }
+        &__size{
+          position:relative;
+          right: 6%;
+          font-weight: bolder;
+          margin-left: 1em;
+          margin-bottom: 1em;
+          &__all{
+            &__select{
+              height: 48px;
+              width: 248px;
+              border-radius: 7px;
+              border: solid 1px gray;
+            }
+            .fa-arrow-down{
+              position:relative;
+              left: 90%;
+              bottom: 30px;
+            }
+          }
+        }
+        &__money{
+          position:relative;
+          top: -25px;
+          right: 6%;
+          font-weight: bolder;
+          margin-left: 1em;
+          margin-bottom: 1em;
+          &__all{
+            &__select{
+              height: 48px;
+              width: 248px;
+              border-radius: 7px;
+              border: solid 1px gray;
+            }
+            .fa-arrow-down{
+              position:relative;
+              left: 90%;
+              bottom: 30px;
+            }
+          }
+          &__minmax{
+            display: flex;
+            margin-top: 10%;
+            &__inputf{
+              width:111px;
+              height: 48px;
+              border-radius: 7px;
+              border: solid 1px gray;
+              padding-left:3px;
+            }
+            &__span{
+              position:relative;
+              top: 10px;
+              margin-left: 7.5px;
+              margin-right: 7.5px;
+            }
+            &__inputs{
+              padding-left:3px;
+              width:111px;
+              height: 48px;
+              border-radius: 7px;
+              border: solid 1px gray;
+            }
+          }
+        }
+        &__status{
+          &__box1{
+            display:flex;
+          }
+        }
+      }
+    }
+  }
+  .search__container__right{
+    &__itembox{
+      &__result{
+        font-size: 22px;
+        color: #333333;
+      }
+      &__content{
+  
+        display:flex;
+        &__ind{
+          background-color:white;
+          margin-right:2em;
+          margin-bottom:5px;
+          &__body{
+            &__pbox{
+              &__ibox{
+                position:relative;
+                left: 75%;
+                bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
