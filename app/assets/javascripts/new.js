@@ -61,20 +61,22 @@ $(document).on('change','input[type= "file"]',function(event){
 $('.sell-upload-items-container__guide').on('dragover',function(e){
   e.preventDefault();
 });
-$('.sell-upload-items-container__guide').on('drop',function(event){
-  event.preventDefault();
-  files = event.originalEvent.dataTransfer.files;
-  for (var i=0; i<files.length; i++) {
-    files_array.push(files[i]);
-    var fileReader = new FileReader();
-    fileReader.onload = function( event ) {
-      var loadedImageUri = event.target.result;
-      $(buildImage(loadedImageUri)).appendTo(".sell-upload-items-container__preview ul").trigger("create");
-      console.log(files_array[1])
-    };
-    fileReader.readAsDataURL(files[i]);
-  }
-});
+if(files_array.length<5){
+  $('.sell-upload-items-container__guide').on('drop',function(event){
+    event.preventDefault();
+    files = event.originalEvent.dataTransfer.files;
+    for (var i=0; i<files.length; i++) {
+      files_array.push(files[i]);
+      var fileReader = new FileReader();
+      fileReader.onload = function( event ) {
+        var loadedImageUri = event.target.result;
+        $(buildImage(loadedImageUri)).appendTo(".sell-upload-items-container__preview ul").trigger("create");
+        console.log(files_array[1])
+      };
+      fileReader.readAsDataURL(files[i]);
+    }
+  });
+};
 
 $(document).on('click','.sell-upload-items-container__preview a', function(){
     var index = $(".sell-upload-items-container__preview a").index(this);
