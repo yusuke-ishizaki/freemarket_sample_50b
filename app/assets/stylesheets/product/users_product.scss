@@ -20,9 +20,10 @@
     margin: 16px 0 16px 0;
 }
 .users-product__main-content{
-    float: right;
+    // float: right;
     width: 700px;
-    display: block
+    display: block;
+    margin: auto;
 }
 
 .user-product__text-center{
@@ -41,7 +42,4 @@
     margin: 40px auto 0;
     padding: 0 0 40px;
     height: 1040px;
-}
-.users-product__main-content  {
-    margin-right: 200px;
 }
