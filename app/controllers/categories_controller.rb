@@ -3,6 +3,12 @@ class CategoriesController < ApplicationController
   def index
 
     @parents = Category.where(parent_id: 0)
+
+    # @parents = Category.find(params[:id])
+
+    # @child = Category.where(parent_id: 1)
+    
+
     # @ladis = @parents.find(1)
     # binding.pry
 
@@ -29,7 +35,24 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    # params idを使用してID取得 
-    category.products
+    # 一覧には際最新の20件が表示されるようにする記述
+    # @products = Product.all.order(created_at: :desc).limit(20)
+
+    # children = Category.where(parent_id: 1)
+    @category = Category.find(params[:id])
+    @products = Product.order(created_at: :desc).where(category_id: @category.id).limit(20)
+    binding.pry
+
+    # @products = Product.order(created_at: :desc).where(params[:category_id]).limit(20)
+
+
+    # params idを使用してID取得
+    # category.products
+
+    # @child = Category.where(parent_id: 1)
+
+    # @category = Category.find(1)
+    # @category = Category.select('name')
+    # @category_children_name = Category.select()
   end
 end

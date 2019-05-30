@@ -3,71 +3,127 @@
     margin: 40px auto 0;
     width: 700px;
     padding: 0 0 40px;
+    margin-bottom: 800px;
   }
   &__container {
     height: 100%;
     width: 700px;
+    @include clearfix();
   }
   &-title h2 {
     padding: 8px 0;
     font-size: 22px;
     line-height: 1.4;
-    text-align: left;
+    text-align: center;
   }
   &__parent {
-    text-align: center;
-    position: relative;
-    &-list a{
-      float: left;
+    li {
+      // width: 125px;          /* メニュー項目の横幅(125px) */
+      display: inline-block;
+      /* ★横並びに配置する */
+      list-style-type: none;
+      /* ★リストの先頭記号を消す */
+      position: relative;
+      /* ★サブメニュー表示の基準位置にする */
+      list-style-type: none;
+      width: 100%;
+      text-align: center;
+    }
+    a {
+      background-color: white;
+      /* メニュー項目の背景色(白色) */
+      color: white;
+      /* メニュー項目の文字色(白色) */
+      line-height: 40px;
+      /* メニュー項目のリンクの高さ(40px) */
+      text-align: center;
+      /* メインメニューの文字列の配置(中央寄せ) */
+      text-decoration: none;
+      /* メニュー項目の装飾(下線を消す) */
+      font-weight: bold;
+      /* 太字にする */
       display: block;
+      /* ★項目内全域をリンク可能にする */
       border-radius: 4px;
-      min-width: 80px;
-      height: 40px;
-      box-shadow: 1px 1px 1px 1px rgba(14,14,14,0.05);
+      box-shadow: 1px 1px 1px 1px rgba(14, 14, 14, 0.05);
       padding: 0 30px;
       margin: 5px;
       color: #333;
       font-size: 16px;
-      line-height: 40px;
-      background-color: white;
       &:hover {
-        color: blue;
         background-color: red;
-        .category__parent-list{
-          // display: none;
+        /* メニュー項目にマウスが載ったときの背景色(赤色) */
+        color: white;
+        /* メニュー項目にマウスが載ったときの文字色(白色) */
+      }
+    }
+    li:hover > ul {
+      display: block;
+      /* ★マウスポインタが載っている項目の内部にあるリストを表示する */
+    }
+    ul {
+      margin: 0px;
+      /* ★サブメニュー外側の余白(ゼロ) */
+      padding: 0px;
+      /* ★サブメニュー内側の余白(ゼロ) */
+      display: none;
+      /* ★標準では非表示にする */
+      position: absolute;
+      /* ★絶対配置にする */
+      li {
+        width: 100%;
+        /* サブメニュー1項目の横幅(135px) */
+        a {
+          font-weight: normal;
+          /* 太字にはしない */
+          text-align: center;
+          &:hover {
+            background-color: red;
+            /* サブメニュー項目にマウスが載ったときの背景色(赤色) */
+            color: #fff;
+            /* サブメニュー項目にマウスが載ったときの文字色(白色) */
+          }
         }
+      }
+      ul {
+        width: 350px;
+        margin: 0px;
+        /* ★サブメニュー外側の余白(ゼロ) */
+        padding: 0px;
+        /* ★サブメニュー内側の余白(ゼロ) */
+        display: none;
+        /* ★標準では非表示にする */
+        position: absolute;
+        /* ★絶対配置にする */
+        top: -1px;
+        /* 1pxだけ上方向にずらす(※上に1pxの枠線を引いている場合) */
+        left: 100%;
+        /* ★基準位置からの距離を親ボックスの幅100％にする */
+        text-align: center;
       }
     }
   }
-  &__child {
-    // position: absolute;
-    // color: pink;
-    // background-color: blue;
-    &-list {
-      // display: none;
-    }
-    &:hover{
-      // display: inline;
-      // display: block
-      // display: none;
-
-      // height: auto;
-      // padding: 0;
-      // opacity: 1;
-    }
-  }
-  &__grand-child {
-    height: 50px;
-    width: 50px;
-    background-color: brown;
-  
-    &-list {
-  
+  &__child-list {
+    z-index: 10;
+    a {
+      background-color: rgb(243, 243, 184);
     }
   }
 }
 
 
 
+.categories__child__links {
+  padding: 0;
+  background: #f5f5f5;
+  h3 {
+    margin: 15px 0;
+  }
+}
 
-
+.categories-title {
+  font-size: 22px;
+  margin: 24px 4% 8px;
+  line-height: 1.4;
+  text-align: left;
+}

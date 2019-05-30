@@ -47,7 +47,7 @@
               カテゴリー
               %span.item__new-form-require 必須
               .select-wrap
-                = f.select :parent, [['レディース'],['メンズ'],['インテリア・住まい・小物'],['本・音楽・ゲーム'],['おもちゃ・ホビー・グッズ'],['コスメ・香水・美容'],['家電・スマホ・カメラ'],['スポーツ・レジャー'],['ハンドメイド'],['チケット'],['自動車・オートバイ'],['その他']], prompt: '--'
+                = f.collection_select(:category_id, Category.where(parent_id: 0), :id, :name, prompt: '--')
                 -#= f.select :category_id,Category.all.where(ancestry: nil).map{|c| [c.name, c.id]},{include_blank: "---"},{class:'select-default', id:'selectitembox'}
                 -#= f.select :category_id,{},{include_blank: "---"},{class: "select-default", id:'selectitembox1',style: 'display:none' }
                 -#= f.select :category_id,{},{include_blank: "---"},{class: "select-default",id:"selectitembox2" ,style: "display:none"}

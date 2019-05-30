@@ -51,8 +51,14 @@ end
 
     #categories/index
 crumb :category do |category|
-  link 'カテゴリー一覧'
+  link 'カテゴリー一覧', categories_index_path
   parent :root
+end
+
+    #categories/show
+crumb :categories do |category|
+  link '詳細'
+  parent :category
 end
 
 crumb :brands do
