@@ -154,30 +154,30 @@
       }
     }
   }
-  .search__container__right{
-    &__itembox{
-      &__result{
-        font-size: 22px;
-        color: #333333;
-      }
-      &__content{
-  
-        display:flex;
-        &__ind{
-          background-color:white;
-          margin-right:2em;
-          margin-bottom:5px;
-          &__body{
-            &__pbox{
-              &__ibox{
-                position:relative;
-                left: 75%;
-                bottom: 10px;
-              }
+.search__container__right{
+  &__itembox{
+    &__result{
+      font-size: 22px;
+      color: #333333;
+    }
+    &__content{
+
+      display:flex;
+      &__ind{
+        background-color:white;
+        margin-right:2em;
+        margin-bottom:5px;
+        &__body{
+          &__pbox{
+            &__ibox{
+              position:relative;
+              left: 75%;
+              bottom: 10px;
             }
           }
         }
       }
     }
   }
-  
+}
+

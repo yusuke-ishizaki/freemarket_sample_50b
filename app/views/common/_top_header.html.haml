@@ -8,9 +8,10 @@
             = image_tag "logo.svg", size: "134x36", alt: "mercari"
         .top__header_form
           = form_with model: @product, url: '/product/search', method: :get, local: true do |f|
-            = f.text_field :text, name: "keyword", placeholder: "何かお探しですか？", type: "search", class: 'input__box'
-            = f.submit "data-disable-with": "", name: "commit", type: "submit", value: "", class: "search-btn"
-            %i.fas.fa-search
+            %table
+              = f.text_field :text, name: "keyword", placeholder: "何かお探しですか？", type: "search", class: 'input__box'
+              -# = f.submit "data-disable-with": "", name: "commit", type: "submit", value: "", class: "search-btn"
+              %i.fas.fa-search
       .top__header_nav__box.clearfix
         %nav.top__header__left__box
           %ul.top__header_nav

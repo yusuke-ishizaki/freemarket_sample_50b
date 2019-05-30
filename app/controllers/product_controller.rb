@@ -62,7 +62,7 @@ class ProductController < ApplicationController
   end
 
   def search
-    @products_search = Product.where('name LIKE(?)', "%#{params[:keyword]}%").page(params[:page]).per(10)
+    @products_search = Product.where('name LIKE(?)', "%#{params[:keyword]}%")
   end
 
   private
