@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   resources :categories do
   end
 
+  resources :brands
+
   resources :card, only: [:new, :show, :index] do
     collection do
       post 'show', to: 'card#show'

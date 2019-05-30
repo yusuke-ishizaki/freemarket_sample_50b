@@ -32,3 +32,8 @@ CSV.foreach('db/brand.csv', headers: true) do |row|
     name: row['name'],
   )
 end
+
+
+
+
+
