@@ -11,15 +11,17 @@
         %ul.category__parent
           - @parents.each do |parent|
             %li.category__parent-list
-              =link_to '' do
+              =link_to category_path(parent.id), method: :get do
                 = parent.name
               %ul.category__child
                 - parent.children.each do |child|
                   %li.category__child-list
-                    = child.name
-                  -# %ul.category__grand-child
-                    - child.children.each do |grand|
-                      %li.category__grand-child-list
-                        = grand.name
+                    =link_to category_path(child.id), method: :get do
+                      = child.name
+                    %ul.category__grand-child
+                      - child.children.each do |grand|
+                        %li.category__grand-child-list
+                          =link_to category_path(grand.id), method: :get do
+                            = grand.name
 
-      -# %div.category-lists-box
+  = render "common/common_footer"

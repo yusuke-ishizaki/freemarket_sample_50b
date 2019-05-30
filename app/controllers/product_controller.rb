@@ -73,7 +73,7 @@ class ProductController < ApplicationController
 
   def create_params
     # images以外の値についてのストロングパラメータの設定
-    params.require(:product).permit(:name,:text,:status,:price,:bland_id,delivery_attributes:[:id,:price,:region,:date,:product_id],category_attributes:[:id, :parent]).merge(user_id: current_user.id)
+    params.require(:product).permit(:name,:text,:status,:price,:category_id,:bland_id,delivery_attributes:[:id,:price,:region,:date,:product_id]).merge(user_id: current_user.id)
   end
   def image_params
     #imageのストロングパラメータの設定.js側でimagesをrequireすれば画像のみを引き出せるように設定する。

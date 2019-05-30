@@ -15,7 +15,8 @@ Rails.application.routes.draw do
   get  '/users/show/123' => 'users#show'
   get  '/product_status', to: 'product#product_status'
 
-  resources :categories
+  resources :categories do
+  end
 
   resources :card, only: [:new, :show, :index] do
     collection do

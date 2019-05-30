@@ -3,13 +3,8 @@ class CategoriesController < ApplicationController
   def index
 
     @parents = Category.where(parent_id: 0)
-    # @ladis = @parents.find(1)
-    # binding.pry
 
-    # @categories = Category.eager_load(children: :children).where(parent_id: nil)
-
-    # @categories = Category.where(parent_id: nil)
-
+    # 以下はメモです
     # @category = Category.find(1)
     # # 下記でレディースに紐付く子カテゴリーであるトップス、パンツ、靴を全て取得出来る
     # @category.children
@@ -29,7 +24,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    # params idを使用してID取得 
-    category.products
+    @category = Category.find(params[:id])
+    @products = Product.order(created_at: :desc).where(category_id: @category.id).limit(20)
   end
 end
