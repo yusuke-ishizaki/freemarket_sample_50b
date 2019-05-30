@@ -1,0 +1,170 @@
+= render "common/top_header"
+
+%main.search__container
+  .search__container__left
+    %form.search__container__left__form
+      .search__container__left__form__upside
+        .search__container__left__form__upside__wrap
+          %select.search__container__left__form__upside__wrap__select 並び替え
+          %i.fas.fa-arrow-down
+      .search__container__left__form__downside
+        %h3.search__container__left__form__downside__detailsearch 詳細検索
+        .search__container__left__form__downside__keyword
+          %label.search__container__left__form__downside__keyword__label
+            %i.fas.fa-plus
+            %span.search__container__left__form__downside__keyword__label__span キーワードを追加する
+            %input.search__container__left__form__downside__keyword__label__input{placeholder: "keyword"}
+        .search__container__left__form__downside__category
+          %label.search__container__left__form__downside__category__label
+            %i.fas.fa-list-ul
+            %span.search__container__left__form__downside__category__label__span カテゴリーを選択する
+          .search__container__left__form__downside__category__all
+            %select.search__container__left__form__downside__category__all__select すべて
+            %i.fas.fa-arrow-down
+        .search__container__left__form__downside__bland
+          %label.search__container__left__form__downside__bland__label
+            %i.fas.fa-tags
+              %span.search__container__left__form__downside__bland__label__span ブランド名から選択する
+              %input.search__container__left__form__downside__bland__label__input{placeholder: "例）シャネル"}
+        .search__container__left__form__downside__size
+          %label.search__container__left__form__downside__size__label
+            %i.fas.fa-braille
+            %span.search__container__left__form__downside__size__label__span サイズを指定する
+          .search__container__left__form__downside__size__all
+            %select.search__container__left__form__downside__size__all__select すべて
+            %i.fas.fa-arrow-down
+        .search__container__left__form__downside__money
+          %label.search__container__left__form__downside__money__label
+            %i.fas.fa-coins
+            %span.search__container__left__form__downside__money__label__span 価格
+          .search__container__left__form__downside__money__all
+            %select.search__container__left__form__downside__money__all__select
+            %i.search__container__left__form__downside__money__all__icon
+          .search__container__left__form__downside__money__minmax
+            %input.search__container__left__form__downside__money__minmax__inputf{placeholder: "¥ Min"}
+            %span.search__container__left__form__downside__money__minmax__span ~
+            %input.search__container__left__form__downside__money__minmax__inputs{placeholder: "¥ Max"}
+        .search__container__left__form__downside__status
+          %label.search__container__left__form__downside__status__label
+            %i.fas.fa-star
+            %span.search__container__left__form__downside__status__label__span 商品の状態
+
+          .search__container__left__form__downside__status__box1
+            .search__container__left__form__downside__status__box1__first
+              %input.search__container__left__form__downside__status__box1__first__input{type: "checkbox"}
+              %i.search__container__left__form__downside__status__box1__first__icon
+              %label.search__container__left__form__downside__status__box1__first__label すべて
+            .search__container__left__form__downside__status__box1__second
+              %input.search__container__left__form__downside__status__box1__second__input{type: "checkbox"}
+              %i.search__container__left__form__downside__status__box1__second__icon
+              %label.search__container__left__form__downside__status__box1__second__label 新品、未使用
+
+          .search__container__left__form__downside__status__box1
+            .search__container__left__form__downside__status__box1__first
+              %input.search__container__left__form__downside__status__box1__first__input{type: "checkbox"}
+              %i.search__container__left__form__downside__status__box1__first__icon
+              %label.search__container__left__form__downside__status__box1__first__label 未使用に近い
+            .search__container__left__form__downside__status__box1__second
+              %input.search__container__left__form__downside__status__box1__second__input{type: "checkbox"}
+              %i.search__container__left__form__downside__status__box1__second__icon
+              %label.search__container__left__form__downside__status__box1__second__label 目立った傷や汚れなし
+
+          .search__container__left__form__downside__status__box1
+            .search__container__left__form__downside__status__box1__first
+              %input.search__container__left__form__downside__status__box1__first__input{type: "checkbox"}
+              %i.search__container__left__form__downside__status__box1__first__icon
+              %label.search__container__left__form__downside__status__box1__first__label やや傷や汚れあり
+            .search__container__left__form__downside__status__box1__second
+              %input.search__container__left__form__downside__status__box1__second__input{type: "checkbox"}
+              %i.search__container__left__form__downside__status__box1__second__icon
+              %label.search__container__left__form__downside__status__box1__second__label 傷や汚れあり
+
+          .search__container__left__form__downside__status__box1
+            .search__container__left__form__downside__status__box1__first
+              %input.search__container__left__form__downside__status__box1__first__input{type: "checkbox"}
+              %i.search__container__left__form__downside__status__box1__first__icon
+              %label.search__container__left__form__downside__status__box1__first__label 全体的に状態が悪い
+
+
+
+
+
+        .search__container__left__form__downside__status
+          %label.search__container__left__form__downside__status__label
+            %i.fas.fa-truck-moving
+            %span.search__container__left__form__downside__status__label__span 配送料の負担
+
+          .search__container__left__form__downside__status__box1
+            .search__container__left__form__downside__status__box1__first
+              %input.search__container__left__form__downside__status__box1__first__input{type: "checkbox"}
+              %i.search__container__left__form__downside__status__box1__first__icon
+              %label.search__container__left__form__downside__status__box1__first__label すべて
+            .search__container__left__form__downside__status__box1__second
+              %input.search__container__left__form__downside__status__box1__second__input{type: "checkbox"}
+              %i.search__container__left__form__downside__status__box1__second__icon
+              %label.search__container__left__form__downside__status__box1__second__label 着払い(購入者負担)
+
+          .search__container__left__form__downside__status__box1
+            .search__container__left__form__downside__status__box1__first
+              %input.search__container__left__form__downside__status__box1__first__input{type: "checkbox"}
+              %i.search__container__left__form__downside__status__box1__first__icon
+              %label.search__container__left__form__downside__status__box1__first__label 送料込み(出品者負担)
+
+
+
+
+
+        .search__container__left__form__downside__status
+          %label.search__container__left__form__downside__status__label
+            %i.fas.fa-shopping-cart
+            %span.search__container__left__form__downside__status__label__span 販売状況
+
+          .search__container__left__form__downside__status__box1
+            .search__container__left__form__downside__status__box1__first
+              %input.search__container__left__form__downside__status__box1__first__input{type: "checkbox"}
+              %i.search__container__left__form__downside__status__box1__first__icon
+              %label.search__container__left__form__downside__status__box1__first__label すべて
+            .search__container__left__form__downside__status__box1__second
+              %input.search__container__left__form__downside__status__box1__second__input{type: "checkbox"}
+              %i.search__container__left__form__downside__status__box1__second__icon
+              %label.search__container__left__form__downside__status__box1__second__label 販売中
+
+          .search__container__left__form__downside__status__box1
+            .search__container__left__form__downside__status__box1__first
+              %input.search__container__left__form__downside__status__box1__first__input{type: "checkbox"}
+              %i.search__container__left__form__downside__status__box1__first__icon
+              %label.search__container__left__form__downside__status__box1__first__label 売り切れ
+
+
+
+
+
+  .search__container__right
+    %section.search__container__right__itembox
+      %h2.search__container__right__itembox__result
+        検索結果 1-48 件
+      .search__container__right__itembox__content
+        - @products_search.each do |product|
+          %section.items_box
+            = link_to product_path(product.id), method: :get do
+              %figure.items_box-photo
+                = image_tag product.images.first
+                -if product.sale == 'sold_out'
+                  %figcaption
+                    .item-sold-out-badge
+                      .sold_text SOLD 
+              .items_box-details
+                %h3.items_box-title.font-2
+                  = product.name
+                .items_box-num
+                  .items_box-price.font-5
+                    ¥
+                  .items_box-price.font-5
+                    = product.price
+                %p.items_box-tax (税込)
+                .search__container__right__itembox__content__ind__body__pbox__ibox
+                  %i.far.fa-heart
+                  %span.search__container__right__itembox__content__ind__body__pbox__ibox__icon 2
+                %p.search__container__right__itembox__content__ind__body__pbox__tax
+
+= render "common/common_footer"
