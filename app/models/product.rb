@@ -7,4 +7,7 @@ class Product < ActiveRecord::Base
     has_many_attached :images
     extend ActiveHash::Associations::ActiveRecordExtensions
     belongs_to_active_hash :prefecture
+    belongs_to_active_hash :size
+    belongs_to_active_hash :status
+    belongs_to_active_hash :fee
 end

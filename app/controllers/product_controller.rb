@@ -63,6 +63,9 @@ class ProductController < ApplicationController
 
   def search
     @products_search = Product.where('name LIKE(?)', "%#{params[:keyword]}%").page(params[:page]).per(10)
+    @search = Product.ransack(params[:q])
+    # @search.build_condition if @search.conditions.empty?
+    @products = @search.result
   end
 
   private

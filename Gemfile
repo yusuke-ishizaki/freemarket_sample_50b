@@ -85,6 +85,7 @@ gem 'omniauth-facebook'
 gem 'active_hash'
 gem 'ancestry'
 gem 'kaminari', '~> 0.17.0'
+gem 'ransack'
 
 group :production do
   gem 'unicorn', '5.4.1'
