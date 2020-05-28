@@ -84,7 +84,7 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 gem 'active_hash'
 gem 'ancestry'
-gem 'kaminari', '~> 0.17.0'
+gem 'kaminari', '~> 1.2.1'
 
 group :production do
   gem 'unicorn', '5.4.1'
